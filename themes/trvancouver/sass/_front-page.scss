@@ -1,0 +1,88 @@
+.site-content {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    .best-single-container {
+        border: 1px solid $color__border;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+    .best-thumb {
+        width: 50%;
+    }
+    .content-p {
+        width: 50%;
+    }
+    .contnet-continaer {
+        width: 70%;
+    }
+    #secondary {
+        width: 30%;
+    }
+    .widget-left {
+        width: 200px;
+    }
+    .firstpage-content-th {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.content-title {
+    a {
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+    }
+    h3 {
+        margin: 0;
+    }
+}
+
+.viewmore-btn {
+    background: grey;
+    width: 630px;
+    height: 32px;
+    padding-top: 4px;
+    margin-top: 30px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+.best-posts-container {
+    margin-top: 30px;
+}
+
+.front-posts {
+    display: flex; // justify-content: space-between;
+    .front-post-single {
+        width: 23%;
+        padding: 0 2%;
+    }
+}
+
+.post-th-title {
+    a {
+        font-size: 14px;
+    }
+}
+
+.front-post-contianer {
+    margin: 50px 0;
+}
+
+.fpc-food {
+    border-bottom: 1px solid $color__border;
+}
+
+///widget
+#adrotate_widgets-2 {
+    width: 200px;
+}

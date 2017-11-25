@@ -1,0 +1,596 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Heateor Social Comments\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-12 07:58+0530\n"
+"PO-Revision-Date: 2017-09-12 07:59+0530\n"
+"Last-Translator: The Champ <lordofthechamps@gmail.com>\n"
+"Language-Team: Team Heateor <hello@heateor.com>\n"
+"Language: en_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../heateor-social-comments.php:40
+msgid "This is password protected."
+msgstr ""
+
+#: ../heateor-social-comments.php:220
+msgid ""
+"Specify a Disqus shortname in Super Socializer &gt; Social Commenting "
+"section in admin panel"
+msgstr ""
+
+#: ../heateor-social-comments.php:323
+msgid "Click to show help"
+msgstr ""
+
+#: ../heateor-social-comments.php:323
+msgid "Click to hide help"
+msgstr ""
+
+#: ../heateor-social-comments.php:367
+msgid "Disable Social Comments on this "
+msgstr ""
+
+#: ../heateor-social-comments.php:408
+msgid "Settings saved"
+msgstr ""
+
+#: ../heateor-social-comments.php:408
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../heateor-social-comments.php:536
+msgid "Please help us make the plugin better"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "I am deactivating the plugin because"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "I no longer need the plugin"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "I found a better plugin"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "I only needed the plugin for a short period"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "The plugin broke my site"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "The plugin suddenly stopped working"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "I couldn\\'t understand how to make it work"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid ""
+"The plugin is great, but I need specific feature that you don\\'t support"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "The plugin is not working"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "It\\'s not what I was looking for"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "The plugin didn\\'t work as expected"
+msgstr ""
+
+#: ../heateor-social-comments.php:537
+msgid "Other"
+msgstr ""
+
+#: ../heateor-social-comments.php:560
+msgid "Please specify a vaild reason"
+msgstr ""
+
+#: ../heateor-social-comments.php:617
+msgid "Add-Ons"
+msgstr ""
+
+#: ../heateor-social-comments.php:618
+msgid "Support Documentation"
+msgstr ""
+
+#: ../heateor-social-comments.php:619
+msgid "Settings"
+msgstr ""
+
+#: ../heateor-social-comments.php:662
+#, php-format
+msgid ""
+"As you are using only Facebook Comments feature of this plugin, you should "
+"switch to <a href=\"%s\" target=\"_blank\">Fancy Facebook Comments</a> for "
+"better performance"
+msgstr ""
+
+#: ../heateor-social-comments.php:662
+msgid "Okay"
+msgstr ""
+
+#: ../heateor-social-comments.php:662
+msgid "Later"
+msgstr ""
+
+#: ../admin/help.php:4
+msgid "About"
+msgstr ""
+
+#: ../admin/help.php:4
+msgid "Version"
+msgstr ""
+
+#: ../admin/help.php:6
+msgid "by"
+msgstr ""
+
+#: ../admin/help.php:7
+msgid ""
+"We are a creative team with unique ideas in mind and service in heart. We "
+"love what we do. For more info join us at"
+msgstr ""
+
+#: ../admin/help.php:19
+msgid "Donate Now"
+msgstr ""
+
+#: ../admin/help.php:25
+msgid "Plugin Demo"
+msgstr ""
+
+#: ../admin/help.php:31
+msgid "Translate Plugin"
+msgstr ""
+
+#: ../admin/help.php:37
+msgid "Support Forum"
+msgstr ""
+
+#: ../admin/help.php:43
+msgid "Add-ons"
+msgstr ""
+
+#: ../admin/help.php:49
+msgid "Our Products"
+msgstr ""
+
+#: ../admin/help.php:54
+msgid "Need Quick Help?"
+msgstr ""
+
+#: ../admin/help.php:56
+msgid ""
+"If you <strong>have any query</strong>, need help regarding <strong>plugin "
+"setup</strong>, want <strong>custom features</strong> in the plugin or "
+"<strong>have any suggestion</strong> to improve the plugin, just drop an "
+"email at <a href=\"mailto:support@heateor.com\">support@heateor.com</a>"
+msgstr ""
+
+#: ../admin/help.php:61
+msgid "Testimonial"
+msgstr ""
+
+#: ../admin/help.php:63
+msgid ""
+"You can send us testimonial at <a href=\"mailto:hello@heateor.com"
+"\">hello@heateor.com</a>"
+msgstr ""
+
+#: ../admin/help.php:68
+msgid "Support Us"
+msgstr ""
+
+#: ../admin/help.php:71 ../admin/help.php:74 ../admin/help.php:75
+#: ../admin/help.php:76 ../admin/help.php:77 ../admin/help.php:78
+msgid "Rate 5-star"
+msgstr ""
+
+#: ../admin/plugin-options.php:9
+msgid "Configuration"
+msgstr ""
+
+#: ../admin/plugin-options.php:10 ../admin/plugin-options.php:693
+msgid "Shortcode"
+msgstr ""
+
+#: ../admin/plugin-options.php:11 ../admin/plugin-options.php:706
+msgid "FAQ"
+msgstr ""
+
+#: ../admin/plugin-options.php:20
+msgid "General Options"
+msgstr ""
+
+#: ../admin/plugin-options.php:26
+msgid "Commenting layout"
+msgstr ""
+
+#: ../admin/plugin-options.php:40
+msgid "Use Tabbed layout to arrange comments under tabs"
+msgstr ""
+
+#: ../admin/plugin-options.php:41
+msgid "Use Stacked layout to arrange comments below/top of each-other"
+msgstr ""
+
+#: ../admin/plugin-options.php:49
+msgid "Order of Comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:90
+msgid ""
+"Drag and drop to set the order of comments in social commenting interface"
+msgstr ""
+
+#: ../admin/plugin-options.php:98
+msgid "Comment area label"
+msgstr ""
+
+#: ../admin/plugin-options.php:108
+msgid "Works, if tabbed layout is selected. Label for comment area"
+msgstr ""
+
+#: ../admin/plugin-options.php:117
+msgid "Show Comment Counts"
+msgstr ""
+
+#: ../admin/plugin-options.php:127
+msgid "Show comments count for each comment system"
+msgstr ""
+
+#: ../admin/plugin-options.php:139
+msgid "Enable Social Comments at"
+msgstr ""
+
+#: ../admin/plugin-options.php:158
+msgid "Specify the page/post groups where you want to enable Social Comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:169
+msgid "Delete options on plugin deletion"
+msgstr ""
+
+#: ../admin/plugin-options.php:179
+msgid ""
+"If enabled, all plugin options will be deleted from database when you delete "
+"the plugin"
+msgstr ""
+
+#: ../admin/plugin-options.php:187
+msgid "Custom CSS"
+msgstr ""
+
+#: ../admin/plugin-options.php:194
+msgid "You can specify any additional CSS rules (without &lt;style&gt; tag)"
+msgstr ""
+
+#: ../admin/plugin-options.php:211
+msgid "WordPress Comments Options"
+msgstr ""
+
+#: ../admin/plugin-options.php:217
+msgid "Enable default WordPress comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:227
+msgid "Uncheck to disable default WordPress comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:235
+msgid "WordPress Comments label"
+msgstr ""
+
+#: ../admin/plugin-options.php:245
+msgid "Leave empty to display only WordPress icon"
+msgstr ""
+
+#: ../admin/plugin-options.php:253
+msgid "Show WordPress icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:263
+msgid "Enable to display WordPress icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:273
+msgid "Facebook Comments Options"
+msgstr ""
+
+#: ../admin/plugin-options.php:279
+msgid "Enable Facebook Comments notification and moderation"
+msgstr ""
+
+#: ../admin/plugin-options.php:287 ../admin/plugin-options.php:297
+msgid "Enable Facebook Comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:305
+msgid "Facebook App ID"
+msgstr ""
+
+#: ../admin/plugin-options.php:315
+msgid ""
+"(Optional) You can save App ID for plugin to use it while rendering Facebook "
+"comments interface"
+msgstr ""
+
+#: ../admin/plugin-options.php:323
+msgid "Facebook Comments label"
+msgstr ""
+
+#: ../admin/plugin-options.php:333
+msgid "Leave empty to display only Facebook icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:341
+msgid "Show Facebook icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:351
+msgid "Enable to display Facebook icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:359 ../admin/plugin-options.php:569
+msgid "Url to comment on"
+msgstr ""
+
+#: ../admin/plugin-options.php:369
+msgid ""
+"The absolute URL that comments posted will be permanently associated with. "
+"Stories on Facebook about comments posted, will link to this URL.<br/>If "
+"left empty <strong>(Recommended)</strong>, url of the webpage will be used "
+"at which commenting is enabled."
+msgstr ""
+
+#: ../admin/plugin-options.php:377
+msgid "Show Recent Facebook Comments in a Widget"
+msgstr ""
+
+#: ../admin/plugin-options.php:385 ../admin/plugin-options.php:551
+msgid "Width"
+msgstr ""
+
+#: ../admin/plugin-options.php:395
+msgid ""
+"Leave empty to auto-adjust the width. The width (in pixels) of the Comments "
+"block."
+msgstr ""
+
+#: ../admin/plugin-options.php:403
+msgid "Color Scheme"
+msgstr ""
+
+#: ../admin/plugin-options.php:407
+msgid "Light"
+msgstr ""
+
+#: ../admin/plugin-options.php:408
+msgid "Dark"
+msgstr ""
+
+#: ../admin/plugin-options.php:416
+msgid "The color scheme used by the plugin. Can be \"light\" or \"dark\"."
+msgstr ""
+
+#: ../admin/plugin-options.php:424
+msgid "Number of comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:434
+msgid ""
+"The number of comments to show by default. The minimum value is 1. Defaults "
+"to 10"
+msgstr ""
+
+#: ../admin/plugin-options.php:442
+msgid "Order by"
+msgstr ""
+
+#: ../admin/plugin-options.php:446
+msgid "Social"
+msgstr ""
+
+#: ../admin/plugin-options.php:447
+msgid "Reverse Time"
+msgstr ""
+
+#: ../admin/plugin-options.php:448
+msgid "Time"
+msgstr ""
+
+#: ../admin/plugin-options.php:456
+msgid "The order to use when displaying comments."
+msgstr ""
+
+#: ../admin/plugin-options.php:464
+msgid "Recover Facebook Comments Lost After Moving to SSL/Https"
+msgstr ""
+
+#: ../admin/plugin-options.php:472
+msgid "Language"
+msgstr ""
+
+#: ../admin/plugin-options.php:482
+#, php-format
+msgid ""
+"Enter the code of the language you want to use to display commenting. You "
+"can find the language codes at <a href=\"%s\" target=\"_blank\">this link</"
+"a>. Leave it empty for default language(English)"
+msgstr ""
+
+#: ../admin/plugin-options.php:491
+msgid "Google Plus Comments Options"
+msgstr ""
+
+#: ../admin/plugin-options.php:497
+msgid "Enable Google Plus Comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:507
+msgid "Enable Google Plus Commenting"
+msgstr ""
+
+#: ../admin/plugin-options.php:515
+msgid "Google Plus Comments label"
+msgstr ""
+
+#: ../admin/plugin-options.php:525
+msgid "Leave empty to display only Google Plus icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:533
+msgid "Show Google Plus icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:543
+msgid "Enable to display Google Plus icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:561
+msgid "Width of GooglePlus Commenting interface. Leave empty for auto adjust"
+msgstr ""
+
+#: ../admin/plugin-options.php:579
+msgid ""
+"The absolute URL that comments posted will be permanently associated with. "
+"Stories on Google Plus about comments posted, will link to this URL.<br/>If "
+"left empty <strong>(Recommended)</strong>, url of the webpage will be used "
+"at which commenting is enabled."
+msgstr ""
+
+#: ../admin/plugin-options.php:588
+msgid "Disqus comments Options"
+msgstr ""
+
+#: ../admin/plugin-options.php:594 ../admin/plugin-options.php:604
+msgid "Enable Disqus comments"
+msgstr ""
+
+#: ../admin/plugin-options.php:612
+msgid "Disqus Comments label"
+msgstr ""
+
+#: ../admin/plugin-options.php:622
+msgid "Leave empty to display only Disqus icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:630
+msgid "Show Disqus icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:640
+msgid "Enable to display Disqus icon in its tab"
+msgstr ""
+
+#: ../admin/plugin-options.php:648
+msgid "Disqus Shortname"
+msgstr ""
+
+#: ../admin/plugin-options.php:658
+msgid ""
+"<strong>Required to use Disqus comments.</strong> For more info on "
+"shortname, visit following link."
+msgstr ""
+
+#: ../admin/plugin-options.php:666
+msgid "Disqus API Key/Public Key"
+msgstr ""
+
+#: ../admin/plugin-options.php:676
+msgid ""
+"Used to show Disqus Comments count, get one for free at <a href=\"https://"
+"disqus.com/api/applications\" target=\"_blank\">this link</a>"
+msgstr ""
+
+#: ../admin/plugin-options.php:695
+msgid "Social Comments Shortcode"
+msgstr ""
+
+#: ../admin/plugin-options.php:708
+msgid "<strong>Note:</strong>"
+msgstr ""
+
+#: ../admin/plugin-options.php:709
+msgid ""
+"Plugin will not work on local server. You should have an online website for "
+"the plugin to function properly."
+msgstr ""
+
+#: ../admin/plugin-options.php:710
+msgid ""
+"Default comment form must be enabled at the webpages where you want social "
+"comments to work."
+msgstr ""
+
+#: ../admin/plugin-options.php:713
+msgid ""
+"How to show recent Facebook Comments from all over the website in a widget?"
+msgstr ""
+
+#: ../admin/plugin-options.php:714
+msgid ""
+"How to recover the Facebook Comments lost after moving my website to SSL/"
+"Https?"
+msgstr ""
+
+#: ../admin/plugin-options.php:715
+msgid "Why is my browser blocking some features of the plugin?"
+msgstr ""
+
+#: ../admin/plugin-options.php:716
+msgid "How to recover Facebook Comments lost after moving to SSL/Https?"
+msgstr ""
+
+#: ../admin/plugin-options.php:717
+msgid "How can I disable Social Comments at individual page/post?"
+msgstr ""
+
+#: ../admin/plugin-options.php:725
+msgid "Save Changes"
+msgstr ""
+
+#: ../admin/plugin-options.php:730
+msgid "Instagram Shoutout"
+msgstr ""
+
+#: ../admin/plugin-options.php:732
+msgid ""
+"If you can send (to hello@heateor.com) how our plugin is helping your "
+"business, we can share it on Instagram. You can also send any relevant "
+"hashtags and people to mention in the Instagram post."
+msgstr ""
+
+#: ../admin/plugin-options.php:733
+msgid ""
+"<b>Example</b> - Blah-Blah Online Coaching teaches various programming "
+"language courses through their website. They have emerged as one of the most "
+"popular online coaching websites in the past year. Anyone can become "
+"proficient in programming language of their choice in a very easy way in no "
+"time."
+msgstr ""
+
+#: ../admin/plugin-options.php:734
+msgid ""
+"@blahblahonlinecoaching proudly use #HeateorSocialComments to enable social "
+"commenting at their website. Be sure to visit their website at "
+"blahblahonlinecoaching.com where you can browse a variety of programming "
+"language courses."
+msgstr ""

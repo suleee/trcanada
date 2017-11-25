@@ -1,0 +1,5 @@
+[07-Oct-2017 01:25:40 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/trcanada/public_html/wp-content/plugins/hello.php on line 60
+[07-Oct-2017 01:25:51 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/trcanada/public_html/wp-content/plugins/hello.php on line 60
+[06-Nov-2017 20:05:24 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/trcanada/public_html/wp-content/plugins/hello.php on line 60
+[08-Nov-2017 11:37:56 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/trcanada/public_html/wp-content/plugins/hello.php on line 60
+[08-Nov-2017 11:37:58 UTC] PHP Fatal error:  Call to undefined function add_action() in /home/trcanada/public_html/wp-content/plugins/hello.php on line 60
