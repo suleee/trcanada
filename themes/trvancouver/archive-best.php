@@ -41,19 +41,22 @@ get_header(); ?>
 						<li class="product-list">                   
                         <a href='<?php echo $url?>' class='button'>
 						
-						<h2><?php echo $term->name; ?></h2></a>
+						<p><?php echo $term->name; ?></p></a>
 						</li>
                     <?php
                         endforeach;
-                    ?>
+					?>
+					
 			</ul>
 
-			</header><!-- .page-header -->
-			<!--<?php /* Start the Loop */ ?>-->
+			</header>
+
+			<?php /* Start the Loop */ ?>
 				
 				
 			<div class="arhive-posts-container best-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
+				
 					<div class="posts">
 						<div class="thumbnail-wrapper">
 							<a href = "<?php the_permalink(); ?> " rel="bookmark"><?php the_post_thumbnail( ); ?></a>
