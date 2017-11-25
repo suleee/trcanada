@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<header class="page-header">
 			<?php
-			
+			//change the name of header of the page
 			function archive_best_title( $title) {
 			if(is_post_type_archive('best')){
 				$title = '티알이 뽑은 베스트 랭킹';
@@ -52,7 +52,7 @@ get_header(); ?>
 			<!--<?php /* Start the Loop */ ?>-->
 				
 				
-			<div class="product-posts">
+			<div class="arhive-posts-container best-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="posts">
 						<div class="thumbnail-wrapper">
@@ -61,8 +61,8 @@ get_header(); ?>
 
 						<div class="title">
 							<?php the_title(); ?>
-							....
-							<?php echo CFS()->get( 'cost' ); ?>
+							<div><?php red_starter_posted_on(); ?> </div>
+						
 						</div>
 					</div>
 				<?php endwhile; ?>
@@ -72,6 +72,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 

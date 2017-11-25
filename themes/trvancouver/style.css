@@ -780,6 +780,25 @@ a {
 .bypostauthor {
   display: block; }
 
+#primary, .arhive-posts-container {
+  display: -ms-flexbox;
+  display: flex; }
+  #primary #main, .arhive-posts-container #main {
+    width: 70%; }
+  #primary #secondary, .arhive-posts-container #secondary {
+    width: 30%; }
+
+.page-header h1 {
+  border-left: 4px solid #136df9;
+  font-size: 20px;
+  padding-left: 10px; }
+
+.posts {
+  width: 228px;
+  padding-right: 28px; }
+  .posts img {
+    height: 111px; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

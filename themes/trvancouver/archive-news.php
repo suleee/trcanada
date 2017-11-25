@@ -52,7 +52,7 @@ get_header(); ?>
 			<!--<?php /* Start the Loop */ ?>-->
 				
 				
-			<div class="product-posts">
+			<div class="arhive-posts-container news-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="posts">
 						<div class="thumbnail-wrapper">
@@ -61,8 +61,8 @@ get_header(); ?>
 
 						<div class="title">
 							<?php the_title(); ?>
-							....
-							<?php echo CFS()->get( 'cost' ); ?>
+							
+							<!-- <?php echo CFS()->get( 'cost' ); ?> -->
 						</div>
 					</div>
 				<?php endwhile; ?>
