@@ -8,6 +8,9 @@
 get_header(); ?>
 
 <section class="contnet-continaer front-page">
+    <div>
+      <?php // echo adrotate_group(1); ?>
+    </div>
     <div class="best-posts-container">
           <?php
         // global $post;
@@ -30,7 +33,12 @@ get_header(); ?>
           <div class="best-thumb">
           <?php the_post_thumbnail( 'large' ); ?></div>
           <div class="content-p">
-          <?php the_content(); ?>
+          <?php
+            $content = get_the_content();
+            $content = strip_tags($content);
+            echo substr($content, 0, 400) . "...";
+          ?>
+          <br/>
           <a class="read-more" href="<?php the_permalink(); ?>"> Read Entry </a>
           </div>
         </div>
