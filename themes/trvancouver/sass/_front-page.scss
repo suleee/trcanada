@@ -86,3 +86,22 @@
 #adrotate_widgets-2 {
     width: 200px;
 }
+
+// Ad rotator
+.rotator {
+    position: relative;
+    .g-col {
+        display: none;
+        &.show {
+            display: inline-block;
+        }
+    }
+    .skipper {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        i {
+            cursor: pointer;
+        }
+    }
+}

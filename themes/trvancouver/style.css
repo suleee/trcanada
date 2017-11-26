@@ -224,6 +224,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 #adrotate_widgets-2 {
   width: 200px; }
 
+.rotator {
+  position: relative; }
+  .rotator .g-col {
+    display: none; }
+    .rotator .g-col.show {
+      display: inline-block; }
+  .rotator .skipper {
+    position: absolute;
+    top: -5px;
+    right: 1px; }
+    .rotator .skipper i {
+      cursor: pointer; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;

@@ -8,8 +8,12 @@
 get_header(); ?>
 
 <section class="contnet-continaer front-page">
-    <div>
-      <?php // echo adrotate_group(1); ?>
+    <div class="rotator">
+      <div class="skipper">
+        <i class="fa fa-caret-left prev" aria-hidden="true"></i>
+        <i class="fa fa-caret-right next" aria-hidden="true"></i>
+      </div>
+      <?php echo adrotate_group(1); ?>
     </div>
     <div class="best-posts-container">
           <?php
