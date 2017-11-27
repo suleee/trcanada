@@ -11,13 +11,20 @@
         padding: 20px 20px;
     }
     .best-thumb {
-        width: 50%;
-        height: 190px;
-        width: 282px;
-        overflow: hidden;
+        img{
+        height: 150px;
+        width: 280px;
+        object-fit: cover;}
+    
     }
     .content-p {
+        padding-left: 20px;
         width: 50%;
+        a{
+            text-decoration: none;
+            color: $color_orange;
+            font-size: 14px;
+        }
     }
     .contnet-continaer {
         width: 70%;
@@ -64,9 +71,24 @@
 }
 
 .best-posts-container {
-    margin-top: 30px;
+    margin-top: 11px;
 }
-
+.front-best-post-date{
+    display: flex;
+    border-bottom: 1px solid $color__border;
+    margin-bottom: 20px;
+    min-height: 32px;
+    p{
+        font-size: 12px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+        color: $color_date;
+        .cat-best{
+            color: $color_orange;
+        }
+        
+    }
+}
 .front-posts {
     display: flex; // justify-content: space-between;
     .front-post-single {
@@ -109,6 +131,9 @@
 // Ad rotator
 .rotator {
     position: relative;
+    height: 120px;
+    border: 1px solid $color__border;
+    margin-top: 25px;
     .g-col {
         display: none;
         &.show {

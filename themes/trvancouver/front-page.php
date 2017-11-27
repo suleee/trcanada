@@ -30,7 +30,11 @@ get_header(); ?>
           <div class="content-title">
         <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
         </div> 
-        <div><?php red_starter_posted_on(); ?> / <?php comments_number(); ?>
+        <div class="front-best-post-date">
+        <p>Posted By: <?php red_starter_posted_by(); ?></p> 
+        <p>On: <?php red_starter_posted_on(); ?></p> 
+        <p>In: <span class="cat-best">Best</span></p>
+        <p><?php comments_number(); ?></p>
         </div>
         </div>
           <div class="contetnt firstpage-content-th">
@@ -40,10 +44,10 @@ get_header(); ?>
           <?php
             $content = get_the_content();
             $content = strip_tags($content);
-            echo substr($content, 0, 400) . "...";
+            echo substr($content, 0, 280) . "...";
           ?>
           <br/>
-          <a class="read-more" href="<?php the_permalink(); ?>"> Read Entry </a>
+          <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
           </div>
         </div>
         </div>

@@ -175,13 +175,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     border-radius: 3px;
     margin-bottom: 20px;
     padding: 20px 20px; }
-  .site-content .best-thumb {
-    width: 50%;
-    height: 190px;
-    width: 282px;
-    overflow: hidden; }
+  .site-content .best-thumb img {
+    height: 150px;
+    width: 280px;
+    object-fit: cover; }
   .site-content .content-p {
+    padding-left: 20px;
     width: 50%; }
+    .site-content .content-p a {
+      text-decoration: none;
+      color: #f09217;
+      font-size: 14px; }
   .site-content .contnet-continaer {
     width: 70%; }
   .site-content #secondary {
@@ -217,7 +221,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding-top: 20px; }
 
 .best-posts-container {
-  margin-top: 30px; }
+  margin-top: 11px; }
+
+.front-best-post-date {
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  min-height: 32px; }
+  .front-best-post-date p {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #c6c6c6; }
+    .front-best-post-date p .cat-best {
+      color: #f09217; }
 
 .front-posts {
   display: -ms-flexbox;
@@ -253,7 +271,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     font-size: 15px; }
 
 .rotator {
-  position: relative; }
+  position: relative;
+  height: 120px;
+  border: 1px solid #eee;
+  margin-top: 25px; }
   .rotator .g-col {
     display: none; }
     .rotator .g-col.show {
@@ -820,29 +841,6 @@ a {
 
 .bypostauthor {
   display: block; }
-
-#primary, .arhive-posts-container {
-  display: -ms-flexbox;
-  display: flex; }
-  #primary #main, .arhive-posts-container #main {
-    width: 70%; }
-  #primary #secondary, .arhive-posts-container #secondary {
-    width: 30%; }
-
-.page-header h1 {
-  border-left: 4px solid #136df9;
-  font-size: 20px;
-  padding-left: 10px; }
-
-.posts {
-  width: 228px;
-  padding-right: 28px; }
-  .posts img {
-    height: 111px; }
-
-.content-area #secondary {
-  padding-left: 8px;
-  margin-top: 62px; }
 
 /*--------------------------------------------------------------
 # Media
