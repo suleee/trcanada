@@ -51,6 +51,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       justify-content: space-between;
   max-width: 990px;
   margin: 0 auto; }
+  .small-menu .icons a {
+    padding-left: 10px; }
   .small-menu a {
     text-decoration: none;
     color: white; }
@@ -291,6 +293,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     right: 1px; }
     .rotator .skipper i {
       cursor: pointer; }
+
+#adrotate_widgets-4 .g {
+  border: 1px solid #eee;
+  padding: 20px 20px; }
 
 .sb_instagram_header {
   display: none; }
@@ -931,7 +937,8 @@ a {
 embed,
 iframe,
 object {
-  max-width: 100%; }
+  max-width: 100%;
+  height: 111px; }
 
 /* Captions */
 .wp-caption {

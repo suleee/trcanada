@@ -54,11 +54,12 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
           </div>
 
-<div class="viewmore-btn"><a href>Show More Posts <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+<!-- <div class="viewmore-btn"><a href>Show More Posts <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
 
+ -->
 
-
-
+<div style="display: flex;
+    justify-content: flex-end;" > <a href="best">show more posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
 
 
 <div class="front-post-contianer fpc-trtv">
@@ -79,9 +80,7 @@ get_header(); ?>
         
         <div class="post-thumbnail-wrapper">
         <?php the_content( ); ?></a>
-        </div>
-        <div class="content-title post-th-title">
-        <!-- <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a> -->
+        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
         </div>
         </div>
         <?php endforeach; wp_reset_postdata(); ?>
@@ -125,6 +124,7 @@ get_header(); ?>
 
   <div class="front-post-contianer fpc-foodie">
     <h2><span> 맛집 </span></h2>
+    <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;

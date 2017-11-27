@@ -5,9 +5,13 @@
     justify-content: space-between;
     max-width: 990px;
     margin: 0 auto;
+    .icons a{
+        padding-left: 10px;
+    }
     a{
         text-decoration: none;
         color: white;
+       
     &:hover{
         color: $color_h_span; 
     }
