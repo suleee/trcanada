@@ -231,7 +231,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   min-height: 32px; }
   .front-best-post-date p {
     font-size: 12px;
-    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 20px;
     color: #c6c6c6; }
     .front-best-post-date p .cat-best {
@@ -629,6 +629,9 @@ h2 {
   font-size: 16px; }
   h2 span {
     color: #259bfe; }
+
+h3 {
+  font-size: 19px; }
 
 /*--------------------------------------------------------------
 # Forms
