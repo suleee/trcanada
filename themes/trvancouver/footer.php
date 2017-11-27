@@ -7,16 +7,16 @@
 
 ?>
 
-<div id="3" class="widget-area" role="complementary">
-
-<?php if ( function_exists( 'dynamic_sidebar' )|| dynamic_sidebar('footer')):?>
-<?php endif; ?>
-<?php dynamic_sidebar ('footer'); ?>
-</div><!-- #secondary -->
 
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
+			<div id="3" class="widget-area" role="complementary">
+
+<?php if ( function_exists( 'dynamic_sidebar' )|| dynamic_sidebar('footer')):?>
+<?php endif; ?>
+<?php dynamic_sidebar ('footer'); ?>
+</div>
 				<div class="instagram-container">
 					<!-- <div class="instagram-api">instagram</div> -->
 					<div class="footer-sns-contianer">
