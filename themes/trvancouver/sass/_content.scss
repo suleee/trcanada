@@ -58,7 +58,8 @@
 }
 #secondary{
 width: 30%;
-}}
+}
+}
 .page-header h1{
 	border-left: 4px solid $color_tr;
 	font-size: 20px;
@@ -70,4 +71,11 @@ width: 30%;
 	img{
 		height: 111px;
 	}
+}
+.content-area{
+	#secondary{
+		padding-left: 8px;
+		margin-top: 62px;
+		
+		}
 }

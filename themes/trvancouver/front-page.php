@@ -78,13 +78,43 @@ get_header(); ?>
   </div>
 
 
-  <div class="front-post-contianer">
+  <div class="front-post-contianer fpc-news">
     <h2>News</h2>
       <div class="front-posts front-newsposts">
         <?php
         // global $post;
         $args = array(
         'post_type' => 'news',
+        'order' => 'DSC',
+        'posts_per_page' => 4);
+        $product_posts = get_posts( $args ); // returns an array of posts
+        ?>
+        <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+  <!--grab from content-sigle.php-->
+
+        <div class="front-post-single">
+        
+        <div class="post-thumbnail-wrapper">
+        <?php the_post_thumbnail( 'large' ); ?>
+        </div>
+        <div class="content-title post-th-title">
+        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
+        </div>
+        </div>
+        <?php endforeach; wp_reset_postdata(); ?>
+      </div>
+  </div>
+
+
+
+
+  <div class="front-post-contianer fpc-trtv">
+    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i></div><span> TRTV </span></h2>
+      <div class="front-posts front-foodposts">
+        <?php
+        // global $post;
+        $args = array(
+        'post_type' => 'foodie',
         'order' => 'DSC',
         'posts_per_page' => 4);
         $product_posts = get_posts( $args ); // returns an array of posts
