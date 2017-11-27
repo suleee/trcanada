@@ -107,7 +107,7 @@
     margin: 50px 0;
 }
 
-.fpc-food, .fpc-news {
+.fpc-trtv, .fpc-news {
     border-bottom: 1px solid $color__border;
 }
 .fpc-trtv{
@@ -148,6 +148,10 @@
             cursor: pointer;
         }
     }
+}
+
+.sb_instagram_header{
+    display: none;
 }
 
 // #adrotate_widgets-2 { 

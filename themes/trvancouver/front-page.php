@@ -58,8 +58,11 @@ get_header(); ?>
 
 
 
-  <div class="front-post-contianer fpc-food">
-    <h2><span> 맛집 </span></h2>
+
+
+
+<div class="front-post-contianer fpc-trtv">
+    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i></div><span> TRTV </span></h2>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;
@@ -84,6 +87,8 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
+
+
 
 
   <div class="front-post-contianer fpc-news">
@@ -116,8 +121,10 @@ get_header(); ?>
 
 
 
-  <div class="front-post-contianer fpc-trtv">
-    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i></div><span> TRTV </span></h2>
+
+
+  <div class="front-post-contianer fpc-foodie">
+    <h2><span> 맛집 </span></h2>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;
@@ -142,6 +149,9 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
+
+
+
 
  
 </section>

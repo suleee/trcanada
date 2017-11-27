@@ -250,7 +250,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .front-post-contianer {
   margin: 50px 0; }
 
-.fpc-food, .fpc-news {
+.fpc-trtv, .fpc-news {
   border-bottom: 1px solid #eee; }
 
 .fpc-trtv h2 {
@@ -286,12 +286,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .rotator .skipper i {
       cursor: pointer; }
 
-.archive #primary, .archive .arhive-posts-container {
+.sb_instagram_header {
+  display: none; }
+
+#primary, .arhive-posts-container {
   display: -ms-flexbox;
   display: flex; }
-  .archive #primary #main, .archive .arhive-posts-container #main {
+  #primary #main, .arhive-posts-container #main {
     width: 70%; }
-  .archive #primary #secondary, .archive .arhive-posts-container #secondary {
+  #primary #secondary, .arhive-posts-container #secondary {
     width: 30%; }
 
 .archive .page-header {
