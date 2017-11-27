@@ -48,3 +48,14 @@
 	display: block;
 }
 
+#primary, .arhive-posts-container{
+	display: flex;
+	width: 100%;
+
+#main{
+	width: 70%;
+}
+#secondary{
+width: 30%;
+}
+}

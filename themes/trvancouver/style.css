@@ -104,7 +104,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .main-navigation a:hover {
     color: #136df9; }
   .main-navigation li {
-    padding: 0 20px; }
+    padding: 0 15px; }
+  .main-navigation li:first-child {
+    padding: 0; }
 
 .menu-container {
   max-width: 990px;
@@ -163,6 +165,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: black; }
   .footer-second-section span {
     color: #136df9; }
+
+.footer-widget-area {
+  margin-top: 100px; }
 
 .site-content {
   display: -ms-flexbox;
@@ -289,44 +294,49 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .sb_instagram_header {
   display: none; }
 
-#primary, .arhive-posts-container {
-  display: -ms-flexbox;
-  display: flex; }
-  #primary #main, .arhive-posts-container #main {
-    width: 70%; }
-  #primary #secondary, .arhive-posts-container #secondary {
-    width: 30%; }
-
 .archive .page-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  height: 25px;
+  margin: 20px 0; }
   .archive .page-header a {
     text-decoration: none;
     color: #777; }
+    .archive .page-header a p {
+      margin: 0; }
   .archive .page-header h2 {
     font-size: 13px; }
   .archive .page-header ul {
     list-style: none;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    margin: 0; }
     .archive .page-header ul li {
       padding-right: 34px; }
   .archive .page-header h1 {
     border-left: 4px solid #136df9;
-    font-size: 20px;
-    padding-left: 10px; }
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 0; }
 
 .archive .posts {
   width: 228px;
   padding-right: 28px; }
   .archive .posts img {
-    height: 111px; }
+    height: 111px;
+    object-fit: cover; }
 
 .archive .content-area #secondary {
   padding-left: 8px;
   margin-top: 62px; }
+
+.archive .title h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400; }
 
 html {
   font-family: sans-serif;
@@ -518,7 +528,7 @@ select,
 textarea {
   color: #404040;
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -542,7 +552,7 @@ address {
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
+  font-size: 13.125px;
   font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.6rem;
@@ -551,8 +561,8 @@ pre {
   padding: 1.6rem; }
 
 code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
+  font-family: Verdana, Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 13.125px;
   font-size: 0.9375rem; }
 
 abbr, acronym {
@@ -571,7 +581,7 @@ big {
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
   font-size: 1rem; }
 
 *,
@@ -650,7 +660,7 @@ input[type="submit"] {
   background: #e6e6e6;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
+  font-size: 10.5px;
   font-size: 0.75rem;
   line-height: 1;
   padding: .6rem 1rem .4rem;
@@ -723,7 +733,8 @@ a {
     display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    font-size: 13px; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -796,7 +807,7 @@ a {
     clip: auto !important;
     color: #21759b;
     display: block;
-    font-size: 14px;
+    font-size: 12.25px;
     font-size: 0.875rem;
     font-weight: bold;
     height: auto;
@@ -886,6 +897,15 @@ a {
 
 .bypostauthor {
   display: block; }
+
+#primary, .arhive-posts-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  #primary #main, .arhive-posts-container #main {
+    width: 70%; }
+  #primary #secondary, .arhive-posts-container #secondary {
+    width: 30%; }
 
 /*--------------------------------------------------------------
 # Media

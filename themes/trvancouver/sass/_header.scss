@@ -71,12 +71,16 @@
         color: $color_tr;
     }
     li{
-        padding: 0 20px;
+        padding: 0 15px;
+    }
+    li:first-child{
+        padding: 0;
     }
 }
 .menu-container{
  
     max-width: 990px;
-    margin: 0 auto;}
+    margin: 0 auto;
+}
 
 
