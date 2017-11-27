@@ -3,6 +3,7 @@
     .archive{
     .page-header {
         display: flex;
+        width: 95%;
         justify-content: space-between;
         height: 25px;
         margin: 20px 0;
@@ -14,14 +15,16 @@
             }
         }
         h2{
+            width: 40%;
             font-size: 13px;
         }
         ul{
+            // width: 60%;
             list-style: none;
             display: flex;
             margin: 0;
             li{
-                padding-right: 34px;
+                padding-right: 10px;                
             }
         }
     h1{
@@ -53,4 +56,10 @@
         font-weight: 400;
     }
 
+    }
+
+
+    ///taxonomy best posts
+    .best-posts{
+        display: flex;
     }

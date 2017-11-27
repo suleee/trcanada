@@ -47,7 +47,7 @@ function tr_cpt_best() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 10,
+		'menu_position'         => 4,
 		'menu_icon'             => 'dashicons-thumbs-up',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
@@ -65,6 +65,11 @@ add_action( 'init', 'tr_cpt_best', 0 );
 
 
 
+
+
+
+
+
 // food CPT
 function tr_cpt_foodie() {
 
@@ -77,8 +82,8 @@ function tr_cpt_foodie() {
 		'attributes'            => 'Foodie Attributes',
 		'parent_item_colon'     => 'Parent Item:',
 		'all_items'             => 'All Foodie',
-		'add_new_item'          => 'Add New Item',
-		'add_new'               => 'Add New',
+		'add_new_item'          => 'Add New Foodie',
+		'add_new'               => 'Add New Foodie',
 		'new_item'              => 'New Foodie',
 		'edit_item'             => 'Edit Foodie',
 		'update_item'           => 'Update Foodie',
@@ -95,7 +100,7 @@ function tr_cpt_foodie() {
 		'uploaded_to_this_item' => 'Uploaded to this item',
 		'items_list'            => 'Foodie list',
 		'items_list_navigation' => 'Foodie list navigation',
-		'filter_items_list'     => 'Filter food list',
+		'filter_items_list'     => 'Filter Foodie list',
 	);
 	$args = array(
 		'label'                 => 'Foodie',
@@ -106,8 +111,8 @@ function tr_cpt_foodie() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-store',
+		'menu_position'         => 4,
+		'menu_icon'             => 'dashicons-thumbs-up',
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
@@ -166,7 +171,7 @@ function news_post_type() {
 			'public'                => true,
 			'show_ui'               => true,
 			'show_in_menu'          => true,
-			'menu_position'         => 5,
+			'menu_position'         => 6,
 			'menu_icon'             => 'dashicons-megaphone',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
@@ -227,7 +232,7 @@ function life_post_type() {
 			'public'                => true,
 			'show_ui'               => true,
 			'show_in_menu'          => true,
-			'menu_position'         => 5,
+			'menu_position'         => 7,
 			'menu_icon'             => 'dashicons-admin-home',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
@@ -285,7 +290,7 @@ function trtv_post_type() {
 			'public'                => true,
 			'show_ui'               => true,
 			'show_in_menu'          => true,
-			'menu_position'         => 5,
+			'menu_position'         => 8,
 			'menu_icon'             => 'dashicons-video-alt3',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
@@ -344,7 +349,7 @@ function column_post_type() {
 			'public'                => true,
 			'show_ui'               => true,
 			'show_in_menu'          => true,
-			'menu_position'         => 5,
+			'menu_position'         => 9,
 			'menu_icon'             => 'dashicons-format-aside',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,

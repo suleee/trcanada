@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive for the products post type (shop page).
+ * The template for displaying archive for the Best post type.
  *
  * @package RED_Starter_Theme
  */
@@ -28,7 +28,7 @@ get_header(); ?>
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 	
-			<ul class="product-type-list">
+			<ul class=" post-cat-type-list best-type-list">
                     <?php    
                         $terms = get_terms( array(
                                             'taxonomy' => 'best_type',
@@ -37,8 +37,8 @@ get_header(); ?>
 
                         foreach ($terms as $term) :
                             $url = get_term_link ($term->slug , 'best_type');              
-                    	?>    
-						<li class="product-list">                   
+						?>    
+						<li class="post-cat-list">                   
                         <a href='<?php echo $url?>' class='button'>
 						
 						<p><?php echo $term->name; ?></p></a>

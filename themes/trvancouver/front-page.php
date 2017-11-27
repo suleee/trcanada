@@ -67,7 +67,7 @@ get_header(); ?>
         <?php
         // global $post;
         $args = array(
-        'post_type' => 'foodie',
+        'post_type' => 'trtv',
         'order' => 'DSC',
         'posts_per_page' => 4);
         $product_posts = get_posts( $args ); // returns an array of posts
@@ -78,10 +78,10 @@ get_header(); ?>
         <div class="front-post-single">
         
         <div class="post-thumbnail-wrapper">
-        <?php the_post_thumbnail( 'large' ); ?>
+        <?php the_content( ); ?></a>
         </div>
         <div class="content-title post-th-title">
-        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
+        <!-- <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a> -->
         </div>
         </div>
         <?php endforeach; wp_reset_postdata(); ?>

@@ -91,6 +91,7 @@
 }
 .front-posts {
     display: flex; // justify-content: space-between;
+    padding-bottom: 20px;
     .front-post-single {
         width: 23%;
         padding: 0 2%;
@@ -106,6 +107,8 @@
 .front-post-contianer {
     margin: 50px 0;
 }
+
+
 
 .fpc-trtv, .fpc-news {
     border-bottom: 1px solid $color__border;
