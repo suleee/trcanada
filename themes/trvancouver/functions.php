@@ -96,6 +96,8 @@ function tr_vancouver_scripts() {
 	
 	//true goes bottom
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	// wp_enqueue_script( 'rotator', get_template_directory_uri() . '/build/js/rotator.min.js', array('jquery'), '20171125', true );
+	wp_enqueue_script( 'rotator', get_template_directory_uri() . '/js/rotator.js', array('jquery'), '20171125', true );
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'red_comments', get_template_directory_uri() . '/js/main.js', array('jquery'), false, true);
 

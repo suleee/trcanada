@@ -106,7 +106,25 @@
         font-size: 15px;
     }
 }}
-///widget
+// Ad rotator
+.rotator {
+    position: relative;
+    .g-col {
+        display: none;
+        &.show {
+            display: inline-block;
+        }
+    }
+    .skipper {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
 // #adrotate_widgets-2 { 
 //     width: 200px;
 // }
