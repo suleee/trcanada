@@ -286,6 +286,45 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .rotator .skipper i {
       cursor: pointer; }
 
+.archive #primary, .archive .arhive-posts-container {
+  display: -ms-flexbox;
+  display: flex; }
+  .archive #primary #main, .archive .arhive-posts-container #main {
+    width: 70%; }
+  .archive #primary #secondary, .archive .arhive-posts-container #secondary {
+    width: 30%; }
+
+.archive .page-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .archive .page-header a {
+    text-decoration: none;
+    color: #777; }
+  .archive .page-header h2 {
+    font-size: 13px; }
+  .archive .page-header ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex; }
+    .archive .page-header ul li {
+      padding-right: 34px; }
+  .archive .page-header h1 {
+    border-left: 4px solid #136df9;
+    font-size: 20px;
+    padding-left: 10px; }
+
+.archive .posts {
+  width: 228px;
+  padding-right: 28px; }
+  .archive .posts img {
+    height: 111px; }
+
+.archive .content-area #secondary {
+  padding-left: 8px;
+  margin-top: 62px; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;

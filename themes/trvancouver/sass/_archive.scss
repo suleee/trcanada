@@ -11,11 +11,30 @@
     width: 30%;
     }
     }
-    .page-header h1{
+    
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        a{
+            text-decoration: none;
+            color:#777;
+            
+        }
+        h2{
+            font-size: 13px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                padding-right: 34px;
+            }
+        }
+    h1{
         border-left: 4px solid $color_tr;
         font-size: 20px;
         padding-left: 10px;	
-    }
+    }}
     .posts{
         width: 228px;
         padding-right: 28px;
@@ -30,4 +49,5 @@
             
             }
     }
+
     }
