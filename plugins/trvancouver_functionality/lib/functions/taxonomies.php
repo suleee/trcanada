@@ -7,7 +7,7 @@
 
 
 // Register Product Type Taxonomy
-function best_tax_product_type() {
+function best_tax_type() {
 
 	$labels = array(
 		'name'                       => 'Best Types',
@@ -43,12 +43,12 @@ function best_tax_product_type() {
 	register_taxonomy( 'best_type', array( 'best' ), $args );
 
 }
-add_action( 'init', 'best_tax_product_type', 0 );
+add_action( 'init', 'best_tax_type', 0 );
 
 
 
 // Register Custom Taxonomy
-function foodie_tax_product_type() {
+function foodie_tax_type() {
 
 	$labels = array(
 		'name'                       => 'Foodie Types',
@@ -84,4 +84,4 @@ function foodie_tax_product_type() {
 	register_taxonomy( 'foodie_type', array( 'post' ), $args );
 
 }
-add_action( 'init', 'foodie_tax_product_type(', 0 );
+add_action( 'init', 'foodie_tax_type(', 0 );

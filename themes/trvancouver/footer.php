@@ -27,8 +27,11 @@
 					</div>
 					<ul class="footer-second-section">
 						<li>contact</li>
+						<li> | </li>
 						<li>광고 및 제휴 문의</li>
+						<li> | </li>
 						<li> Kpop me</li>
+						<li> | </li>
 						<li>©<span>TR</span> Canada</li>
 					</ul>
 

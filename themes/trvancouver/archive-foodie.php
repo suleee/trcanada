@@ -52,7 +52,7 @@ get_header(); ?>
 			<!--<?php /* Start the Loop */ ?>-->
 				
 				
-			<div class="product-posts">
+			<div class="arhive-posts-container foodie-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="posts">
 						<div class="thumbnail-wrapper">
@@ -61,8 +61,8 @@ get_header(); ?>
 
 						<div class="title">
 							<?php the_title(); ?>
-							....
-							<?php echo CFS()->get( 'cost' ); ?>
+							<div><?php red_starter_posted_on(); ?> </div>
+							<!-- <?php echo CFS()->get( 'cost' ); ?> -->
 						</div>
 					</div>
 				<?php endwhile; ?>
@@ -72,6 +72,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 

@@ -49,8 +49,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   color: white;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  max-width: 900px;
+  max-width: 990px;
   margin: 0 auto; }
+  .small-menu a {
+    text-decoration: none;
+    color: white; }
+    .small-menu a:hover {
+      color: #259bfe; }
   .small-menu ul {
     display: -ms-flexbox;
     display: flex;
@@ -75,7 +80,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       justify-content: space-between;
   position: relative;
   padding: 20px 0;
-  max-width: 900px; }
+  max-width: 990px; }
   .logo-search-field .fa-search {
     color: #136df9; }
   .logo-search-field button {
@@ -85,6 +90,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     background: none;
     box-shadow: none;
     border: 0; }
+    .logo-search-field button:hover {
+      box-shadow: none; }
+    .logo-search-field button:focus {
+      border: none; }
 
 .main-navigation {
   border-top: 1px solid #eee;
@@ -98,7 +107,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding: 0 20px; }
 
 .menu-container {
-  max-width: 900px;
+  max-width: 990px;
   margin: 0 auto; }
 
 .site-footer {
@@ -109,7 +118,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   height: 100px; }
 
 .site-info-container, .instagram-container {
-  max-width: 900px;
+  max-width: 990px;
   margin: 0 auto; }
 
 .site-info-container {
@@ -149,7 +158,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding-right: 20px;
     font-size: 12px;
     color: #888; }
-  .footer-second-section li:nth-child(4) {
+  .footer-second-section li:nth-child(7) {
     font-weight: bold;
     color: black; }
   .footer-second-section span {
@@ -159,20 +168,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 900px;
+  max-width: 990px;
   margin: 0 auto; }
   .site-content .best-single-container {
     border: 1px solid #eee;
     border-radius: 3px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding: 20px 20px; }
   .site-content .best-thumb {
-    width: 50%; }
+    width: 50%;
+    height: 190px;
+    width: 282px;
+    overflow: hidden; }
   .site-content .content-p {
     width: 50%; }
   .site-content .contnet-continaer {
     width: 70%; }
   .site-content #secondary {
-    width: 30%; }
+    width: 30%;
+    margin-top: 30px;
+    padding-left: 36px; }
   .site-content .widget-left {
     width: 200px; }
   .site-content .firstpage-content-th {
@@ -190,7 +205,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .viewmore-btn {
   background: grey;
-  width: 630px;
   height: 32px;
   padding-top: 4px;
   margin-top: 30px;
@@ -218,11 +232,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .front-post-contianer {
   margin: 50px 0; }
 
-.fpc-food {
+.fpc-food, .fpc-news {
   border-bottom: 1px solid #eee; }
 
-#adrotate_widgets-2 {
-  width: 200px; }
+.fpc-trtv h2 {
+  display: -ms-flexbox;
+  display: flex; }
+  .fpc-trtv h2 span {
+    padding-left: 10px; }
+
+.fpc-trtv .yellow-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 20px;
+  background: #f3df41; }
+  .fpc-trtv .yellow-dot i {
+    color: white;
+    margin-left: 10px;
+    margin-top: 2px;
+    font-size: 15px; }
 
 .rotator {
   position: relative; }
@@ -538,7 +566,7 @@ p {
   font-size: 14px; }
 
 h2 {
-  font-size: 13px; }
+  font-size: 16px; }
   h2 span {
     color: #259bfe; }
 
@@ -792,6 +820,29 @@ a {
 
 .bypostauthor {
   display: block; }
+
+#primary, .arhive-posts-container {
+  display: -ms-flexbox;
+  display: flex; }
+  #primary #main, .arhive-posts-container #main {
+    width: 70%; }
+  #primary #secondary, .arhive-posts-container #secondary {
+    width: 30%; }
+
+.page-header h1 {
+  border-left: 4px solid #136df9;
+  font-size: 20px;
+  padding-left: 10px; }
+
+.posts {
+  width: 228px;
+  padding-right: 28px; }
+  .posts img {
+    height: 111px; }
+
+.content-area #secondary {
+  padding-left: 8px;
+  margin-top: 62px; }
 
 /*--------------------------------------------------------------
 # Media

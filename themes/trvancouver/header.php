@@ -23,13 +23,14 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="small-menu-container">
 				<div class="small-menu">
-				<div class="icons"><i class="fa fa-facebook" aria-hidden="true"></i>
-				<i class="fa fa-instagram" aria-hidden="true"></i>
-				<i class="fa fa-youtube-play" aria-hidden="true"></i>
+				<div class="icons">
+					<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 				</div>
 				<ul>
-				<li>Contact</li>
-				<li>KpopME</li>
+				<a href=""><li>Contact</li></a>
+				<a href=""><li>KpopME</li></a>
 				</ul>
 				</div>
 				</div>
