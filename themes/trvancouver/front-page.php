@@ -26,7 +26,7 @@ get_header(); ?>
         ?>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
         <div class="best-single-container">
-          <div class="content-sns-div">
+          <div class="p-content-div">
         <div class="content-top">
           <div class="content-title">
         <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
@@ -49,11 +49,9 @@ get_header(); ?>
             $content = get_the_content();
             $content = strip_tags($content);
             echo substr($content, 0, 280) . "...";
-          ?></p>
-          
-          <br/>
+          ?>
           <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
-          
+          </p>
         </div>
         </div>  
         </div> 

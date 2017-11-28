@@ -188,10 +188,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     height: 150px;
     width: 280px;
     object-fit: cover; }
-  .home .site-content .content-p-container a {
-    text-decoration: none;
-    color: #f09217;
-    font-size: 14px; }
+  .home .site-content .content-p-container, .home .site-content .best-thumb {
+    width: 50%; }
+  .home .site-content .content-p-container {
+    padding-left: 10px; }
+    .home .site-content .content-p-container .content-p {
+      margin: 0; }
+    .home .site-content .content-p-container a {
+      text-decoration: none;
+      color: #f09217;
+      font-size: 14px; }
   .home .site-content .social-sharing {
     width: 20%;
     padding-top: 45px;
@@ -282,6 +288,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     margin-left: 10px;
     margin-top: 2px;
     font-size: 15px; }
+
+.home .mashsb-container {
+  padding-left: 10px;
+  border-left: 1px solid #eee;
+  padding-top: 76px; }
+
+.home .p-content-div {
+  margin-right: 10px; }
+
+.home .mashsb-buttons a {
+  width: 70px;
+  font-size: 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .home .mashsb-buttons a .text {
+    padding-top: 2px; }
 
 .rotator {
   position: relative;
@@ -924,7 +948,9 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto; }
   #primary #main, .arhive-posts-container #main {
     width: 70%; }
   #primary #secondary, .arhive-posts-container #secondary {
@@ -938,8 +964,11 @@ a {
   height: 23px;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
   border-radius: 40px;
-  position: absolute;
-  z-index: 1; }
+  position: absolute; }
+  .play-btn img {
+    width: 12px;
+    margin-left: 8px;
+    margin-top: 6px; }
 
 .shape-t {
   background: url("../..img/triangle.png") no-repeat center 4.5rem;

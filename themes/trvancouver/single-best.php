@@ -24,12 +24,7 @@ get_header(); ?>
 			?>
 
 		<?php endwhile; // End of the loop. ?>
-
 			
-			<?php if ( comments_open() || get_comments_number() ) :
-    comments_template();
-endif;
-			?>
 		</main><!-- #main -->
 
 		<?php get_sidebar(); ?>

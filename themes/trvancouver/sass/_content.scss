@@ -75,10 +75,14 @@ width: 30%;
     background: linear-gradient(
         rgba(0,0,0, .75), 
         rgba(0,0,0, .75));
-    // border: 2px solid white;
+    
     border-radius: 40px;
     position: absolute;
-    z-index: 1;
+	img{
+		width: 12px;
+		margin-left: 8px;
+		margin-top: 6px;
+	}
  
 }
 
