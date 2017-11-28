@@ -171,108 +171,113 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .footer-widget-area {
   margin-top: 100px; }
 
-.site-content {
+.home .site-content {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   max-width: 990px;
   margin: 0 auto; }
-  .site-content .best-single-container {
+  .home .site-content .best-single-container {
     border: 1px solid #eee;
     border-radius: 3px;
     margin-bottom: 20px;
-    padding: 20px 20px; }
-  .site-content .best-thumb img {
+    padding: 20px 20px;
+    display: -ms-flexbox;
+    display: flex; }
+  .home .site-content .best-thumb img {
     height: 150px;
     width: 280px;
     object-fit: cover; }
-  .site-content .content-p {
-    padding-left: 20px;
-    width: 50%; }
-    .site-content .content-p a {
-      text-decoration: none;
-      color: #f09217;
-      font-size: 14px; }
-  .site-content .contnet-continaer {
+  .home .site-content .content-p-container a {
+    text-decoration: none;
+    color: #f09217;
+    font-size: 14px; }
+  .home .site-content .social-sharing {
+    width: 20%;
+    padding-top: 45px;
+    border-left: 1px solid #eee;
+    padding-left: 10px; }
+    .home .site-content .social-sharing a {
+      font-size: 9px; }
+  .home .site-content .best-posts-container {
+    margin-top: 11px; }
+  .home .site-content .contnet-continaer {
     width: 70%; }
-  .site-content #secondary {
+  .home .site-content #secondary {
     width: 30%;
     margin-top: 30px;
     padding-left: 36px; }
-  .site-content .widget-left {
+  .home .site-content .widget-left {
     width: 200px; }
-  .site-content .firstpage-content-th {
+  .home .site-content .firstpage-content-th {
     display: -ms-flexbox;
     display: flex;
     width: 100%; }
 
-.content-title a {
+.home .content-title a {
   text-decoration: none;
   font-size: 25px;
   color: black; }
 
-.content-title h3 {
+.home .content-title h3 {
   margin: 0; }
 
-.viewmore-btn {
+.home .viewmore-btn {
   background: grey;
   height: 32px;
   padding-top: 4px;
   margin-top: 30px;
   text-align: center; }
-  .viewmore-btn a {
+  .home .viewmore-btn a {
     text-decoration: none;
     color: white;
     font-size: 12px;
     text-align: center;
     padding-top: 20px; }
 
-.best-posts-container {
-  margin-top: 11px; }
-
-.front-best-post-date {
+.home .front-best-post-date {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
   min-height: 32px; }
-  .front-best-post-date p {
+  .home .front-best-post-date p {
     font-size: 12px;
     margin-right: 10px;
     margin-bottom: 20px;
     color: #c6c6c6; }
-    .front-best-post-date p .cat-best {
+    .home .front-best-post-date p .cat-best {
       color: #f09217; }
 
-.front-posts {
+.home .front-posts {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 20px; }
-  .front-posts .front-post-single {
+  .home .front-posts .front-post-single {
     width: 23%;
     padding: 0 2%; }
 
-.post-th-title a {
+.home .post-th-title a {
   font-size: 14px; }
 
-.front-post-contianer {
+.home .front-post-contianer {
   margin: 50px 0; }
 
-.fpc-trtv, .fpc-news {
+.home .fpc-trtv, .home .fpc-news {
   border-bottom: 1px solid #eee; }
 
-.fpc-trtv h2 {
+.home .fpc-trtv h2 {
   display: -ms-flexbox;
   display: flex; }
-  .fpc-trtv h2 span {
+  .home .fpc-trtv h2 span {
     padding-left: 10px; }
 
-.fpc-trtv .yellow-dot {
+.home .fpc-trtv .yellow-dot {
   width: 22px;
   height: 22px;
   border-radius: 20px;
   background: #f3df41; }
-  .fpc-trtv .yellow-dot i {
+  .home .fpc-trtv .yellow-dot i {
     color: white;
     margin-left: 10px;
     margin-top: 2px;
@@ -350,6 +355,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .best-posts {
   display: -ms-flexbox;
   display: flex; }
+
+.kboard-customer-poweredby {
+  display: none; }
 
 html {
   font-family: sans-serif;
@@ -921,6 +929,33 @@ a {
     width: 70%; }
   #primary #secondary, .arhive-posts-container #secondary {
     width: 30%; }
+
+.trtv-tb-w-bg {
+  position: relative; }
+
+.play-btn {
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  border-radius: 40px;
+  position: absolute;
+  z-index: 1; }
+
+.shape-t {
+  background: url("../..img/triangle.png") no-repeat center 4.5rem;
+  background-size: contain, 11rem 26rem, cover; }
+
+.home .play-btn {
+  top: 46px;
+  left: 102px; }
+
+.home .black-box {
+  width: 132px;
+  height: 74px; }
+
+.post-type-archive-trtv .black-box {
+  width: 200px;
+  height: 111px; }
 
 /*--------------------------------------------------------------
 # Media

@@ -1,31 +1,51 @@
-.site-content{
+.home{
+    .site-content{
     display: flex;
     width: 100%;
     max-width: 990px;
     margin: 0 auto;
-
+ 
     .best-single-container {
         border: 1px solid $color__border;
         border-radius: 3px;
         margin-bottom: 20px;
         padding: 20px 20px;
+        display: flex;
     }
     .best-thumb {
         img{
         height: 150px;
         width: 280px;
-        object-fit: cover;}
+        object-fit: cover;
+    }
     
     }
-    .content-p {
-        padding-left: 20px;
-        width: 50%;
+    // .content-p-container{
+    //     width: 50%;
+    // }
+    .content-p-container {
+        // padding-left: 20px;
+       
         a{
             text-decoration: none;
             color: $color_orange;
             font-size: 14px;
         }
     }
+.social-sharing {
+    width: 20%;
+    padding-top: 45px;
+    border-left: 1px solid $color__border;
+    padding-left: 10px;
+    a{
+        font-size: 9px;
+    }
+}
+
+
+.best-posts-container {
+    margin-top: 11px;
+}
     .contnet-continaer {
         width: 70%;
     }
@@ -70,9 +90,6 @@
     }
 }
 
-.best-posts-container {
-    margin-top: 11px;
-}
 .front-best-post-date{
     display: flex;
     border-bottom: 1px solid $color__border;
@@ -88,6 +105,9 @@
         }
         
     }
+}
+.shape-container{
+
 }
 .front-posts {
     display: flex; // justify-content: space-between;
@@ -130,7 +150,17 @@
         margin-top: 2px;
         font-size: 15px;
     }
-}}
+}
+
+
+}
+
+
+}
+
+
+
+
 // Ad rotator
 .rotator {
     position: relative;
@@ -157,7 +187,10 @@
     .g{
     border: 1px solid $color__border;
     padding: 20px 20px;
-}}
+}
+
+
+}
 
 
 

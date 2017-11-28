@@ -60,3 +60,53 @@
 width: 30%;
 }
 }
+
+
+// black bg on videos thumb
+.trtv-tb-w-bg{
+    position: relative;
+}
+
+.play-btn{
+    width: 23px;
+    height: 23px;
+    background: linear-gradient(
+        rgba(0,0,0, .75), 
+        rgba(0,0,0, .75));
+    // border: 2px solid white;
+    border-radius: 40px;
+    position: absolute;
+    z-index: 1;
+ 
+}
+
+.shape-t{
+    background: url("../..img/triangle.png") no-repeat center 4.5rem;
+	background-size: contain, 11rem 26rem, cover;
+	
+//  background-image: url(../../img/trianlge.png);
+//  background-size: 250px, 300px;
+       
+ }
+// .black-box{
+//     background: linear-gradient(
+//         rgba(0,0,0, .75), 
+//         rgba(0,0,0, .75));
+//     position: absolute;
+ 
+// }
+.home{
+	.play-btn{
+        top: 46px;
+        left: 102px;
+    
+	}
+.black-box{
+width: 132px;
+height: 74px;
+}
+}
+.post-type-archive-trtv{
+.black-box{
+	width: 200px;
+	height: 111px;}}

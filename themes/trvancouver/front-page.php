@@ -26,6 +26,7 @@ get_header(); ?>
         ?>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
         <div class="best-single-container">
+          <div class="content-sns-div">
         <div class="content-top">
           <div class="content-title">
         <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
@@ -40,16 +41,23 @@ get_header(); ?>
           <div class="contetnt firstpage-content-th">
           <div class="best-thumb">
           <?php the_post_thumbnail( 'large' ); ?></div>
-          <div class="content-p">
+          
+          
+          <div class="content-p-container">
+            <p class="content-p">
           <?php
             $content = get_the_content();
             $content = strip_tags($content);
             echo substr($content, 0, 280) . "...";
-          ?>
+          ?></p>
+          
           <br/>
           <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
-          </div>
+          
         </div>
+        </div>  
+        </div> 
+        <?php echo do_shortcode( '[wp_social_sharing]' ); ?>
         </div>
         <?php endforeach; wp_reset_postdata(); ?>
           </div>
@@ -78,8 +86,13 @@ get_header(); ?>
 
         <div class="front-post-single">
         
-        <div class="post-thumbnail-wrapper">
-        <?php the_content( ); ?></a>
+        <div class="post-thumbnail-wrapper trtv-tb-w-bg">
+        <div class="shape-t"></div>
+        <div class="play-btn"></div>
+          <!-- <div class="black-box"></div> -->
+        <?php the_post_thumbnail( 'large' ); ?>
+        </div>
+        <div class="content-title post-th-title">
         <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
         </div>
         </div>

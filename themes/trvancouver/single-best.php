@@ -25,6 +25,18 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
+
+		<footer class="social-icon">
+                        <div class="social-media-wrapper">
+                            <a class="social-media"><i class="fa fa-facebook" aria-hidden="true"></i> Like</a>
+                            <a class="social-media"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+                            <a class="social-media"><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</a>
+                        </div>
+                </footer>
+			<?php if ( comments_open() || get_comments_number() ) :
+    comments_template();
+endif;
+			?>
 		</main><!-- #main -->
 
 		<?php get_sidebar(); ?>
