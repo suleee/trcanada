@@ -9,15 +9,36 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
+
+
+<p>home >> best >>	list</p>
+<?php
+$categories = get_terms( array(
+	'taxonomy' => 'best_type',
+	'orderby' => 'name',
+	'hide_empty' => true,
+));
+$separator = ' ';
+$output = '';
+if ( ! empty( $categories ) ) {
+    foreach( $categories as $category ) {
+        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+    }
+    echo trim( $output, $separator );
+}
+?>
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<div class="entry-meta">
+	<?php red_starter_posted_by(); ?> <?php red_starter_posted_on(); ?>/ <?php red_starter_comment_count(); ?> 
+		</div><!-- .entry-meta -->
+
+	
+	<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
+		
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -29,6 +50,37 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+
+	<div>
+	Tags: 
+	</div>
+
+	<div class="rotatot-single-post-container">
+	<div class="rotator rotator-single-post">
+      <?php echo adrotate_group(11); ?>
+	</div>
+	
+	<div class="rotator rotator-single-post">
+      <?php echo adrotate_group(10); ?>
+	</div>
+	</div>
+	
+	<?php echo do_shortcode('[mashshare]'); ?>
+
+
+	<div class="p-n-article-container">
+	<div>
+		<?php previous_post_link('<strong>%link</strong>', 'Previous article'); ?> 
+			</div>   
+	<div>
+	<?php next_post_link('<strong>%link</strong>', 'Next article'); ?>
+			</div>
+			</div>
+
+
+
+		
+
 
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>

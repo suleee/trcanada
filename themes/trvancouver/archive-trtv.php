@@ -19,14 +19,17 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 				
 				
-			<div class="arhive-posts-container best-posts">
+			<div class="arhive-posts-container trtv-posts">
             <?php while ( have_posts() ) : the_post(); ?>
             
                 <div class="posts">
-                    <div class="thumbnail-wrapper">
-					<div class="play-btn"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
-         			 <div class="black-box"></div>
-                        <a href = "<?php the_permalink(); ?> " rel="bookmark"><?php the_post_thumbnail( ); ?></a>
+				<div class="post-thumbnail-wrapper trtv-tb-w-bg">
+				<div class="play-btn">
+				  <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
+				</div>
+						<a href = "<?php the_permalink(); ?> " rel="bookmark">
+						
+						<?php the_post_thumbnail( ); ?></a>
                     </div>
 
                     <div class="title">

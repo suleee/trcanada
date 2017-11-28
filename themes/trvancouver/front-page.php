@@ -8,6 +8,7 @@
 get_header(); ?>
 
 <section class="contnet-continaer front-page">
+<div>text bar</div>
     <div class="rotator">
       <div class="skipper">
         <i class="fa fa-caret-left prev" aria-hidden="true"></i>
@@ -38,7 +39,7 @@ get_header(); ?>
         <p><?php comments_number(); ?></p>
         </div>
         </div>
-          <div class="contetnt firstpage-content-th">
+          <div class="content firstpage-content-th">
           <div class="best-thumb">
           <?php the_post_thumbnail( 'large' ); ?></div>
           
@@ -68,7 +69,10 @@ get_header(); ?>
 
 
 <div class="front-post-contianer fpc-trtv">
-    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i></div><span> TRTV </span></h2>
+<div class="fp-post-header">
+    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i>
+  </div><span> TRTV </span></h2> <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+  </div>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;
@@ -84,7 +88,6 @@ get_header(); ?>
         <div class="front-post-single">
         
         <div class="post-thumbnail-wrapper trtv-tb-w-bg">
-        <div class="shape-t"></div>
         <div class="play-btn">
           <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
         </div>
@@ -103,7 +106,9 @@ get_header(); ?>
 
 
   <div class="front-post-contianer fpc-news">
-    <h2>News</h2>
+  <div class="fp-post-header"><h2> NEWS </h2>
+    <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+        </div>
       <div class="front-posts front-newsposts">
         <?php
         // global $post;
@@ -129,8 +134,9 @@ get_header(); ?>
       </div>
   </div>
   <div class="front-post-contianer fpc-foodie">
-    <h2><span> 맛집 </span></h2>
+    <div class="fp-post-header"><h2><span> 맛집 </span></h2>
     <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+        </div>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;

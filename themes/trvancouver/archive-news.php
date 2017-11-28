@@ -17,7 +17,7 @@ get_header(); ?>
 			//change the name of header of the page
 			function archive_best_title( $title) {
 			if(is_post_type_archive('news')){
-				$title = '티알이 뽑은 베스트 랭킹';
+				$title = 'news';
 				}
 				return $title;
 				}
@@ -51,28 +51,50 @@ get_header(); ?>
 
 			</header>
 
-			<?php /* Start the Loop */ ?>
-				
-				
-			<div class="arhive-posts-container best-posts">
-				<?php while ( have_posts() ) : the_post(); ?>
-				
-					<div class="posts">
-						<div class="thumbnail-wrapper">
-							<a href = "<?php the_permalink(); ?> " rel="bookmark"><?php the_post_thumbnail( ); ?></a>
-						</div>
-
-						<div class="title">
-							<?php the_title('<h3>', '</h3>'); ?>
-							<div><?php red_starter_posted_on(); ?> </div>
-						
-						</div>
-					</div>
-				<?php endwhile; ?>
-			</div>
-			<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+			<?php
+        // global $post;
+        $args = array(
+        'post_type' => 'news',
+        'order' => 'DSC',
+        'posts_per_page' => 3);
+        $product_posts = get_posts( $args ); // returns an array of posts
+        ?>
+        <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+        <div class="best-single-container">
+          <div class="p-content-div">
+        <div class="content-top">
+          <div class="content-title">
+        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
+        </div> 
+        <div class="front-best-post-date">
+        <p>Posted By: <?php red_starter_posted_by(); ?></p> 
+        <p>On: <?php red_starter_posted_on(); ?></p> 
+        <p>In: <span class="cat-best">Best</span></p>
+        <p><?php comments_number(); ?></p>
+        </div>
+        </div>
+          <div class="contetnt firstpage-content-th">
+          <div class="best-thumb">
+          <?php the_post_thumbnail( 'large' ); ?></div>
+          
+          
+          <div class="content-p-container">
+            <p class="content-p">
+          <?php
+            $content = get_the_content();
+            $content = strip_tags($content);
+            echo substr($content, 0, 280) . "...";
+          ?>
+          <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
+          </p>
+        </div>
+        </div>  
+        </div> 
+        <?php echo do_shortcode('[mashshare]'); ?>
+        </div>
+        <?php endforeach; wp_reset_postdata(); ?>
+		  </div>
+		  
 		<?php endif; ?>
 		</main><!-- #main -->
 		<?php get_sidebar(); ?>
