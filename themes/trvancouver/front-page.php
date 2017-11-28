@@ -66,8 +66,7 @@ get_header(); ?>
 
  -->
 
-<div style="display: flex;
-    justify-content: flex-end;" > <a href="best">show more posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+<div style="display: flex;justify-content: flex-end;" > <a href="best">show more posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
 
 
 <div class="front-post-contianer fpc-trtv">
@@ -88,7 +87,9 @@ get_header(); ?>
         
         <div class="post-thumbnail-wrapper trtv-tb-w-bg">
         <div class="shape-t"></div>
-        <div class="play-btn"></div>
+        <div class="play-btn">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
+        </div>
           <!-- <div class="black-box"></div> -->
         <?php the_post_thumbnail( 'large' ); ?>
         </div>
@@ -129,12 +130,6 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
-
-
-
-
-
-
   <div class="front-post-contianer fpc-foodie">
     <h2><span> 맛집 </span></h2>
     <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
