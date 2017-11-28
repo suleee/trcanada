@@ -84,4 +84,4 @@ function foodie_tax_type() {
 	register_taxonomy( 'foodie_type', array( 'post' ), $args );
 
 }
-add_action( 'init', 'foodie_tax_type(', 0 );
+add_action( 'init', 'foodie_tax_type', 0 );
