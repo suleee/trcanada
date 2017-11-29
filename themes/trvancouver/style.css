@@ -46,16 +46,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .small-menu {
   display: -ms-flexbox;
   display: flex;
-  color: white;
   -ms-flex-pack: justify;
       justify-content: space-between;
   max-width: 990px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 3px; }
   .small-menu .icons a {
     padding-left: 10px; }
   .small-menu a {
-    text-decoration: none;
-    color: white; }
+    text-decoration: none; }
     .small-menu a:hover {
       color: #259bfe; }
   .small-menu ul {
@@ -68,8 +67,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       font-size: 12px; }
 
 .small-menu-container {
-  background: #24282d;
-  height: 30px; }
+  height: 30px;
+  border-top: 2px solid #136df9; }
 
 .easylogo {
   width: 200px;
@@ -81,13 +80,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   -ms-flex-pack: justify;
       justify-content: space-between;
   position: relative;
-  padding: 20px 0;
+  padding: 50px 0;
   max-width: 990px; }
   .logo-search-field .fa-search {
     color: #136df9; }
   .logo-search-field button {
     position: absolute;
-    top: 36px;
+    top: 67px;
     right: 12px;
     background: none;
     box-shadow: none;
@@ -98,9 +97,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       border: none; }
 
 .main-navigation {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 30px 0; }
+  border-top: 1px solid #f1f3f6;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 15px 0; }
   .main-navigation a {
     color: black; }
   .main-navigation a:hover {
@@ -111,6 +110,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding: 0; }
 
 .menu-container {
+  margin: 0 auto; }
+
+.logo-search-field, .menu-menu-1-container {
   max-width: 990px;
   margin: 0 auto; }
 
@@ -121,13 +123,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   background: grey;
   height: 100px; }
 
-.site-info-container, .instagram-container {
+.footer-first-section, .footer-second-section {
   max-width: 990px;
+  margin: 0 auto; }
+
+.site-info-container, .instagram-container {
   margin: 0 auto; }
 
 .site-info-container {
   margin-top: 50px;
-  border-top: 2px solid black; }
+  border-top: 1px solid #888; }
 
 .footer-sns-contianer {
   text-align: center; }
@@ -156,7 +161,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .footer-second-section {
   border-top: 1px solid #eee;
   padding-top: 15px;
-  margin: 0;
   padding-left: 0; }
   .footer-second-section li {
     padding-right: 20px;
@@ -171,16 +175,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .footer-widget-area {
   margin-top: 100px; }
 
+.sb_instagram_header, #sbi_load {
+  display: none; }
+
 .home .site-content {
   display: -ms-flexbox;
   display: flex;
-  max-width: 990px;
+  max-width: 980px;
   margin: 0 auto;
   width: 100%; }
   .home .site-content .contnet-continaer {
-    width: 72%; }
+    width: 75%; }
   .home .site-content #secondary {
-    width: 28%;
+    width: 25%;
     margin-top: 30px;
     padding-left: 36px; }
   .home .site-content .widget-left {
@@ -204,14 +211,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: flex;
   padding-bottom: 20px; }
   .home .front-posts .front-post-single {
-    max-width: 158px;
-    margin: 0 10px; }
+    max-width: 165px;
+    margin: 0 12px; }
   .home .front-posts .front-post-single:nth-child(4) {
-    margin-left: 10px;
+    margin-left: 12px;
     margin-right: 0; }
   .home .front-posts .front-post-single:nth-child(1) {
     margin-left: 0;
-    margin-right: 10px; }
+    margin-right: 12px; }
 
 .home .post-th-title a {
   font-size: 14px; }
@@ -249,72 +256,89 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .fp-post-header p {
   color: #888; }
 
-.sb_instagram_header,
-#sbi_load {
-  display: none; }
-
-.trtv-tb-w-bg {
+.home .trtv-tb-w-bg {
   position: relative; }
 
-.play-btn {
+.home .play-btn {
   width: 23px;
   height: 23px;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
   border-radius: 40px;
-  position: absolute; }
-  .play-btn img {
+  position: absolute;
+  top: 61px;
+  left: 130px; }
+  .home .play-btn img {
     width: 12px;
     margin-left: 8px;
     margin-top: 6px; }
 
-.shape-t {
+.home .shape-t {
   background: url("../..img/triangle.png") no-repeat center 4.5rem;
   background-size: contain, 11rem 26rem, cover; }
 
-.home .play-btn {
-  top: 61px;
-  left: 130px; }
+.home .firstpage-content-th {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
 
-.home .black-box {
-  width: 132px;
-  height: 74px; }
+.home .front-best-post-date {
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+  min-height: 32px; }
+  .home .front-best-post-date p {
+    font-size: 12px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: #c6c6c6; }
+    .home .front-best-post-date p .cat-best {
+      color: #f09217; }
 
-.post-type-archive-trtv .black-box {
-  width: 200px;
-  height: 111px; }
+.home .content-p-container {
+  padding-left: 10px; }
+  .home .content-p-container .content-p {
+    margin: 0; }
+  .home .content-p-container a {
+    text-decoration: none;
+    color: #f09217;
+    font-size: 14px; }
 
-.rotator {
-  position: relative;
-  height: 120px;
+.home .best-single-container {
   border: 1px solid #eee;
-  margin-top: 25px; }
-  .rotator .g-col {
-    display: none; }
-    .rotator .g-col.show {
-      display: inline-block; }
-  .rotator .skipper {
-    position: absolute;
-    top: -5px;
-    right: 1px; }
-    .rotator .skipper i {
-      cursor: pointer; }
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 20px 20px;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 11px; }
+  .home .best-single-container a {
+    text-decoration: none;
+    color: black; }
+  .home .best-single-container h3 {
+    margin-top: 0; }
 
-#adrotate_widgets-4 .g {
-  border: 1px solid #eee;
-  padding: 20px 20px; }
+.home .best-thumb img {
+  height: 150px;
+  width: 280px;
+  object-fit: cover; }
+
+.home .fp-post-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 .archive .content-area, .archive .arhive-posts-container {
   display: -ms-flexbox;
   display: flex;
-  max-width: 990px;
+  max-width: 980px;
   margin: 0 auto;
-  width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  width: 100%; }
   .archive .content-area #main, .archive .arhive-posts-container #main {
-    width: 75%; }
+    width: 76%; }
   .archive .content-area #secondary, .archive .arhive-posts-container #secondary {
-    width: 25%;
+    width: 24%;
     padding-left: 15px; }
 
 .archive .page-header {
@@ -366,11 +390,29 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: -ms-flexbox;
   display: flex; }
 
+.page-id-10 .content-area {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .page-id-10 .content-area #main {
+    width: 75%; }
+  .page-id-10 .content-area #secondary {
+    width: 25%;
+    padding-left: 15px;
+    margin-top: 30px; }
+
 .page-id-10 .kboard-customer-poweredby {
   display: none; }
 
-.page-id-10 #secondary {
-  margin-top: 30px; }
+.page-id-10 .fa-search {
+  display: none; }
+
+.page-id-10 .icon-search {
+  color: #0089ff; }
 
 .post-type-archive-news {
   width: 100%; }
@@ -383,65 +425,100 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .post-type-archive-news .site-content {
     display: -ms-flexbox;
     display: flex;
-    max-width: 990px;
+    max-width: 980px;
     margin: 0 auto;
     width: 100%; }
-    .post-type-archive-news .site-content .contnet-continaer {
-      width: 67%; }
     .post-type-archive-news .site-content #secondary {
-      width: 33%;
+      width: 33.5%;
       margin-top: 30px;
       padding-left: 36px; }
     .post-type-archive-news .site-content .widget-left {
       width: 200px; }
-
-.home .firstpage-content-th, .post-type-archive-news .firstpage-content-th {
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%; }
-
-.home .front-best-post-date, .post-type-archive-news .front-best-post-date {
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 20px;
-  min-height: 32px; }
-  .home .front-best-post-date p, .post-type-archive-news .front-best-post-date p {
-    font-size: 12px;
-    margin-right: 10px;
+  .post-type-archive-news .firstpage-content-th {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .post-type-archive-news .front-best-post-date {
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #eee;
     margin-bottom: 20px;
-    color: #c6c6c6; }
-    .home .front-best-post-date p .cat-best, .post-type-archive-news .front-best-post-date p .cat-best {
-      color: #f09217; }
+    min-height: 32px; }
+    .post-type-archive-news .front-best-post-date p {
+      font-size: 12px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      color: #c6c6c6; }
+      .post-type-archive-news .front-best-post-date p .cat-best {
+        color: #f09217; }
+  .post-type-archive-news .content-p-container {
+    padding-left: 10px; }
+    .post-type-archive-news .content-p-container .content-p {
+      margin: 0; }
+    .post-type-archive-news .content-p-container a {
+      text-decoration: none;
+      color: #f09217;
+      font-size: 14px; }
+  .post-type-archive-news .news-single-container {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 11px; }
+  .post-type-archive-news .news-thumb img {
+    height: 150px;
+    width: 280px;
+    object-fit: cover; }
+  .post-type-archive-news .fp-post-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
 
-.home .content-p-container, .post-type-archive-news .content-p-container {
-  padding-left: 10px; }
-  .home .content-p-container .content-p, .post-type-archive-news .content-p-container .content-p {
-    margin: 0; }
-  .home .content-p-container a, .post-type-archive-news .content-p-container a {
-    text-decoration: none;
-    color: #f09217;
-    font-size: 14px; }
-
-.home .best-single-container, .post-type-archive-news .best-single-container {
-  border: 1px solid #eee;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  padding: 20px 20px;
+.page-id-135 .content-area {
   display: -ms-flexbox;
   display: flex;
-  margin-top: 11px; }
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%; }
+  .page-id-135 .content-area #main {
+    width: 75%; }
+  .page-id-135 .content-area #secondary {
+    width: 25%;
+    padding-left: 15px;
+    margin-top: 30px; }
 
-.home .best-thumb img, .post-type-archive-news .best-thumb img {
-  height: 150px;
-  width: 280px;
-  object-fit: cover; }
-
-.home .fp-post-header, .post-type-archive-news .fp-post-header {
+.post-type-archive-column .site-content {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%; }
+  .post-type-archive-column .site-content #main {
+    width: 75%; }
+  .post-type-archive-column .site-content #secondary {
+    width: 25%;
+    padding-left: 15px;
+    margin-top: 30px; }
+
+.post-type-archive-life .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%; }
+  .post-type-archive-life .site-content #main {
+    width: 75%; }
+  .post-type-archive-life .site-content #secondary {
+    width: 25%;
+    padding-left: 15px;
+    margin-top: 30px; }
+
+.post-type-archive-foodie .foodie-posts {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .home .mashsb-container, .post-type-archive-news .mashsb-container {
   padding-left: 10px;
@@ -465,7 +542,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .single .content-area, .single .arhive-posts-container {
   display: -ms-flexbox;
   display: flex;
-  max-width: 990px;
+  max-width: 980px;
   margin: 0 auto;
   width: 100%;
   -ms-flex-wrap: wrap;
@@ -475,6 +552,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .single .content-area #secondary, .single .arhive-posts-container #secondary {
     width: 25%;
     padding-left: 15px; }
+
+.rotator {
+  position: relative;
+  height: 120px;
+  border: 1px solid #eee;
+  margin-top: 25px; }
+  .rotator .g-col {
+    display: none; }
+    .rotator .g-col.show {
+      display: inline-block; }
+  .rotator .skipper {
+    position: absolute;
+    top: -5px;
+    right: 1px; }
+    .rotator .skipper i {
+      cursor: pointer; }
+
+#adrotate_widgets-4 .g {
+  border: 1px solid #eee;
+  padding: 20px 20px; }
 
 html {
   font-family: sans-serif;
@@ -848,6 +945,11 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+input[type="search"] {
+  color: #666;
+  border: 1px solid #0089ff;
+  border-radius: 1px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -897,6 +999,8 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none;
+    font-weight: bold;
+    color: #222;
     text-transform: uppercase; }
 
 /* Small menu. */
@@ -928,6 +1032,10 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.gp-back-to-top {
+  background: #136df9 !important;
+  border-radius: 0 !important; }
 
 /*--------------------------------------------------------------
 # Accessibility

@@ -1,9 +1,7 @@
-.page-id-10{
+.page-id-135{
 
     .content-area{
         @include general-width;
-        flex-wrap: wrap;
-    
     #main{
         width: 75%;
     }
@@ -14,14 +12,4 @@
     }
     }
     
-.kboard-customer-poweredby{
-display: none;
-}    
-
-.fa-search{
-    display: none;
-}
-.icon-search{
-    color: #0089ff;
-}
 }

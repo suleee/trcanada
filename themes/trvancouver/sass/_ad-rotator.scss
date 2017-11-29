@@ -1,0 +1,29 @@
+
+// Ad rotator
+.rotator {
+    position: relative;
+    height: 120px;
+    border: 1px solid $color__border;
+    margin-top: 25px;
+    .g-col {
+        display: none;
+        &.show {
+            display: inline-block;
+        }
+    }
+    .skipper {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+#adrotate_widgets-4 {
+    .g {
+        border: 1px solid $color__border;
+        padding: 20px 20px;
+    }
+}

@@ -25,13 +25,13 @@
 				<div class="small-menu-container">
 				<div class="small-menu">
 				<div class="icons">
-					<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/trcanadadotcom/about/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/trcanadadotcom/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 					<a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 				</div>
 				<ul>
-				<a href=""><li>Contact</li></a>
-				<a href=""><li>KpopME</li></a>
+				<a href=""><li>CONTACT</li></a>
+				<a href=""><li>KPOPME</li></a>
 				</ul>
 				</div>
 				</div>

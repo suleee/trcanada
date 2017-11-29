@@ -6,14 +6,17 @@
     background: grey;
     height: 100px;
 }
-
-.site-info-container, .instagram-container{
+.footer-first-section, .footer-second-section{
     max-width: 990px;
+    margin: 0 auto;
+}
+.site-info-container, .instagram-container{
+    // max-width: 990px;
     margin: 0 auto;
 }
 .site-info-container{
     margin-top: 50px;
-    border-top: 2px solid black;
+    border-top: 1px solid #888;
 }
 .footer-sns-contianer{
     text-align: center;
@@ -44,7 +47,7 @@
 .footer-second-section{
     border-top: 1px solid $color__border;
     padding-top: 15px;
-    margin: 0;
+    // margin: 0;
     padding-left: 0;
     li{
         padding-right: 20px;
@@ -61,4 +64,11 @@
 }
 .footer-widget-area{
 margin-top: 100px;
+}
+
+
+//footer instagram
+.sb_instagram_header, #sbi_load {
+    display: none;
+
 }

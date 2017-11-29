@@ -9,15 +9,25 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="title">
+							<?php the_title('<h3>', '</h3>'); ?>
+						</div>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+					<div class="posts">
+						<div class="thumbnail-wrapper">
+							<?php the_post_thumbnail( ); ?>
+						</div>
+						<?php the_content(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-			<?php endwhile; // End of the loop. ?>
+					
+					</div>
+				<?php endwhile; ?>
+		
 
 		</main><!-- #main -->
 		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
+

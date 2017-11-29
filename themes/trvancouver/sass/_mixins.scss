@@ -14,10 +14,56 @@
 
 @mixin general-width{
 	display: flex;
-	max-width: 990px;
+	max-width: 980px;
 	margin: 0 auto;
 	width: 100%;
 }
+
+@mixin post-container{
+border: 1px solid $color__border;
+border-radius: 3px;
+margin-bottom: 20px;
+padding: 20px 20px;
+display: flex;
+margin-top: 11px;
+}
+
+
+@mixin post-container-date{
+display: flex;
+border-bottom: 1px solid $color__border;
+margin-bottom: 20px;
+min-height: 32px;
+p{
+	font-size: 12px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	color: $color_date;
+	.cat-best{
+		color: $color_orange;
+	}
+}}
+
+@mixin post-container-thumb{
+height: 150px;
+width: 280px;
+object-fit: cover;
+}
+
+
+@mixin video-playbtn-shape{
+width: 23px;
+height: 23px;
+background: linear-gradient( rgba(0, 0, 0, .75), rgba(0, 0, 0, .75));
+border-radius: 40px;
+position: absolute;
+img {
+	width: 12px;
+	margin-left: 8px;
+	margin-top: 6px;
+}
+}
+
 
 
 // @include media ($desktop-width) {
