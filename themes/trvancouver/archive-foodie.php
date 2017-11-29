@@ -54,7 +54,7 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 				
 				
-			<div class="arhive-posts-container best-posts">
+			<div class="arhive-posts-container foodie-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
 				
 					<div class="posts">

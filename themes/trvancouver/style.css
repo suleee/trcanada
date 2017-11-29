@@ -174,9 +174,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .site-content {
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   max-width: 990px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
   .home .site-content .contnet-continaer {
     width: 72%; }
   .home .site-content #secondary {
@@ -221,10 +221,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .home .front-post-contianer .content-title a {
     font-size: 15px; }
 
-.home .best-thumb, .home .content-p-container {
+.home .best-thumb,
+.home .content-p-container {
   width: 50%; }
 
-.home .fpc-trtv, .home .fpc-news {
+.home .fpc-trtv,
+.home .fpc-news {
   border-bottom: 1px solid #eee; }
 
 .home .fpc-trtv h2 {
@@ -247,7 +249,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .fp-post-header p {
   color: #888; }
 
-.sb_instagram_header, #sbi_load {
+.sb_instagram_header,
+#sbi_load {
   display: none; }
 
 .trtv-tb-w-bg {
@@ -300,6 +303,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border: 1px solid #eee;
   padding: 20px 20px; }
 
+.archive .content-area, .archive .arhive-posts-container {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 990px;
+  margin: 0 auto;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .archive .content-area #main, .archive .arhive-posts-container #main {
+    width: 75%; }
+  .archive .content-area #secondary, .archive .arhive-posts-container #secondary {
+    width: 25%;
+    padding-left: 15px; }
+
 .archive .page-header {
   display: -ms-flexbox;
   display: flex;
@@ -331,7 +348,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .archive .posts {
   width: 33%;
-  padding-right: 20px; }
+  padding-right: 10px; }
   .archive .posts img {
     height: 111px;
     object-fit: cover; }
@@ -366,9 +383,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .post-type-archive-news .site-content {
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
     max-width: 990px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
     .post-type-archive-news .site-content .contnet-continaer {
       width: 67%; }
     .post-type-archive-news .site-content #secondary {
@@ -382,14 +399,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: -ms-flexbox;
   display: flex;
   width: 100%; }
-
-.home .content-title a, .post-type-archive-news .content-title a {
-  text-decoration: none;
-  font-size: 25px;
-  color: black; }
-
-.home .content-title h3, .post-type-archive-news .content-title h3 {
-  margin: 0; }
 
 .home .front-best-post-date, .post-type-archive-news .front-best-post-date {
   display: -ms-flexbox;
@@ -428,25 +437,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   width: 280px;
   object-fit: cover; }
 
-.home .mashsb-container, .post-type-archive-news .mashsb-container {
-  padding-left: 10px;
-  border-left: 1px solid #eee;
-  padding-top: 70px; }
-
-.home .p-content-div, .post-type-archive-news .p-content-div {
-  margin-right: 10px; }
-
-.home .mashsb-buttons a, .post-type-archive-news .mashsb-buttons a {
-  width: 70px;
-  font-size: 10px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  margin-bottom: 15px; }
-  .home .mashsb-buttons a .text, .post-type-archive-news .mashsb-buttons a .text {
-    padding-top: 2px; }
-
 .home .fp-post-header, .post-type-archive-news .fp-post-header {
   display: -ms-flexbox;
   display: flex;
@@ -472,14 +462,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .home .mashsb-buttons a .text, .post-type-archive-news .mashsb-buttons a .text {
     padding-top: 2px; }
 
-.post-type-archive-trtv .trtv-posts {
-  padding-top: 30px; }
-
-.post-type-archive-trtv .play-btn {
-  top: 85px;
-  left: 170px; }
-  .post-type-archive-trtv .play-btn img {
-    height: 10px; }
+.single .content-area, .single .arhive-posts-container {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 990px;
+  margin: 0 auto;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .single .content-area #main, .single .arhive-posts-container #main {
+    width: 75%; }
+  .single .content-area #secondary, .single .arhive-posts-container #secondary {
+    width: 25%;
+    padding-left: 15px; }
 
 html {
   font-family: sans-serif;
@@ -1041,22 +1036,6 @@ a {
 
 .bypostauthor {
   display: block; }
-
-.archive .content-area, .single .content-area, .page-id-10 .content-area {
-  max-width: 990px; }
-
-.archive .content-area, .archive .arhive-posts-container, .single .content-area, .single .arhive-posts-container, .page-id-10 .content-area, .page-id-10 .arhive-posts-container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto; }
-  .archive .content-area #main, .archive .arhive-posts-container #main, .single .content-area #main, .single .arhive-posts-container #main, .page-id-10 .content-area #main, .page-id-10 .arhive-posts-container #main {
-    width: 75%; }
-  .archive .content-area #secondary, .archive .arhive-posts-container #secondary, .single .content-area #secondary, .single .arhive-posts-container #secondary, .page-id-10 .content-area #secondary, .page-id-10 .arhive-posts-container #secondary {
-    width: 25%;
-    padding-left: 15px; }
 
 /*--------------------------------------------------------------
 # Media

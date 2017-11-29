@@ -12,10 +12,7 @@
     width: 45%;
 }
 .site-content{
-    display: flex;
-    width: 100%;
-    max-width: 990px;
-    margin: 0 auto;
+    @include general-width;
     .contnet-continaer {
         width: 67%;
     }
@@ -31,21 +28,9 @@
 
 }
 .home, .post-type-archive-news{
-    
     .firstpage-content-th {
         display: flex;
         width: 100%;
-    }
-
-    .content-title {
-        a {
-            text-decoration: none;
-            font-size: 25px;
-            color: black;
-        }
-        h3 {
-            margin: 0;
-        }
     }
     .front-best-post-date{
         display: flex;
@@ -60,7 +45,6 @@
             .cat-best{
                 color: $color_orange;
             }
-            
         }
     }
 .content-p-container {
@@ -88,82 +72,14 @@
         width: 280px;
         object-fit: cover;
     }
-    
     }
-
-// sns sharing btn
-
-.mashsb-container{
-    padding-left: 10px;
-    border-left: 1px solid $color__border;
-    padding-top: 70px;
-
-}
-.p-content-div{
-    margin-right: 10px;
-}
-.mashsb-buttons a{
-    width: 70px;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    .text{
-        padding-top: 2px;
-    }
-}
-
-
-
-
-
 .fp-post-header{
     display: flex;
     justify-content: space-between;
     }
-
-// sns sharing btn
-
-.mashsb-container{
-    padding-left: 10px;
-    border-left: 1px solid $color__border;
-    padding-top: 70px;
-
-}
-.p-content-div{
-    margin-right: 10px;
-}
-.mashsb-buttons a{
-    width: 70px;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-    .text{
-        padding-top: 2px;
-    }
-}
-
-
 }
 
 
 
 
 
-
-///tv
-
-.post-type-archive-trtv{
-
-.trtv-posts{
-padding-top: 30px;
-}
-.play-btn {
-    top: 85px;
-    left: 170px;
-    img{
-    height:  10px;
-}
-}
-}

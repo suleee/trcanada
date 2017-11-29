@@ -1,0 +1,22 @@
+// sns sharing btn
+.home, .post-type-archive-news{
+.mashsb-container{
+    padding-left: 10px;
+    border-left: 1px solid $color__border;
+    padding-top: 70px;
+
+}
+.p-content-div{
+    margin-right: 10px;
+}
+.mashsb-buttons a{
+    width: 70px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    .text{
+        padding-top: 2px;
+    }
+}
+}

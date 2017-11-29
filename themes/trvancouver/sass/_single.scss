@@ -1,0 +1,14 @@
+.single{
+    .content-area, .arhive-posts-container{
+        @include general-width;
+        flex-wrap: wrap;
+    
+    #main{
+        width: 75%;
+    }
+    #secondary{
+    width: 25%;
+    padding-left: 15px;
+    }
+    }
+}

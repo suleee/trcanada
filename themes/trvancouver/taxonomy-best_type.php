@@ -22,7 +22,7 @@ get_header(); ?>
         
 
 
-                        <ul class="best-type-list">
+                        <ul class="tax-type-lists best-type-list">
                     <?php    
                         $terms = get_terms( array(
                                             'taxonomy' => 'best_type',
@@ -48,7 +48,7 @@ get_header(); ?>
             <!--<?php /* Start the Loop */ ?>-->
                 
                 
-            <div class="best-posts">
+            <div class="post-cat-type-list best-posts">
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div class="posts">
                         <div class="thumbnail-wrapper">

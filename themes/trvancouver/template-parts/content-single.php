@@ -52,7 +52,20 @@ if ( ! empty( $categories ) ) {
 	</div><!-- .entry-content -->
 
 	<div>
-	Tags: 
+	Tags:
+	<?php
+		// echo get_the_tag_list('',', ','');
+	?> 
+<?php
+$posttags = get_the_tags();
+if ($posttags) {
+  foreach($posttags as $tag) {
+	  echo "<a href='?slug=".$tag->slug."'>".$tag->name."</a>, ";
+	//   var_dump($tag);
+    // echo $tag->name . ' '; 
+  }
+}
+?>
 	</div>
 
 	<div class="rotatot-single-post-container">

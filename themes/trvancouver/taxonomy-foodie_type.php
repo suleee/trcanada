@@ -48,7 +48,7 @@ get_header(); ?>
             <!--<?php /* Start the Loop */ ?>-->
                 
                 
-            <div class="best-posts">
+            <div class="type-posts">
                 <?php while ( have_posts() ) : the_post(); ?>
                     <div class="posts">
                         <div class="thumbnail-wrapper">

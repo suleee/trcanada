@@ -21,7 +21,7 @@ get_header(); ?>
         $product_posts = get_posts( $args ); // returns an array of posts
         ?>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-        <div class="best-single-container">
+        <div class="news-single-container">
           <div class="p-content-div">
         <div class="content-top">
           <div class="content-title">

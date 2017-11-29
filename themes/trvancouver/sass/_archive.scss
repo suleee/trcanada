@@ -1,6 +1,17 @@
-
-
-    .archive{
+.archive{
+    .content-area, .arhive-posts-container{
+        @include general-width;
+        flex-wrap: wrap;
+    
+    #main{
+        width: 75%;
+    }
+    #secondary{
+    width: 25%;
+    padding-left: 15px;
+    }
+    }
+    
     .page-header {
         display: flex;
         width: 95%;
@@ -36,7 +47,7 @@
     }}
     .posts{
         width: 33%;
-        padding-right: 20px;
+        padding-right: 10px;
     
         img{
             height: 111px;
