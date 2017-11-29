@@ -11,27 +11,26 @@
 .best-thumb{
     width: 45%;
 }
+.site-content{
+    display: flex;
+    width: 100%;
+    max-width: 990px;
+    margin: 0 auto;
+    .contnet-continaer {
+        width: 67%;
+    }
+    #secondary {
+        width: 33%;
+        margin-top: 30px;
+        padding-left: 36px; 
+    }
+    .widget-left {
+        width: 200px;
+    }
+  }
 
 }
 .home, .post-type-archive-news{
-  
-    .site-content{
-        display: flex;
-        width: 100%;
-        max-width: 990px;
-        margin: 0 auto;
-    
-    
-        
-        #secondary {
-            width: 30%;
-            margin-top: 30px;
-            padding-left: 36px; 
-        }
-        .widget-left {
-            width: 200px;
-        }
-      }
     
     .firstpage-content-th {
         display: flex;
@@ -156,10 +155,7 @@
 ///tv
 
 .post-type-archive-trtv{
-.page-header {
-    display: none;
- 
-}
+
 .trtv-posts{
 padding-top: 30px;
 }

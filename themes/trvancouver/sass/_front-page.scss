@@ -1,8 +1,22 @@
 .home{
+    .site-content{
+        display: flex;
+        width: 100%;
+        max-width: 990px;
+        margin: 0 auto;
+        .contnet-continaer {
+            width: 72%;
+        }
+        #secondary {
+            width: 28%;
+            margin-top: 30px;
+            padding-left: 36px; 
+        }
+        .widget-left {
+            width: 200px;
+        }
+      }
    
-    .contnet-continaer {
-        width: 70%;
-    }
 .viewmore-btn {
     background: grey;
     // width: 630px;
@@ -43,8 +57,13 @@
 
 .front-post-contianer {
     margin: 50px 0;
+    .content-title a{
+        font-size: 15px;
+    }
 }
-
+.best-thumb, .content-p-container{
+    width: 50%;
+}
 
 
 .fpc-trtv, .fpc-news {
@@ -68,8 +87,11 @@
         font-size: 15px;
     }
 }
-
-
+}
+.fp-post-header{
+    p{
+        color: $color__viewall;
+    }
 }
 }
 

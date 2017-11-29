@@ -47,6 +47,7 @@ a {
 			top: $base__space-unit;
 			left: -999rem;
 			z-index: 99999;
+			
 
 			ul {
 				left: -999rem;
@@ -54,9 +55,11 @@ a {
 			}
 
 			li {
+				
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
+					
 				}
 			}
 
@@ -89,6 +92,8 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
+
+		text-transform: uppercase;
 	}
 
 	.current_page_item > a,

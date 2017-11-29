@@ -12,45 +12,6 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
-			<?php
-			//change the name of header of the page
-			function archive_best_title( $title) {
-			if(is_post_type_archive('news')){
-				$title = 'news';
-				}
-				return $title;
-				}
-				add_filter('get_the_archive_title', 'archive_best_title');
-				the_archive_title( '<h1 class="">', '</h1>' );
-
-
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
-	
-			<ul class=" post-cat-type-list best-type-list">
-                    <?php    
-                        $terms = get_terms( array(
-                                            'taxonomy' => 'news_type',
-                                            'orderby' => 'name',
-                                        ));
-
-                        foreach ($terms as $term) :
-                            $url = get_term_link ($term->slug , 'news_type');              
-						?>    
-						<li class="post-cat-list">                   
-                        <a href='<?php echo $url?>' class='button'>
-						
-						<p><?php echo $term->name; ?></p></a>
-						</li>
-                    <?php
-                        endforeach;
-					?>
-					
-			</ul>
-
-			</header>
-
 			<?php
         // global $post;
         $args = array(

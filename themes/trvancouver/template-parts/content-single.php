@@ -31,7 +31,7 @@ if ( ! empty( $categories ) ) {
 	<div class="entry-meta">
 	<?php red_starter_posted_by(); ?> <?php red_starter_posted_on(); ?>/ <?php red_starter_comment_count(); ?> 
 		</div><!-- .entry-meta -->
-
+		<?php echo do_shortcode('[mashshare]'); ?>
 	
 	<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>

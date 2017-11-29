@@ -12,10 +12,6 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
-
-			</header>
-
 			<?php /* Start the Loop */ ?>
 				
 				
