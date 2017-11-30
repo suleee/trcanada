@@ -1,4 +1,13 @@
 .home {
+    .logo-search-field, .small-menu, .menu{
+        margin: 0 20px;
+    }
+    .site-content{
+    margin: 0 20px;
+    // @include media ($desktop-width){ 
+    //     padding: 0 0px;
+    // }
+    }
     .front-page-wrapper {
 
         @include media ($desktop-width){ 
@@ -93,7 +102,10 @@
     }
     .best-thumb,
     .content-p-container {
-        width: 50%;
+        @include media ($desktop-width){ 
+            width: 50%;
+        }
+        
     }
     .fpc-trtv,
     .fpc-news {
@@ -149,14 +161,25 @@
 
 //best posts 
 .firstpage-content-th {
+    @include media ($desktop-width){ 
     display: flex;
     width: 100%;
 }
+}
 .front-best-post-date{
+    flex-wrap: wrap;
     @include post-container-date;
+    p{
+        margin: 2px;
+        @include media ($desktop-width){ 
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+    }
 }
 .content-p-container {
 padding-left: 10px;
+
 .content-p{
    margin: 0;
 }
@@ -167,7 +190,12 @@ padding-left: 10px;
     }
 }
 .best-single-container {
-    
+    border: 1px solid $color__border;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+  
+    margin-top: 11px;
     a{
         text-decoration: none;
         color: black;
@@ -176,7 +204,7 @@ padding-left: 10px;
         margin-top: 0;
     }
     @include media ($desktop-width){ 
-        @include post-container;
+        display: flex;
     }
 }
 .best-thumb {

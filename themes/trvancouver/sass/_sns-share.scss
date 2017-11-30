@@ -2,10 +2,11 @@
 .home, .post-type-archive-news{
 .mashsb-container{
     padding-left: 10px;
-    border-left: 1px solid $color__border;
+    
     padding-top: 20px;
     @include media ($desktop-width){ 
         padding-top: 70px;
+        border-left: 1px solid $color__border;
     }
 }
 .p-content-div{

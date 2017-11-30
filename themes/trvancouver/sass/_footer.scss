@@ -25,9 +25,13 @@
 }
 
 .footer-second-section, .footer-first-section{
+    margin: 0 20px;
+    @include media ($desktop-width){ 
     list-style: none;
     display: flex;
 }
+}
+
 .footer-first-section{
     justify-content: space-between;
     p{
@@ -47,15 +51,23 @@
 .footer-second-section{
     border-top: 1px solid $color__border;
     padding-top: 15px;
-    // margin: 0;
+  
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include media ($desktop-width){ 
+        justify-content: flex-start;
+        }
     a{
         text-decoration: none;
     }
+
     li{
         padding-right: 20px;
         font-size: 12px;
         color: $color_footer_p;
+        list-style: none;
     }
     li:nth-child(8){
         font-weight: bold;
