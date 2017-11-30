@@ -80,8 +80,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   -ms-flex-pack: justify;
       justify-content: space-between;
   position: relative;
-  padding: 50px 0;
+  padding: 10px 0;
   max-width: 990px; }
+  @media all and (min-width: 700px) {
+    .logo-search-field {
+      padding: 50px 0; } }
   .logo-search-field .fa-search {
     color: #136df9; }
   .logo-search-field button {
@@ -156,7 +159,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     text-decoration: none;
     color: #888;
     font-size: 12px;
-    padding-top: 10px; }
+    padding-top: 10px;
+    text-decoration: none; }
 
 .footer-second-section {
   border-top: 1px solid #eee;
@@ -178,20 +182,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .sb_instagram_header, #sbi_load {
   display: none; }
 
-.home .site-content {
+.home .front-page-wrapper {
   display: -ms-flexbox;
   display: flex;
   max-width: 980px;
   margin: 0 auto;
   width: 100%; }
-  .home .site-content .contnet-continaer {
+  .home .front-page-wrapper .front-page {
     width: 75%; }
-  .home .site-content #secondary {
+  .home .front-page-wrapper #secondary {
     width: 25%;
     margin-top: 30px;
     padding-left: 36px; }
-  .home .site-content .widget-left {
+  .home .front-page-wrapper .widget-left {
     width: 200px; }
+
+.home .text-bar-top {
+  max-width: 980px;
+  margin: 0 auto; }
+  .home .text-bar-top .breaking_news {
+    padding-top: 30px; }
 
 .home .viewmore-btn {
   background: grey;
@@ -519,6 +529,32 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .post-type-archive-foodie .foodie-posts {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+
+.page-id-159 .content-area {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%; }
+  .page-id-159 .content-area #main {
+    width: 75%; }
+  .page-id-159 .content-area #secondary {
+    width: 25%;
+    padding-left: 15px;
+    margin-top: 30px; }
+
+.page-id-162 .content-area {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%; }
+  .page-id-162 .content-area #main {
+    width: 75%; }
+  .page-id-162 .content-area #secondary {
+    width: 25%;
+    padding-left: 15px;
+    margin-top: 30px; }
 
 .home .mashsb-container, .post-type-archive-news .mashsb-container {
   padding-left: 10px;
@@ -965,43 +1001,49 @@ a {
 
 /* Menus */
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-    font-size: 13px; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  height: 0px; }
+  @media all and (min-width: 700px) {
+    .main-navigation {
+      visibility: visible;
+      clear: both;
+      display: block;
       float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    color: #222;
-    text-transform: uppercase; }
+      width: 100%;
+      height: auto; }
+      .main-navigation ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        font-size: 13px; }
+        .main-navigation ul ul {
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          float: left;
+          position: absolute;
+          top: 1.5rem;
+          left: -999rem;
+          z-index: 99999; }
+          .main-navigation ul ul ul {
+            left: -999rem;
+            top: 0; }
+          .main-navigation ul ul li:hover > ul,
+          .main-navigation ul ul li.focus > ul {
+            left: 100%; }
+          .main-navigation ul ul a {
+            width: 200px; }
+        .main-navigation ul li:hover > ul,
+        .main-navigation ul li.focus > ul {
+          left: auto; }
+      .main-navigation li {
+        float: left;
+        position: relative; }
+      .main-navigation a {
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        color: #222;
+        text-transform: uppercase; } }
 
 /* Small menu. */
 .menu-toggle,
@@ -1036,6 +1078,9 @@ a {
 .gp-back-to-top {
   background: #136df9 !important;
   border-radius: 0 !important; }
+
+#responsive-menu-button {
+  right: 80% !important; }
 
 /*--------------------------------------------------------------
 # Accessibility

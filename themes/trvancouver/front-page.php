@@ -2,13 +2,16 @@
 /**
 * The template for displaying front-page.
 *
-* @package RED_Starter_Theme
+* @package Trvancouver_Theme
 */
 
 get_header(); ?>
 
-<section class="contnet-continaer front-page">
-<div>text bar</div>
+
+<div class="text-bar-top"><?php echo do_shortcode('[horizontal_news id="2" category="news"]'); ?></div>
+
+<div class="front-page-wrapper">
+<section class="content-container front-page">
     <div class="rotator">
       <div class="skipper">
         <i class="fa fa-caret-left prev" aria-hidden="true"></i>
@@ -161,13 +164,9 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
-
-
-
-
- 
 </section>
 <?php get_sidebar(); ?>
 </div>
+        </div>
 
 <?php get_footer(); ?>

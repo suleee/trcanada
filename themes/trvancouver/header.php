@@ -30,8 +30,8 @@
 					<a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
 				</div>
 				<ul>
-				<a href=""><li>CONTACT</li></a>
-				<a href=""><li>KPOPME</li></a>
+				<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'contact us' ) ) ); ?>"><li>CONTACT</li></a>
+				<a href="http://kpopme.com/"><li>KPOPME</li></a>
 				</ul>
 				</div>
 				</div>

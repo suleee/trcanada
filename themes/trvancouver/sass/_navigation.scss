@@ -27,11 +27,16 @@ a {
 /* Menus */
 
 .main-navigation {
-
+	visibility: hidden;
+	height: 0px;
+	
+	@media all and (min-width: 700px) {
+		visibility: visible;
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+	height: auto;
 
 	ul {
 		display: none;
@@ -101,7 +106,7 @@ a {
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
-}
+}}
 
 /* Small menu. */
 .menu-toggle,
@@ -151,4 +156,17 @@ a {
 .gp-back-to-top {
 background: $color_tr !important;
 border-radius: 0 !important; 
+}
+
+
+
+#responsive-menu-button{
+// position: absolute !important;
+// top: 105px !important;
+right: 80% !important;
+@media all and (min-width: 700px) {
+	// visibility: hidden !important;
+	// top: 10px !important;
+	// right: 10px !important;
+}
 }

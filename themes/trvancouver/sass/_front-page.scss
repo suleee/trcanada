@@ -1,7 +1,7 @@
 .home {
-    .site-content {
+    .front-page-wrapper {
         @include general-width;
-        .contnet-continaer {
+        .front-page{
             width: 75%;
         }
         #secondary {
@@ -11,6 +11,13 @@
         }
         .widget-left {
             width: 200px;
+        }
+    }
+    .text-bar-top{
+        max-width: 980px;
+        margin: 0 auto;
+        .breaking_news{
+            padding-top: 30px;
         }
     }
     .viewmore-btn {
