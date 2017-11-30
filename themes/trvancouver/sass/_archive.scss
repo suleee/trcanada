@@ -11,7 +11,14 @@
     margin-top: 50px;
     }
     }
-    
+    .thumbnail-wrapper img{
+        max-height: 96px;
+        object-fit: cover;
+        // overflow: hidden;
+    }
+    .post-cat-type-list{
+        margin-top: 30px;
+    }
     .page-header {
         display: flex;
         width: 95%;

@@ -421,6 +421,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     width: 20%;
     margin-top: 50px; }
 
+.archive .thumbnail-wrapper img {
+  max-height: 96px;
+  object-fit: cover; }
+
+.archive .post-cat-type-list {
+  margin-top: 30px; }
+
 .archive .page-header {
   display: -ms-flexbox;
   display: flex;
@@ -658,7 +665,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .mashsb-container, .post-type-archive-news .mashsb-container {
   padding-left: 10px;
   border-left: 1px solid #eee;
-  padding-top: 70px; }
+  padding-top: 20px; }
+  @media all and (min-width: 760px) {
+    .home .mashsb-container, .post-type-archive-news .mashsb-container {
+      padding-top: 70px; } }
 
 .home .p-content-div, .post-type-archive-news .p-content-div {
   margin-right: 10px; }

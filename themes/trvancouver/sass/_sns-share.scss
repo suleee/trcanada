@@ -3,8 +3,10 @@
 .mashsb-container{
     padding-left: 10px;
     border-left: 1px solid $color__border;
-    padding-top: 70px;
-
+    padding-top: 20px;
+    @include media ($desktop-width){ 
+        padding-top: 70px;
+    }
 }
 .p-content-div{
     margin-right: 10px;
@@ -15,6 +17,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+  
     .text{
         padding-top: 2px;
     }
