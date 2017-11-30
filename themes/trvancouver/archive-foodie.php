@@ -59,7 +59,7 @@ get_header(); ?>
 				
 					<div class="posts">
 						<div class="thumbnail-wrapper">
-							<a href = "<?php the_permalink(); ?> " rel="bookmark"><?php the_post_thumbnail( ); ?></a>
+							<a href = "<?php the_permalink(); ?> " rel="bookmark" class="post-img-tb"><?php the_post_thumbnail( ); ?></a>
 						</div>
 
 						<div class="title">

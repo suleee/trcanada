@@ -3,30 +3,26 @@
 .post-type-archive-trtv{
     
     .trtv-posts{
-    padding-top: 30px;
+    flex-wrap: wrap;
     }
-    // .play-btn {
-    //     top: 85px;
-    //     left: 170px;
-    //     img{
-    //     height:  10px;
-    // }
-    // }
-
+    #secondary {
+        margin-top: 30px;
+    }    
     //video posts
-.trtv-tb-w-bg {
-    position: relative;
-}
-
-.play-btn {
-    @include video-playbtn-shape;
-    // top: 11px;
-    // left: 130px;
-}
-
-.shape-t {
-    background: url("../..img/triangle.png") no-repeat center 4.5rem;
-    background-size: contain, 11rem 26rem, cover;
-}
-
+    .trtv-tb-w-bg {
+        position: relative;
+    }
+    
+    .play-btn {
+        @include video-playbtn-shape;
+        top: 84px;
+        left: 187px;    
+    }
+    .shape-t {
+        background: url("../..img/triangle.png") no-repeat center 4.5rem;
+        background-size: contain, 11rem 26rem, cover;
+    }
+    .arhive-posts-container {
+        margin-top: 30px;
+    }
     }

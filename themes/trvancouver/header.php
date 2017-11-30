@@ -38,10 +38,13 @@
 					<!-- <h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
 				</div><!-- .site-branding -->
-				<div class="menu-container">
-				<div class="logo-search-field"><?php show_easylogo(); ?> 
+				<div class="menu-container">			
+				<div class="logo-search-field">
+				<?php echo do_shortcode('[responsive_menu]'); ?>	
+				<?php show_easylogo(); ?> 
 						<span class="header-search"><?php get_search_form( )?></span>
 					</div>
+
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 		
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', ) ); ?>
@@ -49,6 +52,7 @@
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 
 					</nav><!-- #site-navigation -->
+				
 					</div>
 			</header><!-- #masthead -->
 

@@ -37,6 +37,7 @@ a {
 	float: left;
 	width: 100%;
 	height: auto;
+	margin-bottom: 30px;
 
 	ul {
 		display: none;
@@ -115,7 +116,7 @@ a {
 	display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 710px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -163,7 +164,9 @@ border-radius: 0 !important;
 #responsive-menu-button{
 // position: absolute !important;
 // top: 105px !important;
-right: 80% !important;
+// right: 90% !important;
+// top: 15%!important;
+
 @media all and (min-width: 700px) {
 	// visibility: hidden !important;
 	// top: 10px !important;

@@ -23,9 +23,8 @@ get_header(); ?>
 				<div class="play-btn">
 				  <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
 				</div>
-						<a href = "<?php the_permalink(); ?> " rel="bookmark">
-						
-						<?php the_post_thumbnail( ); ?></a>
+						<a href = "<?php the_permalink(); ?> " rel="bookmark" class="post-img-tb">
+						<?php the_post_thumbnail( 'large' ); ?></a>
                     </div>
 
                     <div class="title">

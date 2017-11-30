@@ -66,6 +66,13 @@ img {
 
 
 
+// Media Queries
+@mixin media($width) {
+	@media all and (min-width: $width) {
+		@content;
+	}
+}
+
 // @include media ($desktop-width) {
 // 	font-size: 1.2rem;
 // }

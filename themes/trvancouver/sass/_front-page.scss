@@ -1,24 +1,43 @@
 .home {
     .front-page-wrapper {
-        @include general-width;
-        .front-page{
-            width: 75%;
+
+        @include media ($desktop-width){ 
+            @include general-width;
+            .front-page{
+                width: 75%;
+            }
+            #secondary {
+                width: 25%;
+                margin-top: 25px;
+                padding-left: 36px;
+            }
         }
-        #secondary {
-            width: 25%;
-            margin-top: 30px;
-            padding-left: 36px;
-        }
+    
+        
+       
         .widget-left {
             width: 200px;
         }
     }
     .text-bar-top{
-        max-width: 980px;
+        max-width: 900px;
         margin: 0 auto;
-        .breaking_news{
-            padding-top: 30px;
+        .wptu-ticker{
+            border: none;
         }
+        .wptu-ticker-title, .wptu-ticker-head{
+            background: $color_tr !important;
+            color: white !important;
+            span{
+                display: none;}
+        }
+        
+        // .breaking_news{
+        //     padding-top: 30px;
+        // }
+        // .news_ticker{
+        //     border: none;
+        // }
     }
     .viewmore-btn {
         background: grey; // width: 630px;
@@ -36,14 +55,25 @@
     }
     .front-posts {
         display: flex;
-        padding-bottom: 20px;
+        flex-wrap: wrap;
+        padding: 0 20px 20px 20px;
+        
+        @include media ($desktop-width){ 
+            display: flex;
+            padding: 0 0px 20px 0px;
+        }
         .front-post-single {
-            max-width: 165px;
-            margin: 0 12px;
+            max-width: 260px;
+
+            @include media ($desktop-width){ 
+                max-width: 165px;
+                margin: 0 12px;
+            }
         }
         .front-post-single:nth-child(4) {
+            @include media ($desktop-width){ 
             margin-left: 12px;
-            margin-right: 0;
+            margin-right: 0;}
         }
         .front-post-single:nth-child(1) {
             margin-left: 0;
@@ -92,6 +122,8 @@
     .fp-post-header {
         p {
             color: $color__viewall;
+            padding-right: 10px;
+            
         }
     }
 
@@ -113,7 +145,7 @@
 }
 
   
-    
+
 
 //best posts 
 .firstpage-content-th {
@@ -135,13 +167,16 @@ padding-left: 10px;
     }
 }
 .best-single-container {
-    @include post-container;
+    
     a{
         text-decoration: none;
         color: black;
     }
     h3{
         margin-top: 0;
+    }
+    @include media ($desktop-width){ 
+        @include post-container;
     }
 }
 .best-thumb {

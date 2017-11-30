@@ -8,7 +8,7 @@
 get_header(); ?>
 
 
-<div class="text-bar-top"><?php echo do_shortcode('[horizontal_news id="2" category="news"]'); ?></div>
+<div class="text-bar-top"><?php echo do_shortcode('[wp_ticker]'); ?></div>
 
 <div class="front-page-wrapper">
 <section class="content-container front-page">

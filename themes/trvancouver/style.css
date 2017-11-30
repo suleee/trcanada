@@ -44,42 +44,50 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Front page
 --------------------------------------------------------------*/
 .small-menu {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  padding: 5px 0;
-  max-width: 990px;
-  margin: 0 auto;
-  padding-top: 3px;
-  border-bottom: 1px solid #f1f3f6; }
-  .small-menu .icons {
-    position: absolute;
-    top: 35px;
-    right: 178px; }
-  .small-menu .icons a {
-    padding-left: 20px; }
-  .small-menu a {
-    text-decoration: none; }
-    .small-menu a:hover {
-      color: #259bfe; }
-  .small-menu ul {
-    display: -ms-flexbox;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding-left: 10px; }
-    .small-menu ul li {
-      padding: 0 10px;
-      font-size: 12px; }
+  visibility: hidden; }
+  @media all and (min-width: 760px) {
+    .small-menu {
+      visibility: visible;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+      padding: 5px 0;
+      max-width: 990px;
+      margin: 0 auto;
+      padding-top: 3px;
+      border-bottom: 1px solid #f1f3f6; }
+      .small-menu .icons {
+        position: absolute;
+        top: 35px;
+        right: 200px; }
+      .small-menu .icons a {
+        padding-left: 20px; }
+      .small-menu a {
+        text-decoration: none;
+        color: #24282d; }
+        .small-menu a:hover {
+          color: #259bfe; }
+      .small-menu ul {
+        display: -ms-flexbox;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding-left: 10px; }
+        .small-menu ul li {
+          padding: 0 10px;
+          font-size: 12px; } }
 
 .small-menu-container {
   height: 30px;
   border-top: 2px solid #136df9; }
 
 .easylogo {
-  width: 200px;
+  width: 155px;
   margin: 0; }
+  @media all and (min-width: 760px) {
+    .easylogo {
+      width: 200px; } }
 
 .logo-search-field {
   display: -ms-flexbox;
@@ -89,7 +97,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   position: relative;
   padding: 10px 0;
   max-width: 990px; }
-  @media all and (min-width: 700px) {
+  @media all and (min-width: 760px) {
     .logo-search-field {
       padding: 50px 0; } }
   .logo-search-field .fa-search {
@@ -104,6 +112,32 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .logo-search-field button:hover {
       box-shadow: none; }
     .logo-search-field button:focus {
+      border: none; }
+  .logo-search-field .header-search {
+    visibility: hidden; }
+    @media all and (min-width: 760px) {
+      .logo-search-field .header-search {
+        visibility: visible; } }
+  .logo-search-field #responsive-menu-button {
+    top: 10%; }
+    @media all and (min-width: 760px) {
+      .logo-search-field #responsive-menu-button {
+        visibility: hidden; } }
+  .logo-search-field .fa-search {
+    color: #136df9; }
+  .logo-search-field .serach-fieldset button {
+    position: absolute;
+    top: 28px;
+    right: 12px;
+    background: none;
+    box-shadow: none;
+    border: 0; }
+    @media all and (min-width: 760px) {
+      .logo-search-field .serach-fieldset button {
+        top: 67px; } }
+    .logo-search-field .serach-fieldset button:hover {
+      box-shadow: none; }
+    .logo-search-field .serach-fieldset button:focus {
       border: none; }
 
 .main-navigation {
@@ -120,6 +154,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding: 0; }
 
 .menu-container {
+  position: relative;
   margin: 0 auto; }
 
 .logo-search-field, .menu-menu-1-container {
@@ -178,38 +213,46 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding-right: 20px;
     font-size: 12px;
     color: #888; }
-  .footer-second-section li:nth-child(7) {
+  .footer-second-section li:nth-child(8) {
     font-weight: bold;
     color: black; }
   .footer-second-section span {
     color: #136df9; }
 
-.footer-widget-area {
-  margin-top: 100px; }
+@media all and (min-width: 760px) {
+  .footer-widget-area {
+    margin-top: 100px; } }
 
 .sb_instagram_header, #sbi_load {
   display: none; }
 
-.home .front-page-wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 980px;
-  margin: 0 auto;
-  width: 100%; }
-  .home .front-page-wrapper .front-page {
-    width: 75%; }
-  .home .front-page-wrapper #secondary {
-    width: 25%;
-    margin-top: 30px;
-    padding-left: 36px; }
-  .home .front-page-wrapper .widget-left {
-    width: 200px; }
+@media all and (min-width: 760px) {
+  .home .front-page-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+    width: 100%; }
+    .home .front-page-wrapper .front-page {
+      width: 75%; }
+    .home .front-page-wrapper #secondary {
+      width: 25%;
+      margin-top: 25px;
+      padding-left: 36px; } }
+
+.home .front-page-wrapper .widget-left {
+  width: 200px; }
 
 .home .text-bar-top {
-  max-width: 980px;
+  max-width: 900px;
   margin: 0 auto; }
-  .home .text-bar-top .breaking_news {
-    padding-top: 30px; }
+  .home .text-bar-top .wptu-ticker {
+    border: none; }
+  .home .text-bar-top .wptu-ticker-title, .home .text-bar-top .wptu-ticker-head {
+    background: #136df9 !important;
+    color: white !important; }
+    .home .text-bar-top .wptu-ticker-title span, .home .text-bar-top .wptu-ticker-head span {
+      display: none; }
 
 .home .viewmore-btn {
   background: grey;
@@ -227,13 +270,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .front-posts {
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 20px; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 20px 20px 20px; }
+  @media all and (min-width: 760px) {
+    .home .front-posts {
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 0px 20px 0px; } }
   .home .front-posts .front-post-single {
-    max-width: 165px;
-    margin: 0 12px; }
-  .home .front-posts .front-post-single:nth-child(4) {
-    margin-left: 12px;
-    margin-right: 0; }
+    max-width: 260px; }
+    @media all and (min-width: 760px) {
+      .home .front-posts .front-post-single {
+        max-width: 165px;
+        margin: 0 12px; } }
+  @media all and (min-width: 760px) {
+    .home .front-posts .front-post-single:nth-child(4) {
+      margin-left: 12px;
+      margin-right: 0; } }
   .home .front-posts .front-post-single:nth-child(1) {
     margin-left: 0;
     margin-right: 12px; }
@@ -272,7 +326,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     font-size: 15px; }
 
 .home .fp-post-header p {
-  color: #888; }
+  color: #888;
+  padding-right: 10px; }
 
 .home .trtv-tb-w-bg {
   position: relative; }
@@ -322,19 +377,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: #f09217;
     font-size: 14px; }
 
-.home .best-single-container {
-  border: 1px solid #eee;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  padding: 20px 20px;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 11px; }
-  .home .best-single-container a {
-    text-decoration: none;
-    color: black; }
-  .home .best-single-container h3 {
-    margin-top: 0; }
+.home .best-single-container a {
+  text-decoration: none;
+  color: black; }
+
+.home .best-single-container h3 {
+  margin-top: 0; }
+
+@media all and (min-width: 760px) {
+  .home .best-single-container {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 11px; } }
 
 .home .best-thumb img {
   height: 150px;
@@ -359,8 +417,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   width: 100%; }
   .archive .content-area #main, .archive .arhive-posts-container #main {
     width: 80%; }
-  .archive .content-area #secondary, .archive .arhive-posts-container #secondary {
-    width: 20%; }
+  .archive .content-area .widget-area, .archive .arhive-posts-container .widget-area {
+    width: 20%;
+    margin-top: 50px; }
 
 .archive .page-header {
   display: -ms-flexbox;
@@ -369,7 +428,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   -ms-flex-pack: justify;
       justify-content: space-between;
   height: 25px;
-  margin-top: 50px; }
+  margin-top: 10px; }
   .archive .page-header a {
     text-decoration: none;
     color: #777; }
@@ -395,12 +454,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   width: 33%;
   padding-right: 43px;
   margin-bottom: 63px; }
-  .archive .posts img {
+  .archive .posts .post-img-tb img {
     height: 111px;
     object-fit: cover; }
-
-.archive .content-area #secondary {
-  margin-top: 50px; }
 
 .archive .title h3 {
   margin: 0;
@@ -444,7 +500,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .post-type-archive-news #primary #main {
     width: 100%; }
   .post-type-archive-news .site-main {
-    margin-top: 25px; }
+    margin-top: 10px; }
   .post-type-archive-news .content-p-container {
     width: 55%; }
   .post-type-archive-news .best-thumb {
@@ -569,6 +625,36 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .page-id-162 #secondary {
   display: none; }
 
+.post-type-archive-trtv .trtv-posts {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.post-type-archive-trtv #secondary {
+  margin-top: 30px; }
+
+.post-type-archive-trtv .trtv-tb-w-bg {
+  position: relative; }
+
+.post-type-archive-trtv .play-btn {
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  border-radius: 40px;
+  position: absolute;
+  top: 84px;
+  left: 187px; }
+  .post-type-archive-trtv .play-btn img {
+    width: 12px;
+    margin-left: 8px;
+    margin-top: 6px; }
+
+.post-type-archive-trtv .shape-t {
+  background: url("../..img/triangle.png") no-repeat center 4.5rem;
+  background-size: contain, 11rem 26rem, cover; }
+
+.post-type-archive-trtv .arhive-posts-container {
+  margin-top: 30px; }
+
 .home .mashsb-container, .post-type-archive-news .mashsb-container {
   padding-left: 10px;
   border-left: 1px solid #eee;
@@ -621,6 +707,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 #adrotate_widgets-4 .g {
   border: 1px solid #eee;
   padding: 20px 20px; }
+
+#secondary .g {
+  border: 1px solid rgba(0, 0, 0, 0.1); }
 
 html {
   font-family: sans-serif;
@@ -996,8 +1085,13 @@ textarea {
 
 input[type="search"] {
   color: #666;
-  border: 1px solid #0089ff;
-  border-radius: 1px; }
+  border: none;
+  border-radius: 1px;
+  width: 29px; }
+  @media all and (min-width: 760px) {
+    input[type="search"] {
+      width: 100%;
+      border: 1px solid #0089ff; } }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -1023,7 +1117,8 @@ a {
       display: block;
       float: left;
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin-bottom: 30px; }
       .main-navigation ul {
         display: none;
         list-style: none;
@@ -1063,7 +1158,7 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 710px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -1091,9 +1186,6 @@ a {
 .gp-back-to-top {
   background: #136df9 !important;
   border-radius: 0 !important; }
-
-#responsive-menu-button {
-  right: 80% !important; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1275,9 +1367,6 @@ object {
   max-width: 100px !important; }
   .single .mashsb-buttons a span {
     color: black; }
-
-.best-template-default .content-area {
-  padding-top: 30px; }
 
 .best-template-default .post-85 {
   margin-right: 20px; }

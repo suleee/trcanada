@@ -63,6 +63,11 @@ textarea {
 
 input[type="search"] {
 color: #666;
-border: 1px solid #0089ff;
+border: none;
 border-radius: 1px;
+width: 29px;
+@include media ($desktop-width) {
+	width: 100%;
+	border: 1px solid #0089ff;
+}
 }
