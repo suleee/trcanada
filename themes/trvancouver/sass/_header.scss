@@ -1,13 +1,19 @@
 
 .small-menu{
     display: flex;
-    // color: white;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 5px 0;
     max-width: 990px;
     margin: 0 auto;
     padding-top: 3px;
+    border-bottom: 1px solid #f1f3f6;
+    .icons{
+        position: absolute;
+        top: 35px;
+        right: 178px;
+    }
     .icons a{
-        padding-left: 10px;
+        padding-left: 20px;
     }
     a{
         text-decoration: none;
@@ -21,6 +27,7 @@
         display: flex;
         list-style: none;
         margin: 0;
+        padding-left: 10px;
         li{
             padding: 0 10px;
             font-size: 12px;
@@ -30,6 +37,7 @@
     // background: #24282d;
     height: 30px;
     border-top: 2px solid $color_tr;
+    
 }
 
 .easylogo{

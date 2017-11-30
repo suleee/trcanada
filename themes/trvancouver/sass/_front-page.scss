@@ -154,5 +154,10 @@ display: flex;
 justify-content: space-between;
 }
 
+.post-thumbnail-wrapper img{
+    max-height: 96px;
+    object-fit: cover;
+    // overflow: hidden;
+}
 
 }

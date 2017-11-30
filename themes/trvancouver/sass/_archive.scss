@@ -4,11 +4,10 @@
         // flex-wrap: wrap;
     
     #main{
-        width: 76%;
+        width: 80%;
     }
     #secondary{
-    width: 24%;
-    padding-left: 15px;
+    width: 20%;
     }
     }
     
@@ -17,7 +16,7 @@
         width: 95%;
         justify-content: space-between;
         height: 25px;
-        margin: 30px 0;
+        margin-top: 50px;
         a{
             text-decoration: none;
             color:#777;
@@ -47,7 +46,9 @@
     }}
     .posts{
         width: 33%;
-        padding-right: 10px;
+        padding-right: 43px;
+        margin-bottom: 63px;
+    
     
         img{
             height: 111px;
@@ -57,7 +58,7 @@
  
     .content-area{
         #secondary{
-            margin-top: 30px;
+            margin-top: 50px;
             
             }
     }
@@ -66,6 +67,9 @@
         font-size: 18px;
         line-height: 20px;
         font-weight: 400;
+    }
+    .arhive-posts-container {
+        margin-top: 50px;
     }
 
     }
