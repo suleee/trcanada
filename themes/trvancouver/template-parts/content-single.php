@@ -29,6 +29,7 @@ if ( ! empty( $categories ) ) {
 ?>
 	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	<div class="entry-meta">
+		
 	<?php red_starter_posted_by(); ?> <?php red_starter_posted_on(); ?>/ <?php red_starter_comment_count(); ?> 
 		</div><!-- .entry-meta -->
 		<?php echo do_shortcode('[mashshare]'); ?>
@@ -70,7 +71,7 @@ if ($posttags) {
 
 	<div class="rotatot-single-post-container">
 	<div class="rotator rotator-single-post">
-      <?php echo adrotate_group(11); ?>
+      <?php echo adrotate_group(4); ?>
 	</div>
 	
 	<div class="rotator rotator-single-post">
