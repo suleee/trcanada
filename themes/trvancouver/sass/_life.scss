@@ -1,14 +1,13 @@
-.post-type-archive-life{
-    .site-content{
+.post-type-archive-life {
+    .site-content {
         @include general-width;
-       
-    #main{
-        width: 75%;
+        #main {
+            width: 75%;
+        }
+        #secondary {
+            width: 25%;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
     }
-    #secondary{
-    width: 25%;
-    padding-left: 15px;
-    margin-top: 30px;
-    }
-    }
-    }
+}

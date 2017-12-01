@@ -1,14 +1,24 @@
-.single{
-    .content-area, .arhive-posts-container{
-        @include general-width;
-        flex-wrap: wrap;
-    
-    #main{
-        width: 75%;
+.single {
+    .logo-search-field,
+    .small-menu,
+    .menu {
+        margin: 0 20px;
     }
-    #secondary{
-    width: 25%;
-    padding-left: 15px;
+    .site-content {
+        margin: 0 20px;
     }
+    .content-area,
+    .arhive-posts-container {
+        @include media ($desktop-width) {
+            @include general-width;
+            flex-wrap: wrap;
+            #main {
+                width: 75%;
+            }
+            #secondary {
+                width: 25%;
+                padding-left: 15px;
+            }
+        }
     }
 }

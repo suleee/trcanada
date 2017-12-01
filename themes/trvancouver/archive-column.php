@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive for the News post type.
+ * The template for displaying archive for the Column post type.
  *
  * @package Trvancouver_Theme
  */
@@ -15,13 +15,13 @@ get_header(); ?>
 			<?php
         // global $post;
         $args = array(
-        'post_type' => 'news',
+        'post_type' => 'column',
         'order' => 'DSC',
         'posts_per_page' => 3);
         $product_posts = get_posts( $args ); // returns an array of posts
         ?>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
-        <div class="news-single-container">
+        <div class="column-single-container">
           <div class="p-content-div">
         <div class="content-top">
           <div class="content-title">

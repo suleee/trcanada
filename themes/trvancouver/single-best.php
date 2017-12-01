@@ -17,11 +17,6 @@ get_header(); ?>
 
 
 
-
-
-
-
-
             <div id="post-nav">
     <?php $prevPost = get_previous_post(true);
         if($prevPost) {

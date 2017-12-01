@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying archive for the Best post type.
+ * The template for displaying archive for the TR TV post type.
  *
- * @package RED_Starter_Theme
+ * @package Trvancouver_Theme
  */
 
 get_header(); ?>

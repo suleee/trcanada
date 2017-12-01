@@ -1,91 +1,97 @@
-
-.site-footer{
+.site-footer {
     margin-bottom: 50px;
 }
-.instagram-api{
+
+.instagram-api {
     background: grey;
     height: 100px;
 }
-.footer-first-section, .footer-second-section{
+
+.footer-first-section,
+.footer-second-section {
     max-width: 990px;
     margin: 0 auto;
 }
-.site-info-container, .instagram-container{
+
+.site-info-container,
+.instagram-container {
     // max-width: 990px;
     margin: 0 auto;
 }
-.site-info-container{
+
+.site-info-container {
     margin-top: 50px;
     border-top: 1px solid #888;
 }
-.footer-sns-contianer{
+
+.footer-sns-contianer {
     text-align: center;
-    .fa{
-    padding: 0 20px;}
+    .fa {
+        padding: 0 20px;
+    }
 }
 
-.footer-second-section, .footer-first-section{
-    margin: 0 20px;
-    @include media ($desktop-width){ 
-    list-style: none;
-    display: flex;
-}
+.footer-second-section,
+.footer-first-section {
+    @include media ($desktop-width) {
+        list-style: none;
+        display: flex;
+    }
 }
 
-.footer-first-section{
+.footer-first-section {
     justify-content: space-between;
-    p{
+    p {
         margin: 10px 0;
     }
-    span{
+    span {
         font-weight: bold;
         padding-right: 10px;
     }
-    a{
+    a {
         text-decoration: none;
         color: $color_footer_p;
         font-size: 12px;
         padding-top: 10px;
     }
 }
-.footer-second-section{
+
+.footer-second-section {
     border-top: 1px solid $color__border;
     padding-top: 15px;
-  
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @include media ($desktop-width){ 
+    @include media ($desktop-width) {
         justify-content: flex-start;
-        }
-    a{
+    }
+    a {
         text-decoration: none;
     }
-
-    li{
+    li {
         padding-right: 20px;
         font-size: 12px;
         color: $color_footer_p;
         list-style: none;
     }
-    li:nth-child(8){
+    li:nth-child(8) {
         font-weight: bold;
         color: black;
     }
-    span{
+    span {
         color: $color_tr;
     }
 }
-.footer-widget-area{
-@include media ($desktop-width){ 
-margin-top: 100px;
-}
-}
 
+.footer-widget-area {
+    @include media ($desktop-width) {
+        margin-top: 100px;
+    }
+}
 
 //footer instagram
-.sb_instagram_header, #sbi_load {
+.sb_instagram_header,
+#sbi_load {
     display: none;
-
 }

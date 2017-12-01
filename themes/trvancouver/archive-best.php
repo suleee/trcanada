@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive for the Best post type.
  *
- * @package RED_Starter_Theme
+ * @package Trvancouver_Theme
  */
 
 get_header(); ?>

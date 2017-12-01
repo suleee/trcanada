@@ -1,15 +1,13 @@
-
-.post-type-archive-column{
-    .site-content{
+.post-type-archive-column {
+    .site-content {
         @include general-width;
-       
-    #main{
-        width: 75%;
-    }
-    #secondary{
-    width: 25%;
-    padding-left: 15px;
-    margin-top: 30px;
-    }
+        #main {
+            width: 75%;
+        }
+        #secondary {
+            width: 25%;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
     }
 }

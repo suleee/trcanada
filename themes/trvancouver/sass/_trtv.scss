@@ -1,22 +1,18 @@
 ///tv
-
-.post-type-archive-trtv{
-    
-    .trtv-posts{
-    flex-wrap: wrap;
+.post-type-archive-trtv {
+    .trtv-posts {
+        flex-wrap: wrap;
     }
     #secondary {
         margin-top: 30px;
-    }    
-    //video posts
+    } //video posts
     .trtv-tb-w-bg {
         position: relative;
     }
-    
     .play-btn {
         @include video-playbtn-shape;
         top: 84px;
-        left: 187px;    
+        left: 187px;
     }
     .shape-t {
         background: url("../..img/triangle.png") no-repeat center 4.5rem;
@@ -25,4 +21,4 @@
     .arhive-posts-container {
         margin-top: 30px;
     }
-    }
+}

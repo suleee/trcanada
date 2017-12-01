@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive for the Foodie post type.
+ * The template for displaying archive for the life post type.
  *
  * @package Trvancouver_Theme
  */
@@ -16,8 +16,8 @@ get_header(); ?>
 			<?php
 			//change the name of header of the page
 			function archive_best_title( $title) {
-			if(is_post_type_archive('foodie')){
-				$title = '티알이';
+			if(is_post_type_archive('best')){
+				$title = '티알이 뽑은 베스트 랭킹';
 				}
 				return $title;
 				}
@@ -28,15 +28,15 @@ get_header(); ?>
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 	
-			<ul class="post-cat-type-list foodie-type-list">
+			<ul class=" post-cat-type-list best-type-list">
                     <?php    
                         $terms = get_terms( array(
-                                            'taxonomy' => 'foodie_type',
+                                            'taxonomy' => 'best_type',
                                             'orderby' => 'name',
                                         ));
 
                         foreach ($terms as $term) :
-                            $url = get_term_link ($term->slug , 'foodie_type');              
+                            $url = get_term_link ($term->slug , 'best_type');              
 						?>    
 						<li class="post-cat-list">                   
                         <a href='<?php echo $url?>' class='button'>
@@ -54,7 +54,7 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 				
 				
-			<div class="arhive-posts-container foodie-posts">
+			<div class="arhive-posts-container best-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
 				
 					<div class="posts">
