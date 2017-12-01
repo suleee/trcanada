@@ -412,6 +412,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .best-single-container {
   border: 1px solid #eee;
+  background: #fbfbfc;
   border-radius: 3px;
   margin-bottom: 20px;
   padding: 20px 20px;
@@ -579,7 +580,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     width: 45%; }
   .post-type-archive-news .news-single-container {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    background: #fbfbfc; }
   .post-type-archive-news .content-title h3 {
     margin-top: 0; }
   .post-type-archive-news .content-title a {
@@ -741,6 +743,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       font-size: 14px; }
   .post-type-archive-column .column-single-container {
     border: 1px solid #eee;
+    background: #fbfbfc;
     border-radius: 3px;
     margin-bottom: 20px;
     padding: 20px 20px;

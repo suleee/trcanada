@@ -51,7 +51,6 @@ get_header(); ?>
         </div>
         </div>  
         </div> 
-        <?php echo do_shortcode('[mashshare]'); ?>
         </div>
         <?php endforeach; wp_reset_postdata(); ?>
 		  </div>

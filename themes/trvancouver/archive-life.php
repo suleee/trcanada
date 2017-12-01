@@ -16,45 +16,18 @@ get_header(); ?>
 			<?php
 			//change the name of header of the page
 			function archive_best_title( $title) {
-			if(is_post_type_archive('best')){
-				$title = '티알이 뽑은 베스트 랭킹';
+			if(is_post_type_archive('life')){
+				$title = 'life';
 				}
 				return $title;
 				}
-				add_filter('get_the_archive_title', 'archive_best_title');
+				add_filter('get_the_archive_title', 'archive_life_title');
 				the_archive_title( '<h1 class="">', '</h1>' );
-
-
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
-	
-			<ul class=" post-cat-type-list best-type-list">
-                    <?php    
-                        $terms = get_terms( array(
-                                            'taxonomy' => 'best_type',
-                                            'orderby' => 'name',
-                                        ));
-
-                        foreach ($terms as $term) :
-                            $url = get_term_link ($term->slug , 'best_type');              
-						?>    
-						<li class="post-cat-list">                   
-                        <a href='<?php echo $url?>' class='button'>
-						
-						<p><?php echo $term->name; ?></p></a>
-						</li>
-                    <?php
-                        endforeach;
-					?>
-					
-			</ul>
 
 			</header>
 
-			<?php /* Start the Loop */ ?>
-				
-				
-			<div class="arhive-posts-container best-posts">
+			<div class="arhive-posts-container life-posts">
 				<?php while ( have_posts() ) : the_post(); ?>
 				
 					<div class="posts">
