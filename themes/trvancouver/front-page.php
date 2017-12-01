@@ -30,21 +30,24 @@ get_header(); ?>
         ?>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
         <div class="best-single-container">
+
           <div class="p-content-div">
-        <div class="content-top">
-          <div class="content-title">
-        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
-        </div> 
+          <div class="best-thumb">
+          <?php the_post_thumbnail( 'large' ); ?></div>
+
+          <div class="content firstpage-content-th">
+        <!-- <div class="content-top"> -->
+          <!-- <div class="content-title"> -->
+        <a class="post-best-h" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
+        <!-- </div>  -->
         <div class="front-best-post-date">
         <p>Posted By: <?php red_starter_posted_by(); ?></p> 
         <p>On: <?php red_starter_posted_on(); ?></p> 
-        <p>In: <span class="cat-best">Best</span></p>
+        <p>In: <span class="cat-post-type">Best</span></p>
         <p><?php comments_number(); ?></p>
         </div>
-        </div>
-          <div class="content firstpage-content-th">
-          <div class="best-thumb">
-          <?php the_post_thumbnail( 'large' ); ?></div>
+        <!-- </div> -->
+          
           
           
           <div class="content-p-container">
@@ -57,9 +60,10 @@ get_header(); ?>
           <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
           </p>
         </div>
+        <?php echo do_shortcode('[mashshare]'); ?>
         </div>  
         </div> 
-        <?php echo do_shortcode('[mashshare]'); ?>
+      
         </div>
         <?php endforeach; wp_reset_postdata(); ?>
           </div>

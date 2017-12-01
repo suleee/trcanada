@@ -30,7 +30,7 @@ get_header(); ?>
         <div class="archive-post-date">
         <p>Posted By: <?php red_starter_posted_by(); ?></p> 
         <p>On: <?php red_starter_posted_on(); ?></p> 
-        <p>In: <span class="cat-column">Column</span></p>
+        <p>In: <span class="cat-post-type">Column</span></p>
         <p><?php comments_number(); ?></p>
         </div>
         </div>

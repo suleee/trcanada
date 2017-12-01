@@ -81,15 +81,22 @@
             font-size: 15px;
         }
     }
-    .best-thumb,
-    .content-p-container {
-        @include media ($desktop-width) {
-            width: 50%;
+    .mashsb-container {
+        padding: 0px;
+        padding-top: 19px;        
+        border: 0;
+        .mashsb-buttons{
+        display: flex;
+        justify-content: flex-start;
+        width: 290px;
+        margin: 0;
+        }
+        a{
+            margin-right: 10px;
         }
     }
-    .best-thumb {
-        text-align: center;
-    }
+
+   
     .fpc-trtv,
     .fpc-news {
         border-bottom: 1px solid $color__border;
@@ -136,13 +143,25 @@
     //best posts 
     .firstpage-content-th {
         @include media ($desktop-width) {
-            display: flex;
-            width: 100%;
+        
         }
+    }
+
+    .p-content-div{
+        @include media ($desktop-width) {
+            display: flex;
+            // width: 85%;
+        }
+        .firstpage-content-th{
+            width: 65%;
+            padding-left: 15px;
+        }
+        
     }
     .front-best-post-date {
         flex-wrap: wrap;
         @include post-container-date;
+        margin-bottom: 6px;
         p {
             margin: 2px;
             @include media ($desktop-width) {
@@ -152,7 +171,7 @@
         }
     }
     .content-p-container {
-        padding-left: 10px;
+        // padding-left: 10px;
         .content-p {
             margin: 0;
         }
@@ -163,30 +182,34 @@
         }
     }
     .best-single-container {
-        border: 1px solid $color__border;
-        background: $color_post_background;
-        border-radius: 3px;
         margin-bottom: 20px;
-        padding: 20px 20px;
+        padding: 30px 0px;
         margin-top: 11px;
-        a {
+        .post-best-h {
             text-decoration: none;
             color: black;
         }
         h3 {
             margin-top: 0;
+          
         }
-        @include media ($desktop-width) {
-            display: flex;
-        }
+        // @include media ($desktop-width) {
+        //     display: flex;
+        // }
     }
     .best-thumb {
+       
+            text-align: center;
+            width: 35%;
+        
         img {
             width: 300px;
             height: 150px;
             object-fit: cover;
             @include media ($desktop-width) {
                 @include post-container-thumb;
+            
+                height: 200px;
             }
         }
     }
