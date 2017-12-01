@@ -1,13 +1,83 @@
 .post-type-archive-column {
+    width: 100%;
+    #primary #main {
+        width: 100%;
+    }
+    .site-main {
+        margin-top: 10px;
+    }
+    .content-p-container {
+        @include media ($desktop-width) {
+            width: 55%;
+        }
+    }
+    .archive-post-thumb {
+        width: 45%;
+    }
+    .column-single-container {
+        display: flex;
+    }
+    .content-title h3 {
+        margin-top: 0;
+    }
+    .content-title a {
+        text-decoration: none;
+        color: black;
+    }
     .site-content {
-        @include general-width;
-        #main {
-            width: 75%;
+        @include media ($desktop-width) {
+            @include general-width;
+            #secondary {
+                width: 30%;
+                margin-top: 30px;
+                padding-left: 36px;
+            }
+            .widget-left {
+                width: 200px;
+            }
         }
-        #secondary {
-            width: 25%;
-            padding-left: 15px;
-            margin-top: 30px;
+    } //best posts 
+    .archive-content-th {
+        @include media ($desktop-width) {
+            display: flex;
+            width: 100%;
         }
+    }
+    .archive-post-date {
+        flex-wrap: wrap;
+        @include post-container-date;
+        p {
+            @include archive-post-date;
+        }
+    }
+    .content-p-container {
+        padding-left: 10px;
+        .content-p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: $color_orange;
+            font-size: 14px;
+        }
+    }
+    .column-single-container {
+        border: 1px solid $color__border;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        padding: 20px 20px;
+        margin-top: 11px;
+        @include media ($desktop-width) {
+            // @include post-container;
+        }
+    }
+    .archive-post-thumb {
+        img {
+            @include post-container-thumb;
+        }
+    }
+    .fp-post-header {
+        display: flex;
+        justify-content: space-between;
     }
 }

@@ -69,6 +69,13 @@
     }
 }
 
-// @include media ($desktop-width) {
-// 	font-size: 1.2rem;
-// }
+@mixin archive-post-date{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    @include media($desktop-width) {
+        margin-right: 10px;
+        margin-bottom: 20px;
+        margin: 2px;
+	}
+  
+}

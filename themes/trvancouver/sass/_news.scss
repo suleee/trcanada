@@ -8,10 +8,15 @@
         margin-top: 10px;
     }
     .content-p-container {
-        width: 55%;
+        @include media ($desktop-width) {
+            width: 55%;
+        }
     }
-    .best-thumb {
+    .archive-post-thumb {
         width: 45%;
+    }
+    .news-single-container {
+        display: flex;
     }
     .content-title h3 {
         margin-top: 0;
@@ -33,19 +38,17 @@
             }
         }
     } //best posts 
-    .firstpage-content-th {
-        display: flex;
-        width: 100%;
+    .archive-content-th {
+        @include media ($desktop-width) {
+            display: flex;
+            width: 100%;
+        }
     }
-    .front-best-post-date {
+    .archive-post-date {
         flex-wrap: wrap;
         @include post-container-date;
         p {
-            margin: 2px;
-            @include media ($desktop-width) {
-                margin-right: 10px;
-                margin-bottom: 20px;
-            }
+            @include archive-post-date;
         }
     }
     .content-p-container {
@@ -69,7 +72,7 @@
             // @include post-container;
         }
     }
-    .news-thumb {
+    .archive-post-thumb {
         img {
             @include post-container-thumb;
         }

@@ -27,15 +27,15 @@ get_header(); ?>
           <div class="content-title">
         <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
         </div> 
-        <div class="front-best-post-date">
+        <div class="archive-post-date">
         <p>Posted By: <?php red_starter_posted_by(); ?></p> 
         <p>On: <?php red_starter_posted_on(); ?></p> 
-        <p>In: <span class="cat-best">Best</span></p>
+        <p>In: <span class="cat-news">News</span></p>
         <p><?php comments_number(); ?></p>
         </div>
         </div>
-          <div class="content firstpage-content-th">
-          <div class="best-thumb">
+          <div class="content archive-content-th">
+          <div class="archive-post-thumb">
           <?php the_post_thumbnail( 'large' ); ?></div>
           
           

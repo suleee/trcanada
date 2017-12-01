@@ -572,10 +572,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     width: 100%; }
   .post-type-archive-news .site-main {
     margin-top: 10px; }
-  .post-type-archive-news .content-p-container {
-    width: 55%; }
-  .post-type-archive-news .best-thumb {
+  @media all and (min-width: 760px) {
+    .post-type-archive-news .content-p-container {
+      width: 55%; } }
+  .post-type-archive-news .archive-post-thumb {
     width: 45%; }
+  .post-type-archive-news .news-single-container {
+    display: -ms-flexbox;
+    display: flex; }
   .post-type-archive-news .content-title h3 {
     margin-top: 0; }
   .post-type-archive-news .content-title a {
@@ -594,11 +598,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         padding-left: 36px; }
       .post-type-archive-news .site-content .widget-left {
         width: 200px; } }
-  .post-type-archive-news .firstpage-content-th {
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%; }
-  .post-type-archive-news .front-best-post-date {
+  @media all and (min-width: 760px) {
+    .post-type-archive-news .archive-content-th {
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; } }
+  .post-type-archive-news .archive-post-date {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     display: -ms-flexbox;
@@ -606,19 +611,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     border-bottom: 1px solid #eee;
     margin-bottom: 20px;
     min-height: 32px; }
-    .post-type-archive-news .front-best-post-date p {
+    .post-type-archive-news .archive-post-date p {
       font-size: 12px;
       margin-right: 10px;
       margin-bottom: 20px;
       color: #c6c6c6; }
-      .post-type-archive-news .front-best-post-date p .cat-best {
+      .post-type-archive-news .archive-post-date p .cat-best {
         color: #f09217; }
-    .post-type-archive-news .front-best-post-date p {
-      margin: 2px; }
+    .post-type-archive-news .archive-post-date p {
+      margin-top: 2px;
+      margin-bottom: 2px; }
       @media all and (min-width: 760px) {
-        .post-type-archive-news .front-best-post-date p {
+        .post-type-archive-news .archive-post-date p {
           margin-right: 10px;
-          margin-bottom: 20px; } }
+          margin-bottom: 20px;
+          margin: 2px; } }
   .post-type-archive-news .content-p-container {
     padding-left: 10px; }
     .post-type-archive-news .content-p-container .content-p {
@@ -633,7 +640,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     margin-bottom: 20px;
     padding: 20px 20px;
     margin-top: 11px; }
-  .post-type-archive-news .news-thumb img {
+  .post-type-archive-news .archive-post-thumb img {
     height: 150px;
     width: 280px;
     object-fit: cover; }
@@ -664,18 +671,89 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .page-id-135 .title h3 {
   font-size: 30px; }
 
-.post-type-archive-column .site-content {
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 980px;
-  margin: 0 auto;
+.post-type-archive-column {
   width: 100%; }
-  .post-type-archive-column .site-content #main {
-    width: 75%; }
-  .post-type-archive-column .site-content #secondary {
-    width: 25%;
-    padding-left: 15px;
-    margin-top: 30px; }
+  .post-type-archive-column #primary #main {
+    width: 100%; }
+  .post-type-archive-column .site-main {
+    margin-top: 10px; }
+  @media all and (min-width: 760px) {
+    .post-type-archive-column .content-p-container {
+      width: 55%; } }
+  .post-type-archive-column .archive-post-thumb {
+    width: 45%; }
+  .post-type-archive-column .column-single-container {
+    display: -ms-flexbox;
+    display: flex; }
+  .post-type-archive-column .content-title h3 {
+    margin-top: 0; }
+  .post-type-archive-column .content-title a {
+    text-decoration: none;
+    color: black; }
+  @media all and (min-width: 760px) {
+    .post-type-archive-column .site-content {
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 980px;
+      margin: 0 auto;
+      width: 100%; }
+      .post-type-archive-column .site-content #secondary {
+        width: 30%;
+        margin-top: 30px;
+        padding-left: 36px; }
+      .post-type-archive-column .site-content .widget-left {
+        width: 200px; } }
+  @media all and (min-width: 760px) {
+    .post-type-archive-column .archive-content-th {
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; } }
+  .post-type-archive-column .archive-post-date {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    min-height: 32px; }
+    .post-type-archive-column .archive-post-date p {
+      font-size: 12px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      color: #c6c6c6; }
+      .post-type-archive-column .archive-post-date p .cat-best {
+        color: #f09217; }
+    .post-type-archive-column .archive-post-date p {
+      margin-top: 2px;
+      margin-bottom: 2px; }
+      @media all and (min-width: 760px) {
+        .post-type-archive-column .archive-post-date p {
+          margin-right: 10px;
+          margin-bottom: 20px;
+          margin: 2px; } }
+  .post-type-archive-column .content-p-container {
+    padding-left: 10px; }
+    .post-type-archive-column .content-p-container .content-p {
+      margin: 0; }
+    .post-type-archive-column .content-p-container a {
+      text-decoration: none;
+      color: #f09217;
+      font-size: 14px; }
+  .post-type-archive-column .column-single-container {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    margin-top: 11px; }
+  .post-type-archive-column .archive-post-thumb img {
+    height: 150px;
+    width: 280px;
+    object-fit: cover; }
+  .post-type-archive-column .fp-post-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
 
 .post-type-archive-life .site-content {
   display: -ms-flexbox;
@@ -739,21 +817,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   margin-top: 30px; }
 
 .home .mashsb-container,
-.post-type-archive-news .mashsb-container {
+.post-type-archive-news .mashsb-container,
+.post-type-archive-column .mashsb-container {
   padding-left: 10px;
   padding-top: 20px; }
   @media all and (min-width: 760px) {
     .home .mashsb-container,
-    .post-type-archive-news .mashsb-container {
+    .post-type-archive-news .mashsb-container,
+    .post-type-archive-column .mashsb-container {
       padding-top: 70px;
       border-left: 1px solid #eee; } }
 
 .home .p-content-div,
-.post-type-archive-news .p-content-div {
+.post-type-archive-news .p-content-div,
+.post-type-archive-column .p-content-div {
   margin-right: 10px; }
 
 .home .mashsb-buttons a,
-.post-type-archive-news .mashsb-buttons a {
+.post-type-archive-news .mashsb-buttons a,
+.post-type-archive-column .mashsb-buttons a {
   width: 70px;
   font-size: 10px;
   display: -ms-flexbox;
@@ -762,7 +844,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       justify-content: center;
   margin-bottom: 15px; }
   .home .mashsb-buttons a .text,
-  .post-type-archive-news .mashsb-buttons a .text {
+  .post-type-archive-news .mashsb-buttons a .text,
+  .post-type-archive-column .mashsb-buttons a .text {
     padding-top: 2px; }
 
 .single .logo-search-field,
