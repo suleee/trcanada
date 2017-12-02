@@ -67,26 +67,9 @@ get_header(); ?>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <!-- realted article -->
-	
+        <h3>Related posts</h3>
 			<div class="relatedposts">
-    <h3>Related posts</h3>
     <?php
         $orig_post = $post;
         global $post;

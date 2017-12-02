@@ -88,15 +88,17 @@ if ($posttags) {
 	</div>
 	</div>
 	
-	<?php echo do_shortcode('<div class="single-sns-bottom">[[mashshare]</div>'); ?>
+	<?php echo do_shortcode('<div class="single-sns-bottom">[mashshare]</div>'); ?>
 
 
 	<div class="p-n-article-container">
 	<div>
-		<?php previous_post_link('<strong>%link</strong>', 'Previous article'); ?> 
+		<h3>Previous posts</h3>
+		<?php previous_post_link('<strong>%link</strong>', '%title', ''); ?> 
 			</div>   
 	<div>
-	<?php next_post_link('<strong>%link</strong>', 'Next article'); ?>
+	<h3>Next posts</h3>
+	<?php next_post_link('<strong>%link</strong>', '%title'); ?>
 			</div>
 			</div>
 

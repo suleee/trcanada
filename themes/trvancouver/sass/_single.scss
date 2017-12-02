@@ -82,9 +82,37 @@
     .rotatot-single-post-container {
         display: flex;
     }
+    .relatedposts{
+        display: flex;
+        padding: 15px;
+        border: 1px solid $color__border;
+        background: $color_post_background;
+        img{
+            width: 150px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .relatedthumb{
+            width: 25%;
+        }
+    }
+    .p-n-article-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-submit{
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .comment-form-comment textarea{
+        height: 120px;
+    }
+
 }
 
-.content-area {}
 
 .post-85 {
     margin-right: 20px;
