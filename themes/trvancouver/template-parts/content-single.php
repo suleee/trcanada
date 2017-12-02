@@ -84,7 +84,7 @@ if ($posttags) {
 	</div>
 	
 	<div class="rotator rotator-single-post">
-      <?php echo adrotate_group(10); ?>
+      <?php echo adrotate_group(5); ?>
 	</div>
 	</div>
 	

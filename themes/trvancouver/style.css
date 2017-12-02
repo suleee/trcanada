@@ -143,16 +143,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .main-navigation {
   border-top: 1px solid #f1f3f6;
-  border-bottom: 1px solid #e2e2e2;
-  padding: 15px 0; }
+  border-bottom: 1px solid #e2e2e2; }
   .main-navigation a {
     color: black; }
   .main-navigation a:hover {
     color: #136df9; }
   .main-navigation li {
     padding: 0 15px; }
-  .main-navigation li:first-child {
-    padding: 0; }
+  .main-navigation .menu-item {
+    padding: 20px 0px;
+    margin: 0 15px; }
+    .main-navigation .menu-item.current-menu-item {
+      border-bottom: 2px solid blue; }
+    .main-navigation .menu-item:hover {
+      border-bottom: 2px solid blue; }
 
 .menu-container {
   position: relative;
@@ -485,11 +489,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   max-height: 96px;
   object-fit: cover; }
 
-.archive .logo-search-field,
-.archive .small-menu,
-.archive .menu {
-  margin: 0 20px; }
-
 .archive .site-content {
   margin: 0 20px; }
 
@@ -560,19 +559,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   font-weight: 400; }
 
 .archive .arhive-posts-container {
-  margin-top: 50px; }
+  margin-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .best-posts {
   display: -ms-flexbox;
   display: flex; }
-
-.page-id-10 .logo-search-field,
-.page-id-10 .small-menu,
-.page-id-10 .menu {
-  margin: 0 20px; }
-
-.page-id-10 .site-content {
-  margin: 0 20px; }
 
 @media all and (min-width: 760px) {
   .page-id-10 .content-area,
@@ -1332,7 +1325,7 @@ input[type="submit"] {
   font-size: 10.5px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: .7rem 4rem .5rem; }
+  padding: .4rem 1rem .2rem; }
 
 /* Fields */
 input[type="text"],

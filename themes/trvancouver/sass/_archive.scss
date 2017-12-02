@@ -1,9 +1,9 @@
 .archive {
-    .logo-search-field,
-    .small-menu,
-    .menu {
-        margin: 0 20px;
-    }
+    // .logo-search-field,
+    // .small-menu,
+    // .menu {
+    //     margin: 0 20px;
+    // }
     .site-content {
         margin: 0 20px;
     }
@@ -77,6 +77,7 @@
     }
     .arhive-posts-container {
         margin-top: 50px;
+        flex-wrap: wrap;
     }
 } ///taxonomy best posts
 .best-posts {
