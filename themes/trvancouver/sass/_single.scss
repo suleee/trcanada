@@ -1,11 +1,18 @@
 .single {
-    .logo-search-field,
-    .small-menu,
-    .menu {
-        margin: 0 20px;
-    }
-    .site-content {
-        margin: 0 20px;
+    .page-root {
+        list-style: none;
+        display: flex;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: $color_grey;
+        }
     }
     .content-area,
     .arhive-posts-container {
@@ -21,4 +28,64 @@
             }
         }
     }
+    .feature-image {
+        margin-left: 2%;
+        img {
+            object-fit: cover;
+            width: 90%;
+        }
+    }
+    .single-sns-bottom a {
+        background: none;
+        border: 1px solid black;
+        border-radius: 100px;
+        max-width: 100px !important;
+        span {
+            color: black;
+        }
+    }
+    .single-sns-top {
+        .text {
+            color: black;
+        }
+        a.mash-small {
+            padding: 20px;
+        }
+        .mashicon-facebook {
+            background: none;
+            border: 1px solid $color__border; // border-radius: 100px;
+            max-width: 200px !important;
+            border-radius: 100px;
+            .icon {
+                color: rgb(59, 89, 152);
+            }
+        }
+        .mashicon-twitter {
+            background: none;
+            border: 1px solid $color__border; // border-radius: 100px;
+            max-width: 200px !important;
+            border-radius: 100px;
+            .icon {
+                color: #0084b4;
+            }
+        }
+        .mashicon-subscribe {
+            background: none;
+            border: 1px solid $color__border; // border-radius: 100px;
+            max-width: 200px !important;
+            border-radius: 100px;
+            .icon {
+                color: rgb(59, 89, 152);
+            }
+        }
+    }
+    .rotatot-single-post-container {
+        display: flex;
+    }
+}
+
+.content-area {}
+
+.post-85 {
+    margin-right: 20px;
 }

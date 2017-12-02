@@ -53,7 +53,7 @@ get_header(); ?>
     ?>
         <div class="post-next">
             <a class="next" href="<?php the_permalink(); ?>">Next Story &raquo;</a>
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('array( 500, 600'); ?></a>
             <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
             <small><?php the_date('F j, Y'); ?></strong>
         </div>

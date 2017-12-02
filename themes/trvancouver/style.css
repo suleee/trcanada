@@ -857,13 +857,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .post-type-archive-trtv .arhive-posts-container {
   margin-top: 30px; }
 
-.single .logo-search-field,
-.single .small-menu,
-.single .menu {
-  margin: 0 20px; }
-
-.single .site-content {
-  margin: 0 20px; }
+.single .page-root {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px; }
+  .single .page-root p {
+    margin: 0; }
+  .single .page-root a {
+    text-decoration: none;
+    color: #c3c3c3; }
 
 @media all and (min-width: 760px) {
   .single .content-area,
@@ -882,6 +888,57 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .single .arhive-posts-container #secondary {
       width: 25%;
       padding-left: 15px; } }
+
+.single .feature-image {
+  margin-left: 2%; }
+  .single .feature-image img {
+    object-fit: cover;
+    width: 90%; }
+
+.single .single-sns-bottom a {
+  background: none;
+  border: 1px solid black;
+  border-radius: 100px;
+  max-width: 100px !important; }
+  .single .single-sns-bottom a span {
+    color: black; }
+
+.single .single-sns-top .text {
+  color: black; }
+
+.single .single-sns-top a.mash-small {
+  padding: 20px; }
+
+.single .single-sns-top .mashicon-facebook {
+  background: none;
+  border: 1px solid #eee;
+  max-width: 200px !important;
+  border-radius: 100px; }
+  .single .single-sns-top .mashicon-facebook .icon {
+    color: #3b5998; }
+
+.single .single-sns-top .mashicon-twitter {
+  background: none;
+  border: 1px solid #eee;
+  max-width: 200px !important;
+  border-radius: 100px; }
+  .single .single-sns-top .mashicon-twitter .icon {
+    color: #0084b4; }
+
+.single .single-sns-top .mashicon-subscribe {
+  background: none;
+  border: 1px solid #eee;
+  max-width: 200px !important;
+  border-radius: 100px; }
+  .single .single-sns-top .mashicon-subscribe .icon {
+    color: #3b5998; }
+
+.single .rotatot-single-post-container {
+  display: -ms-flexbox;
+  display: flex; }
+
+.post-85 {
+  margin-right: 20px; }
 
 .rotator {
   position: relative;
@@ -1571,17 +1628,3 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.single .mashsb-buttons a {
-  background: none;
-  border: 1px solid black;
-  border-radius: 100px;
-  max-width: 100px !important; }
-  .single .mashsb-buttons a span {
-    color: black; }
-
-.best-template-default .post-85 {
-  margin-right: 20px; }
-
-.rotatot-single-post-container {
-  display: -ms-flexbox;
-  display: flex; }

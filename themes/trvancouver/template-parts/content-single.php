@@ -10,8 +10,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
+	
+<ul class="page-root">
+	<a href=""><li>home <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+	<a href=""><li>best <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+	<a href=""><li><?php the_title( '<p class="entry-title">', '</p>' ); ?> </li></a>
+</ul>
 
-<p>home >> best >>	list</p>
+
 <?php
 $categories = get_terms( array(
 	'taxonomy' => 'best_type',
@@ -27,16 +33,19 @@ if ( ! empty( $categories ) ) {
     echo trim( $output, $separator );
 }
 ?>
+
+
 	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	<div class="entry-meta">
 		
 	<?php red_starter_posted_by(); ?> <?php red_starter_posted_on(); ?>/ <?php red_starter_comment_count(); ?> 
 		</div><!-- .entry-meta -->
-		<?php echo do_shortcode('[mashshare]'); ?>
+		<?php echo do_shortcode('<div class="single-sns-top">[mashshare]</div>'); ?>
 	
-	<?php if ( has_post_thumbnail() ) : ?>
+	<div class="feature-image"><?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
+</div>
 
 		
 		
@@ -79,7 +88,7 @@ if ($posttags) {
 	</div>
 	</div>
 	
-	<?php echo do_shortcode('[mashshare]'); ?>
+	<?php echo do_shortcode('<div class="single-sns-bottom">[[mashshare]</div>'); ?>
 
 
 	<div class="p-n-article-container">
