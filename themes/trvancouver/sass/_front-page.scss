@@ -18,6 +18,7 @@
             width: 200px;
         }
     }
+
     .text-bar-top {
         max-width: 900px;
         margin: 0 auto;
@@ -33,6 +34,8 @@
             }
         }
     }
+
+    //best posts
     .viewmore-btn {
         background: grey; // width: 630px;
         height: 32px;
@@ -47,6 +50,91 @@
             padding-top: 20px;
         }
     }
+        //best posts 
+        .firstpage-content-th {
+            @include media ($desktop-width) {
+            
+            }
+        }
+    
+        .p-content-div{
+            @include media ($desktop-width) {
+                display: flex;
+            }
+            .firstpage-content-th{
+                width: 65%;
+                padding-left: 15px;
+            }
+            
+        }
+        .front-best-post-date {
+            flex-wrap: wrap;
+            @include post-container-date;
+            margin-bottom: 6px;
+            p {
+                margin: 2px;
+                @include media ($desktop-width) {
+                    margin-right: 10px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .content-p-container {
+            .content-p {
+                margin: 0;
+            }
+            a {
+                text-decoration: none;
+                color: $color_orange;
+                font-size: 1rem;
+            }
+        }
+        .best-single-container {
+            margin-bottom: 20px;
+            padding: 30px 0px;
+            margin-top: 11px;
+            border-bottom: 1px solid $color__border;
+            .post-best-h {
+                text-decoration: none;
+                color: black;
+            }
+            h3 {
+                margin-top: 0;
+              
+            }
+            
+        }
+        .best-single-container:nth-child(3){
+            margin-bottom: 10px;
+        }
+        .best-thumb {
+           
+                text-align: center;
+                width: 35%;
+            
+            img {
+                width: 300px;
+                height: 150px;
+                object-fit: cover;
+                @include media ($desktop-width) {
+                    @include post-container-thumb;
+                
+                    height: 200px;
+                }
+            }
+        }
+        .fp-post-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        .post-thumbnail-wrapper img {
+            max-height: 96px;
+            object-fit: cover; // overflow: hidden;
+    
+            border: 1px solid rgba(0,0,0,.1);
+        }
+
+    //posts
     .front-posts {
         display: flex;
         flex-wrap: wrap;
@@ -73,16 +161,12 @@
             margin-right: 12px;
         }
     }
-    .post-th-title {
-        a {
-            font-size: 14px;
-        }
-    }
+  
     .front-post-contianer {
         margin: 50px 0;
-        .content-title a {
-            font-size: 15px;
-        }
+    }
+    .fpc-trtv{
+        margin-top: 80px;
     }
     .mashsb-container {
         padding: 0px;
@@ -116,14 +200,14 @@
             height: 22px;
             border-radius: 20px;
             background: rgb(243, 223, 65);
-            i {
-                color: white;
-                margin-left: 10px;
-                margin-top: 2px;
-                font-size: 15px;
-            }
+            img{
+                width: 13px;
+                margin-left: 6px;
+                        }
         }
+        
     }
+
     .fp-post-header {
         p {
             color: $color__viewall;
@@ -136,95 +220,30 @@
     }
     .play-btn {
         @include video-playbtn-shape;
-        top: 61px;
-        left: 130px;
+        top: 58px;
+        left: 125px;
     }
     .shape-t {
         background: url("../..img/triangle.png") no-repeat center 4.5rem;
         background-size: contain, 11rem 26rem, cover;
     }
-    //best posts 
-    .firstpage-content-th {
-        @include media ($desktop-width) {
-        
-        }
-    }
 
-    .p-content-div{
-        @include media ($desktop-width) {
-            display: flex;
-            // width: 85%;
-        }
-        .firstpage-content-th{
-            width: 65%;
-            padding-left: 15px;
-        }
-        
-    }
-    .front-best-post-date {
-        flex-wrap: wrap;
-        @include post-container-date;
-        margin-bottom: 6px;
-        p {
-            margin: 2px;
-            @include media ($desktop-width) {
-                margin-right: 10px;
-                margin-bottom: 20px;
-            }
-        }
-    }
-    .content-p-container {
-        // padding-left: 10px;
-        .content-p {
-            margin: 0;
-        }
-        a {
+    .fp-show-more{
+        a{
             text-decoration: none;
-            color: $color_orange;
-            font-size: 14px;
-        }
-    }
-    .best-single-container {
-        margin-bottom: 20px;
-        padding: 30px 0px;
-        margin-top: 11px;
-        .post-best-h {
-            text-decoration: none;
-            color: black;
-        }
-        h3 {
-            margin-top: 0;
-          
-        }
-        // @include media ($desktop-width) {
-        //     display: flex;
-        // }
-    }
-    .best-thumb {
-       
-            text-align: center;
-            width: 35%;
-        
-        img {
-            width: 300px;
-            height: 150px;
-            object-fit: cover;
-            @include media ($desktop-width) {
-                @include post-container-thumb;
+            color: #222;
             
-                height: 200px;
-            }
         }
     }
-    .fp-post-header {
-        display: flex;
-        justify-content: space-between;
+    .fp-post-header{
+        a{
+            text-decoration: none;
+            color: $color_dark_grey;
+        }
     }
-    .post-thumbnail-wrapper img {
-        max-height: 96px;
-        object-fit: cover; // overflow: hidden;
-
-        border: 1px solid rgba(0,0,0,.1);
+  .post-th-title{
+    a{
+        @include th-title;
     }
-  
+  }
 }

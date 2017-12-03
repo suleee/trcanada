@@ -74,12 +74,14 @@ get_header(); ?>
 
  -->
 
-<div style="display: flex;justify-content: flex-end;" > <a href="<?php echo get_home_url(); ?>/best">show more posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+<div style="display: flex;justify-content: center;" class="fp-show-more" >
+  <a href="<?php echo get_home_url(); ?>/best">show more posts <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+</div>
 
 
 <div class="front-post-contianer fpc-trtv">
 <div class="fp-post-header">
-    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i>
+    <h2><div class="yellow-dot"><img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
   </div><span> TRTV </span></h2> 
   <a href="<?php echo get_home_url(); ?>/trtv">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
   </div>

@@ -58,8 +58,9 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				
 					<div class="posts">
+					<a href = "<?php the_permalink(); ?> " rel="bookmark" class="post-img-tb">
 						<div class="thumbnail-wrapper">
-							<a href = "<?php the_permalink(); ?> " rel="bookmark" class="post-img-tb"><?php the_post_thumbnail( ); ?></a>
+							<?php the_post_thumbnail( ); ?>
 						</div>
 
 						<div class="title">
@@ -67,6 +68,7 @@ get_header(); ?>
 							<div><?php red_starter_posted_on(); ?> </div>
 						
 						</div>
+					</a>
 					</div>
 				<?php endwhile; ?>
 			</div>

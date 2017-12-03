@@ -105,12 +105,12 @@
     .serach-fieldset button {
         position: absolute;
         top: 28px;
-        right: 12px;
+        right: 2px;
         background: none;
         box-shadow: none;
         border: 0;
         @include media ($desktop-width) {
-            top: 67px;
+            top: 70px;
         }
         &:hover {
             box-shadow: none;

@@ -36,7 +36,7 @@ get_header(); ?>
         </div>
           <div class="content archive-content-th">
           <div class="archive-post-thumb">
-          <?php the_post_thumbnail( 'large' ); ?></div>
+          <a class="read-more" href="<?php the_permalink(); ?>">  <?php the_post_thumbnail( 'large' ); ?></div></a>
           
           
           <div class="content-p-container">
