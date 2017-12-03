@@ -52,7 +52,7 @@
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 
 					</nav><!-- #site-navigation -->
-				
+				<div class="menu-b-bottom"></div>
 					</div>
 			</header><!-- #masthead -->
 

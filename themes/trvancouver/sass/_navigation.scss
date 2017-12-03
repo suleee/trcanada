@@ -37,7 +37,7 @@ a {
         float: left;
         width: 100%;
         height: auto;
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
         ul {
             display: none;
             list-style: none;
@@ -104,10 +104,7 @@ a {
 @media screen and (min-width: 710px) {
     .menu-toggle {
         display: none;
-    } // .main-navigation{
-    // 	display: flex;
-    // 	height: 100px;
-    // }
+    } 
     .main-navigation ul {
         display: block;
     }
@@ -138,13 +135,5 @@ a {
 }
 
 #responsive-menu-button {
-    // position: absolute !important;
-    // top: 105px !important;
-    // right: 90% !important;
-    // top: 15%!important;
-    @media all and (min-width: 700px) {
-        // visibility: hidden !important;
-        // top: 10px !important;
-        // right: 10px !important;
-    }
+
 }

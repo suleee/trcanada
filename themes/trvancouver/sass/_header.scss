@@ -120,11 +120,13 @@
         }
     }
 }
-
+.menu-b-bottom{
+    height: 62px;
+    border-bottom: 1px solid #e2e2e2;
+}
 .main-navigation {
     border-top: 1px solid #f1f3f6;
-    border-bottom: 1px solid #e2e2e2;
-    // padding: 15px 0;
+  
     a {
         color: black;
     }
@@ -134,9 +136,7 @@
     li {
         padding: 0 15px;
     }
-    // li:first-child {
-    //     padding: 0;
-    // }
+  
     .menu-item {
         padding: 20px 0px;
         margin: 0 15px;

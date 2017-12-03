@@ -141,9 +141,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .logo-search-field .serach-fieldset button:focus {
       border: none; }
 
-.main-navigation {
-  border-top: 1px solid #f1f3f6;
+.menu-b-bottom {
+  height: 62px;
   border-bottom: 1px solid #e2e2e2; }
+
+.main-navigation {
+  border-top: 1px solid #f1f3f6; }
   .main-navigation a {
     color: black; }
   .main-navigation a:hover {
@@ -280,6 +283,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .post-type-archive-column .mashsb-buttons a .text {
     padding-top: 2px; }
 
+.mashsb-count {
+  display: none; }
+
+.home .site-content {
+  margin-top: 20px; }
+
 @media all and (min-width: 760px) {
   .home .front-page-wrapper {
     display: -ms-flexbox;
@@ -339,7 +348,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     @media all and (min-width: 760px) {
       .home .front-posts .front-post-single {
         max-width: 165px;
-        margin: 0 12px; } }
+        margin: 0 9px; } }
   @media all and (min-width: 760px) {
     .home .front-posts .front-post-single:nth-child(4) {
       margin-left: 12px;
@@ -487,7 +496,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .post-thumbnail-wrapper img {
   max-height: 96px;
-  object-fit: cover; }
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
 
 .archive .site-content {
   margin: 0 20px; }
@@ -499,7 +509,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     display: flex;
     max-width: 980px;
     margin: 0 auto;
-    width: 100%; }
+    width: 100%;
+    margin-top: 20px; }
     .archive .content-area #main,
     .archive .arhive-posts-container #main {
       width: 80%; }
@@ -916,15 +927,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   max-width: 200px !important;
   border-radius: 100px; }
   .single .single-sns-top .mashicon-twitter .icon {
-    color: #0084b4; }
+    color: #2ecbfd; }
 
 .single .single-sns-top .mashicon-subscribe {
   background: none;
   border: 1px solid #eee;
   max-width: 200px !important;
   border-radius: 100px; }
-  .single .single-sns-top .mashicon-subscribe .icon {
-    color: #3b5998; }
 
 .single .rotatot-single-post-container {
   display: -ms-flexbox;
@@ -981,9 +990,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 #adrotate_widgets-4 .g {
   border: 1px solid #eee;
   padding: 20px 20px; }
-
-#secondary .g {
-  border: 1px solid rgba(0, 0, 0, 0.1); }
 
 html {
   font-family: sans-serif;
@@ -1390,8 +1396,7 @@ a {
       display: block;
       float: left;
       width: 100%;
-      height: auto;
-      margin-bottom: 30px; }
+      height: auto; }
       .main-navigation ul {
         display: none;
         list-style: none;

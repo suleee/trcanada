@@ -1,4 +1,7 @@
 .home {
+    .site-content{
+        margin-top: 20px;
+    }
     .front-page-wrapper {
         @include media ($desktop-width) {
             @include general-width;
@@ -56,7 +59,7 @@
             max-width: 260px;
             @include media ($desktop-width) {
                 max-width: 165px;
-                margin: 0 12px;
+                margin: 0 9px;
             }
         }
         .front-post-single:nth-child(4) {
@@ -220,5 +223,8 @@
     .post-thumbnail-wrapper img {
         max-height: 96px;
         object-fit: cover; // overflow: hidden;
+
+        border: 1px solid rgba(0,0,0,.1);
     }
+  
 }

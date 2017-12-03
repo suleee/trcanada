@@ -59,6 +59,8 @@ get_header(); ?>
           ?>
           <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
           </p>
+
+          
         </div>
         <?php echo do_shortcode('[mashshare]'); ?>
         </div>  
@@ -72,13 +74,14 @@ get_header(); ?>
 
  -->
 
-<div style="display: flex;justify-content: flex-end;" > <a href="best">show more posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+<div style="display: flex;justify-content: flex-end;" > <a href="<?php echo get_home_url(); ?>/best">show more posts <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
 
 
 <div class="front-post-contianer fpc-trtv">
 <div class="fp-post-header">
     <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i>
-  </div><span> TRTV </span></h2> <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+  </div><span> TRTV </span></h2> 
+  <a href="<?php echo get_home_url(); ?>/trtv">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
   </div>
       <div class="front-posts front-foodposts">
         <?php
@@ -114,7 +117,7 @@ get_header(); ?>
 
   <div class="front-post-contianer fpc-news">
   <div class="fp-post-header"><h2> NEWS </h2>
-    <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+    <a href="<?php echo get_home_url(); ?>/news">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
       <div class="front-posts front-newsposts">
         <?php
@@ -142,7 +145,7 @@ get_header(); ?>
   </div>
   <div class="front-post-contianer fpc-foodie">
     <div class="fp-post-header"><h2><span> 맛집 </span></h2>
-    <p>view all <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+    <a href="<?php echo get_home_url(); ?>/foodie">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div>
       <div class="front-posts front-foodposts">
         <?php
