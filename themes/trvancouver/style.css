@@ -501,7 +501,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .home .fp-show-more a {
   text-decoration: none;
-  color: #222; }
+  color: #888; }
 
 .home .fp-post-header a {
   text-decoration: none;
@@ -598,6 +598,22 @@ h3 {
 .best-posts {
   display: -ms-flexbox;
   display: flex; }
+
+.search .site-content {
+  margin-top: 20px; }
+  @media all and (min-width: 760px) {
+    .search .site-content .content-area {
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 980px;
+      margin: 0 auto;
+      width: 100%; } }
+  .search .site-content .site-main {
+    width: 75%; }
+  .search .site-content #secondary {
+    width: 25%;
+    margin-top: 25px;
+    padding-left: 36px; }
 
 @media all and (min-width: 760px) {
   .page-id-10 .content-area,
@@ -882,10 +898,10 @@ h3 {
 .post-type-archive-trtv .arhive-posts-container {
   margin-top: 30px; }
 
-.single .site-content {
+.life-template-default .site-content, .single .site-content {
   margin-top: 20px; }
 
-.single .page-root {
+.life-template-default .page-root, .single .page-root {
   list-style: none;
   display: -ms-flexbox;
   display: flex;
@@ -893,14 +909,15 @@ h3 {
   margin: 0;
   padding: 0;
   font-size: 14px; }
-  .single .page-root p {
+  .life-template-default .page-root p, .single .page-root p {
     margin: 0; }
-  .single .page-root a {
+  .life-template-default .page-root a, .single .page-root a {
     text-decoration: none;
     color: #c3c3c3; }
 
 @media all and (min-width: 760px) {
-  .single .content-area,
+  .life-template-default .content-area,
+  .life-template-default .arhive-posts-container, .single .content-area,
   .single .arhive-posts-container {
     display: -ms-flexbox;
     display: flex;
@@ -909,88 +926,90 @@ h3 {
     width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    .single .content-area #main,
+    .life-template-default .content-area #main,
+    .life-template-default .arhive-posts-container #main, .single .content-area #main,
     .single .arhive-posts-container #main {
       width: 75%; }
-    .single .content-area #secondary,
+    .life-template-default .content-area #secondary,
+    .life-template-default .arhive-posts-container #secondary, .single .content-area #secondary,
     .single .arhive-posts-container #secondary {
       width: 25%;
       padding-left: 15px; } }
 
-.single .feature-image {
+.life-template-default .feature-image, .single .feature-image {
   margin-left: 2%; }
-  .single .feature-image img {
+  .life-template-default .feature-image img, .single .feature-image img {
     object-fit: cover;
     width: 90%; }
 
-.single .single-sns-bottom a {
+.life-template-default .single-sns-bottom a, .single .single-sns-bottom a {
   background: none;
   border: 1px solid black;
   border-radius: 100px;
   max-width: 100px !important; }
-  .single .single-sns-bottom a span {
+  .life-template-default .single-sns-bottom a span, .single .single-sns-bottom a span {
     color: black; }
 
-.single .single-sns-top .text {
+.life-template-default .single-sns-top .text, .single .single-sns-top .text {
   color: black; }
 
-.single .single-sns-top a.mash-small {
+.life-template-default .single-sns-top a.mash-small, .single .single-sns-top a.mash-small {
   padding: 20px; }
 
-.single .single-sns-top .mashicon-facebook {
+.life-template-default .single-sns-top .mashicon-facebook, .single .single-sns-top .mashicon-facebook {
   background: none;
   border: 1px solid #eee;
   max-width: 200px !important;
   border-radius: 100px; }
-  .single .single-sns-top .mashicon-facebook .icon {
+  .life-template-default .single-sns-top .mashicon-facebook .icon, .single .single-sns-top .mashicon-facebook .icon {
     color: #3b5998; }
 
-.single .single-sns-top .mashicon-twitter {
+.life-template-default .single-sns-top .mashicon-twitter, .single .single-sns-top .mashicon-twitter {
   background: none;
   border: 1px solid #eee;
   max-width: 200px !important;
   border-radius: 100px; }
-  .single .single-sns-top .mashicon-twitter .icon {
+  .life-template-default .single-sns-top .mashicon-twitter .icon, .single .single-sns-top .mashicon-twitter .icon {
     color: #2ecbfd; }
 
-.single .single-sns-top .mashicon-subscribe {
+.life-template-default .single-sns-top .mashicon-subscribe, .single .single-sns-top .mashicon-subscribe {
   background: none;
   border: 1px solid #eee;
   max-width: 200px !important;
   border-radius: 100px; }
 
-.single .rotatot-single-post-container {
+.life-template-default .rotatot-single-post-container, .single .rotatot-single-post-container {
   display: -ms-flexbox;
   display: flex; }
 
-.single .relatedposts {
+.life-template-default .relatedposts, .single .relatedposts {
   display: -ms-flexbox;
   display: flex;
   padding: 15px;
   border: 1px solid #eee;
   background: #fbfbfc; }
-  .single .relatedposts img {
+  .life-template-default .relatedposts img, .single .relatedposts img {
     width: 150px; }
-  .single .relatedposts a {
+  .life-template-default .relatedposts a, .single .relatedposts a {
     text-decoration: none;
     color: black; }
-  .single .relatedposts .relatedthumb {
+  .life-template-default .relatedposts .relatedthumb, .single .relatedposts .relatedthumb {
     width: 25%; }
 
-.single .p-n-article-container {
+.life-template-default .p-n-article-container, .single .p-n-article-container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.single .form-submit {
+.life-template-default .form-submit, .single .form-submit {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
   margin: 0; }
 
-.single .comment-form-comment textarea {
+.life-template-default .comment-form-comment textarea, .single .comment-form-comment textarea {
   height: 120px; }
 
 .post-85 {

@@ -1,1 +1,18 @@
-.search {}
+.search {
+    .site-content {
+        margin-top: 20px;
+        .content-area {
+            @include media ($desktop-width) {
+                @include general-width;
+            }
+        }
+        .site-main {
+            width: 75%;
+        }
+        #secondary {
+            width: 25%;
+            margin-top: 25px;
+            padding-left: 36px;
+        }
+    }
+}
