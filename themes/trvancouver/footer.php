@@ -33,7 +33,7 @@
 					<a href="">View available tickets <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 					</div>
 					<ul class="footer-second-section">
-					<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'contact us' ) ) ); ?>"><li>contact</li></a>
+					<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'contact us' ) ) ); ?>"><li>Contact</li></a>
 						<li> | </li>
 						<a href="<?php echo esc_url( get_permalink( get_page_by_title( '광고 및 제휴 문의' ) ) ); ?>"><li>광고 및 제휴 문의</li></a>
 						<li> | </li>

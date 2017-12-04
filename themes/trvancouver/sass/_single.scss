@@ -1,4 +1,4 @@
-.single {
+.life-template-default, .single {
     .site-content{
         margin-top: 20px;
     }
@@ -23,10 +23,10 @@
             @include general-width;
             flex-wrap: wrap;
             #main {
-                width: 75%;
+                width: 80%;
             }
             #secondary {
-                width: 25%;
+                width: 20%;
                 padding-left: 15px;
             }
         }

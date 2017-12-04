@@ -1,1 +1,47 @@
-.search {}
+.search {
+    .site-content {
+        margin-top: 20px;
+        .content-area {
+            @include media ($desktop-width) {
+                @include general-width;
+            }
+        }
+        .site-main {
+            width: 75%;
+        }
+        #secondary {
+            width: 25%;
+            margin-top: 25px;
+            padding-left: 36px;
+        }
+    }
+    .entry-header {
+        h2 {
+            margin-bottom: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+    }
+    .entry-summary {
+        margin-top: 0px;
+    }
+    article {
+        margin-bottom: 40px;
+    }
+    .page-numbers {
+        border: 1px solid $color__border;
+        border-radius: 1px;
+        padding: 5px 10px;
+        margin: 0 3px;
+    }
+    .search-pagination{
+        justify-content: flex-end;
+        display: flex;
+        a{
+            text-decoration: none;
+            color: #b7bdc8;
+        }
+    }
+}
