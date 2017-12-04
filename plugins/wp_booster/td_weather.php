@@ -542,8 +542,6 @@ class td_weather {
 
 		// today in format like: 20150210
 		$today_date = date( 'Ymd', current_time( 'timestamp', 0 ) );
-
-
 		if (!empty($api_response['list']) and is_array($api_response['list'])) {
 			$cnt = 0;
 
