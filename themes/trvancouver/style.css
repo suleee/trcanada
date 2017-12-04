@@ -615,6 +615,34 @@ h3 {
     margin-top: 25px;
     padding-left: 36px; }
 
+.search .entry-header h2 {
+  margin-bottom: 0px; }
+
+.search .entry-header a {
+  text-decoration: none;
+  color: #222; }
+
+.search .entry-summary {
+  margin-top: 0px; }
+
+.search article {
+  margin-bottom: 40px; }
+
+.search .page-numbers {
+  border: 1px solid #eee;
+  border-radius: 1px;
+  padding: 5px 10px;
+  margin: 0 3px; }
+
+.search .search-pagination {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  display: -ms-flexbox;
+  display: flex; }
+  .search .search-pagination a {
+    text-decoration: none;
+    color: #b7bdc8; }
+
 @media all and (min-width: 760px) {
   .page-id-10 .content-area,
   .page-id-10 .arhive-posts-container {
@@ -884,8 +912,8 @@ h3 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   border-radius: 40px;
   position: absolute;
-  top: 84px;
-  left: 187px; }
+  top: 71px;
+  left: 179px; }
   .post-type-archive-trtv .play-btn img {
     width: 16px;
     margin-left: 9px;
@@ -929,11 +957,11 @@ h3 {
     .life-template-default .content-area #main,
     .life-template-default .arhive-posts-container #main, .single .content-area #main,
     .single .arhive-posts-container #main {
-      width: 75%; }
+      width: 80%; }
     .life-template-default .content-area #secondary,
     .life-template-default .arhive-posts-container #secondary, .single .content-area #secondary,
     .single .arhive-posts-container #secondary {
-      width: 25%;
+      width: 20%;
       padding-left: 15px; } }
 
 .life-template-default .feature-image, .single .feature-image {
