@@ -87,10 +87,8 @@
         }
     }
     #responsive-menu-button {
-        // position: inherit !important;
-        // top: 0;
-        // // right: 0;
-        top: 5%;
+        position: absolute;
+        height: 37px;        
         @include media ($desktop-width) {
             visibility: hidden;
         }

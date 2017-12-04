@@ -116,7 +116,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       .logo-search-field .header-search {
         visibility: visible; } }
   .logo-search-field #responsive-menu-button {
-    top: 5%; }
+    position: absolute;
+    height: 37px; }
     @media all and (min-width: 760px) {
       .logo-search-field #responsive-menu-button {
         visibility: hidden; } }

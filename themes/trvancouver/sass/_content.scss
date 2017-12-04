@@ -57,6 +57,6 @@
     flex-wrap: wrap;
     justify-content: center;
     @include media ($desktop-width) {
-display: block;
+        display: block;
     }
 }
