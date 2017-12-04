@@ -1709,9 +1709,6 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.we {
-  width: 300px; }
-
 .clear-sky-d {
   animation: spin 4s infinite linear; }
 
@@ -1813,7 +1810,8 @@ object {
     padding: 0; } }
 
 .td-weather-temp-wrap {
-  display: inline-block; }
+  display: -ms-flexbox;
+  display: flex; }
 
 .td-weather-now {
   float: left;
@@ -1993,28 +1991,9 @@ object {
   right: 5px; }
 
 .td-weather-animated-icon {
-  float: left;
-  text-align: right;
-  margin-left: -15px;
-  position: relative;
+  display: none;
   /* responsive portrait tablet + phone */
   /* responsive portrait tablet */ }
-
-@media (max-width: 1018px) {
-  .td-weather-animated-icon {
-    left: 0;
-    top: -6px;
-    margin-right: 0;
-    margin-left: -22px; } }
-
-@media (min-width: 768px) and (max-width: 1018px) {
-  .td-weather-animated-icon {
-    transform: scale(0.72);
-    -webkit-transform: scale(0.72);
-    -moz-transform: scale(0.72);
-    -ms-transform: scale(0.72);
-    -o-transform: scale(0.72);
-    margin-left: -20px; } }
 
 .td-weather-animated-icon span {
   width: 100px;
