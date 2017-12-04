@@ -370,7 +370,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .content-p-container a {
   text-decoration: none;
   color: #f09217;
-  font-size: 1rem; }
+  font-size: 14px; }
+  .home .content-p-container a:hover {
+    text-decoration: underline;
+    color: #f9ae53; }
 
 .home .best-single-container {
   margin-bottom: 20px;
@@ -379,9 +382,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   border-bottom: 1px solid #eee; }
   .home .best-single-container .post-best-h {
     text-decoration: none;
-    color: black; }
+    color: #222; }
   .home .best-single-container h3 {
     margin-top: 0; }
+    .home .best-single-container h3:hover {
+      color: #136df9; }
 
 .home .best-single-container:nth-child(3) {
   margin-bottom: 10px; }
@@ -435,6 +440,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .home .front-posts .front-post-single:nth-child(1) {
     margin-left: 0;
     margin-right: 12px; }
+  .home .front-posts .front-post-single a {
+    text-decoration: none;
+    color: #222; }
+    .home .front-posts .front-post-single a:hover {
+      text-decoration: underline;
+      color: #136df9; }
 
 .home .front-post-contianer {
   margin: 50px 0; }
@@ -502,15 +513,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .home .fp-show-more a {
   text-decoration: none;
   color: #888; }
+  .home .fp-show-more a:hover {
+    color: #136df9; }
 
 .home .fp-post-header a {
+  margin-right: 17px;
   text-decoration: none;
   color: #888; }
+  .home .fp-post-header a:hover {
+    color: #c3c3c3; }
 
-.home .post-th-title a {
-  text-decoration: none;
-  color: #222;
-  font-size: 1rem; }
+.home .fp-post-header .fp-post-hover a:hover {
+  color: #222; }
 
 .archive .site-content {
   margin: 0 20px; }
@@ -579,6 +593,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     text-decoration: none;
     color: #222;
     font-size: 1rem; }
+    .archive .posts a:hover {
+      text-decoration: underline;
+      color: #136df9; }
   .archive .posts span {
     color: #aaa;
     font-size: 12px; }
@@ -743,6 +760,9 @@ h3 {
       text-decoration: none;
       color: #f09217;
       font-size: 14px; }
+      .post-type-archive-news .content-p-container a:hover {
+        text-decoration: underline;
+        color: #f9ae53; }
   .post-type-archive-news .news-single-container {
     border: 1px solid #eee;
     border-radius: 3px;
@@ -848,6 +868,9 @@ h3 {
       text-decoration: none;
       color: #f09217;
       font-size: 14px; }
+      .post-type-archive-column .content-p-container a:hover {
+        text-decoration: underline;
+        color: #f9ae53; }
   .post-type-archive-column .column-single-container {
     border: 1px solid #eee;
     background: #fbfbfc;
@@ -877,10 +900,6 @@ h3 {
     width: 25%;
     padding-left: 15px;
     margin-top: 30px; }
-
-.post-type-archive-foodie .foodie-posts {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
 
 .page-id-159 .content-area {
   max-width: 980px;

@@ -38,10 +38,9 @@ get_header(); ?>
 
 						<div class="title">
 							<?php the_title('<h3>', '</h3>'); ?>
-							<div><?php red_starter_posted_on(); ?> </div>
-						
 						</div>
-			</a>
+					</a>
+			<div><?php red_starter_posted_on(); ?> </div>
 					</div>
 				<?php endwhile; ?>
 			</div>

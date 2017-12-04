@@ -19,20 +19,20 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
             
                 <div class="posts">
+				<a href = "<?php the_permalink(); ?> " rel="bookmark" >
 				<div class="post-thumbnail-wrapper trtv-tb-w-bg">
 				<div class="play-btn">
-				  <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
+				  <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png" class="post-img-tb" alt=""/>
 				</div>
-						<a href = "<?php the_permalink(); ?> " rel="bookmark" class="post-img-tb">
-						<?php the_post_thumbnail( 'large' ); ?></a>
+						
+						<?php the_post_thumbnail( 'large' ); ?>
                     </div>
 
                     <div class="title">
                         <?php the_title('<h3>', '</h3>'); ?>
-                        <div><?php red_starter_posted_on(); ?> </div>
-                    
                     </div>
-                </div>
+				</div></a>
+				<div><?php red_starter_posted_on(); ?> </div>
             <?php endwhile; ?>
 			</div>
 			<?php else : ?>

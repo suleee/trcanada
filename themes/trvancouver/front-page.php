@@ -33,7 +33,7 @@ get_header(); ?>
 
           <div class="p-content-div">
           <div class="best-thumb">
-          <?php the_post_thumbnail( 'large' ); ?></div>
+          <a class="fp-post-thumb-hover" href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( 'large' ); ?></div></a>
 
           <div class="content firstpage-content-th">
         <!-- <div class="content-top"> -->
@@ -57,7 +57,8 @@ get_header(); ?>
             $content = strip_tags($content);
             echo substr($content, 0, 280) . "...";
           ?>
-          <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
+          <a class="read-more" href="<?php the_permalink(); ?>"> 
+          Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
           </p>
 
           
@@ -98,18 +99,18 @@ get_header(); ?>
   <!--grab from content-sigle.php-->
 
         <div class="front-post-single">
-        
+        <a class="fp-post-hover" href="<?php the_permalink(); ?>"> 
         <div class="post-thumbnail-wrapper trtv-tb-w-bg">
         <div class="play-btn">
           <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
         </div>
           <!-- <div class="black-box"></div> -->
-        <?php the_post_thumbnail( 'large' ); ?>
+         <?php the_post_thumbnail( 'large' ); ?>
         </div>
-        <div class="content-title post-th-title">
-        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
-        </div>
-        </div>
+        <!-- <div class="content-title post-th-title"> -->
+        <?php the_title( '<h3">', '</h3>' ); ?>
+        <!-- </div> -->
+        </div></a>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
@@ -134,14 +135,14 @@ get_header(); ?>
   <!--grab from content-sigle.php-->
 
         <div class="front-post-single">
-        
+        <a class="" href="<?php the_permalink(); ?>">
         <div class="post-thumbnail-wrapper">
         <?php the_post_thumbnail( 'large' ); ?>
         </div>
-        <div class="content-title post-th-title">
-        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
-        </div>
-        </div>
+      
+        <?php the_title( '<h3">', '</h3>' ); ?>
+    
+        </div></a>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
@@ -162,13 +163,14 @@ get_header(); ?>
   <!--grab from content-sigle.php-->
 
         <div class="front-post-single">
-        
+        <a class="" href="<?php the_permalink(); ?>">
         <div class="post-thumbnail-wrapper">
         <?php the_post_thumbnail( 'large' ); ?>
         </div>
-        <div class="content-title post-th-title">
-        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3">', '</h3>' ); ?></a>
-        </div>
+        <!-- <div class="content-title post-th-title"> -->
+      <?php the_title( '<h3">', '</h3>' ); ?>
+        <!-- </div> -->
+      </a>
         </div>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>

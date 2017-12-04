@@ -57,9 +57,7 @@
             margin: 0;
         }
         a {
-            text-decoration: none;
-            color: $color_orange;
-            font-size: 14px;
+            @include read-more;
         }
     }
     .column-single-container {

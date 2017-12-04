@@ -87,4 +87,16 @@
 text-decoration: none;
 color: #222;
 font-size: 1rem;
+&:hover{
+    text-decoration: underline;
+    color: $color_tr;
 }
+}
+@mixin read-more{
+text-decoration: none;
+color: $color_orange;
+font-size: 14px;
+&:hover {
+    text-decoration: underline;
+    color: $color_light_orange;
+}}
