@@ -1037,12 +1037,20 @@ h3 {
 .life-template-default .single-sns-bottom a,
 .single .single-sns-bottom a {
   background: none;
-  border: 1px solid black;
-  border-radius: 100px;
-  max-width: 100px !important; }
+  border: 1px solid #eee;
+  border-radius: 100px; }
   .life-template-default .single-sns-bottom a span,
   .single .single-sns-bottom a span {
     color: black; }
+
+.life-template-default .mashsb-buttons,
+.single .mashsb-buttons {
+  margin: 10px 0 50px 0;
+  width: 500px; }
+  .life-template-default .mashsb-buttons a.mash-small,
+  .single .mashsb-buttons a.mash-small {
+    padding: 20px 10px;
+    margin-right: 23px; }
 
 .life-template-default .single-sns-top .text,
 .single .single-sns-top .text {
@@ -1108,7 +1116,12 @@ h3 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  margin-bottom: 50px; }
+
+.life-template-default .relatedposts,
+.single .relatedposts {
+  margin-bottom: 50px; }
 
 .life-template-default .form-submit,
 .single .form-submit {
@@ -1140,9 +1153,12 @@ h3 {
   background: #136df9;
   color: white; }
 
-.life-template-default .submit:hover,
-.single .submit:hover {
-  background: #259bfe; }
+.life-template-default .submit,
+.single .submit {
+  padding: 15px 35px; }
+  .life-template-default .submit:hover,
+  .single .submit:hover {
+    background: #259bfe; }
 
 .post-85 {
   margin-right: 20px; }
@@ -1506,7 +1522,7 @@ input[type="submit"] {
   font-size: 10.5px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 15px 35px; }
+  padding: .4rem 1rem .2rem; }
 
 /* Fields */
 input[type="text"],

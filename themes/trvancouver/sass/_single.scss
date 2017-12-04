@@ -61,13 +61,20 @@
     }
     .single-sns-bottom a {
         background: none;
-        border: 1px solid black;
+        border: 1px solid $color__border;
         border-radius: 100px;
-        max-width: 100px !important;
         span {
             color: black;
         }
     }
+    .mashsb-buttons{
+        margin: 10px 0 50px 0;
+        width: 500px;
+     a.mash-small{
+        padding: 20px 10px;
+        margin-right: 23px;
+    }
+}
     .single-sns-top {
         .text {
             color: black;
@@ -126,6 +133,10 @@
     .p-n-article-container {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    .relatedposts{
+        margin-bottom: 50px;
     }
     .form-submit {
         display: flex;
@@ -152,6 +163,7 @@
         
     }
     .submit{
+        padding: 15px 35px;  
         &:hover{
             background: $color_h_span;
         }
