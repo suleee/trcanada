@@ -45,7 +45,7 @@
   */
  function red_starter_comment_count() {
  	if ( is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
- 		echo '<span class="comments-link">';
+ 		echo '<i class="fa fa-comments-o" aria-hidden="true"></i> ','<span class="comments-link">';
  		comments_popup_link( esc_html( '0 Comments' ), esc_html( '1 Comment' ), esc_html( '% Comments' ) );
  		echo '</span>';
  	}

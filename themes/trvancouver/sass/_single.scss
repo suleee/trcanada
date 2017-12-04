@@ -1,5 +1,22 @@
-.life-template-default, .single {
-    .site-content{
+.life-template-default,
+.single {
+    .entry-meta {
+        span {
+            margin-right: 8px;
+            color: #222;
+        }
+        .posted-on {
+            margin-right: 330px;
+        }
+        .author {
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: #222;
+        }
+    }
+    .site-content {
         margin-top: 20px;
     }
     .page-root {
@@ -16,7 +33,7 @@
             text-decoration: none;
             color: $color_grey;
             margin-right: 10px;
-            &:hover{
+            &:hover {
                 color: #222;
             }
         }
@@ -57,6 +74,8 @@
         }
         a.mash-small {
             padding: 20px;
+            margin: 10px 20px 20px 0;
+            
         }
         .mashicon-facebook {
             background: none;
@@ -81,11 +100,10 @@
             border: 1px solid $color__border; // border-radius: 100px;
             max-width: 200px !important;
             border-radius: 100px;
-            .icon {
-                // border: 1px solid black;
-            }
+           
         }
     }
+
     .rotatot-single-post-container {
         display: flex;
     }
@@ -117,20 +135,29 @@
     .comment-form-comment textarea {
         height: 120px;
     }
-
-    .relatedthumb{
-        a{
+    .relatedthumb {
+        a {
             @include th-title;
         }
     }
+  
+    .logged-in-as{
+        a{  
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 2px;
+            background: $color_tr;
+            color:white;
+        }
+        
+    }
+    .submit{
+        &:hover{
+            background: $color_h_span;
+        }
+
+    }
 }
-
-
-
-
-
-
-
 
 .post-85 {
     margin-right: 20px;
