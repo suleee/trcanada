@@ -52,3 +52,11 @@
     display: block;
 }
 
+#secondary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include media ($desktop-width) {
+display: block;
+    }
+}

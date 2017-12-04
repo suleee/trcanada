@@ -55,8 +55,10 @@
             display: flex;
         }
         .firstpage-content-th {
-            width: 65%;
-            padding-left: 15px;
+            @include media ($desktop-width) {
+                width: 65%;
+                padding-left: 15px;
+            }
         }
     }
     .front-best-post-date {
@@ -100,7 +102,10 @@
     }
     .best-thumb {
         text-align: center;
+        @include media ($desktop-width) {
+        
         width: 35%;
+    }
         img {
             width: 300px;
             height: 150px;
@@ -109,6 +114,12 @@
                 @include post-container-thumb;
                 height: 200px;
             }
+        }
+    }
+    .p-content-div{
+        padding: 0 50px;
+        @include media ($desktop-width) {
+            padding: 0px;
         }
     }
     .fp-post-header {
@@ -123,9 +134,11 @@
     .front-posts {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding: 0 20px 20px 20px;
         @include media ($desktop-width) {
             display: flex;
+            justify-content: flex-start; // margin: 0 20px;
             padding: 0 0px 20px 0px;
         }
         .front-post-single {
@@ -145,14 +158,14 @@
             margin-left: 0;
             margin-right: 12px;
         }
-    .front-post-single a{
-        text-decoration: none;
-        color: #222;
-        &:hover{
-            text-decoration: underline;
-            color: $color_tr;
+        .front-post-single a {
+            text-decoration: none;
+            color: #222;
+            &:hover {
+                text-decoration: underline;
+                color: $color_tr;
+            }
         }
-    }
     }
     .front-post-contianer {
         margin: 50px 0;
@@ -197,6 +210,10 @@
         }
     }
     .fp-post-header {
+        margin: 0 60px;
+        @include media ($desktop-width) {
+            margin: 0px;
+        }
         p {
             color: $color__viewall;
             padding-right: 10px;
@@ -218,7 +235,7 @@
         a {
             text-decoration: none;
             color: $color_dark_grey;
-            &:hover{
+            &:hover {
                 color: $color_tr;
             }
         }
@@ -228,13 +245,12 @@
             margin-right: 17px;
             text-decoration: none;
             color: $color_dark_grey;
-            &:hover{
+            &:hover {
                 color: $color_grey;
             }
-            
         }
-        .fp-post-hover a:hover{
-            color:#222;
+        .fp-post-hover a:hover {
+            color: #222;
         }
     }
 }

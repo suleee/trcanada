@@ -11,7 +11,9 @@
         }
     }
     .p-content-div {
-        margin-right: 10px;
+        @include media ($desktop-width) {
+            margin-right: 10px;
+        }
     }
     .mashsb-buttons a {
         width: 70px;
@@ -24,6 +26,7 @@
         }
     }
 }
-.mashsb-count{
+
+.mashsb-count {
     display: none;
 }

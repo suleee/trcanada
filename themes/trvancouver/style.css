@@ -269,10 +269,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       padding-top: 70px;
       border-left: 1px solid #eee; } }
 
-.home .p-content-div,
-.post-type-archive-news .p-content-div,
-.post-type-archive-column .p-content-div {
-  margin-right: 10px; }
+@media all and (min-width: 760px) {
+  .home .p-content-div,
+  .post-type-archive-news .p-content-div,
+  .post-type-archive-column .p-content-div {
+    margin-right: 10px; } }
 
 .home .mashsb-buttons a,
 .post-type-archive-news .mashsb-buttons a,
@@ -343,9 +344,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     display: -ms-flexbox;
     display: flex; } }
 
-.home .p-content-div .firstpage-content-th {
-  width: 65%;
-  padding-left: 15px; }
+@media all and (min-width: 760px) {
+  .home .p-content-div .firstpage-content-th {
+    width: 65%;
+    padding-left: 15px; } }
 
 .home .front-best-post-date {
   -ms-flex-wrap: wrap;
@@ -398,8 +400,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   margin-bottom: 10px; }
 
 .home .best-thumb {
-  text-align: center;
-  width: 35%; }
+  text-align: center; }
+  @media all and (min-width: 760px) {
+    .home .best-thumb {
+      width: 35%; } }
   .home .best-thumb img {
     width: 300px;
     height: 150px;
@@ -410,6 +414,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         width: 280px;
         object-fit: cover;
         height: 200px; } }
+
+.home .p-content-div {
+  padding: 0 50px; }
+  @media all and (min-width: 760px) {
+    .home .p-content-div {
+      padding: 0px; } }
 
 .home .fp-post-header {
   display: -ms-flexbox;
@@ -427,11 +437,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
   padding: 0 20px 20px 20px; }
   @media all and (min-width: 760px) {
     .home .front-posts {
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
       padding: 0 0px 20px 0px; } }
   .home .front-posts .front-post-single {
     max-width: 260px; }
@@ -492,9 +506,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     width: 13px;
     margin-left: 6px; }
 
-.home .fp-post-header p {
-  color: #888;
-  padding-right: 10px; }
+.home .fp-post-header {
+  margin: 0 60px; }
+  @media all and (min-width: 760px) {
+    .home .fp-post-header {
+      margin: 0px; } }
+  .home .fp-post-header p {
+    color: #888;
+    padding-right: 10px; }
 
 .home .trtv-tb-w-bg {
   position: relative; }
@@ -1761,6 +1780,17 @@ a {
 
 .bypostauthor {
   display: block; }
+
+#secondary {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  @media all and (min-width: 760px) {
+    #secondary {
+      display: block; } }
 
 /*--------------------------------------------------------------
 # Media
