@@ -268,7 +268,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .we {
   width: 300px; }
 
-.td-w-today-icon {
+.clear-sky-d {
   animation: spin 4s infinite linear; }
 
 @keyframes spin {
@@ -276,6 +276,25 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     -webkit-transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg); } }
+
+.td-w-today-icon {
+  animation: playy 0.8s steps(26) infinite; }
+
+@keyframes playx {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -2700px; } }
+
+@keyframes playy {
+  100% {
+    background-position: -2700px; } }
+
+@keyframes play {
+  0% {
+    background-position: 0 0%; }
+  100% {
+    background-position: 0 100%; } }
 
 .td_smart_list_8 {
   position: relative;

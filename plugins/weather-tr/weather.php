@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by ra.
- * Date: 9/28/2015
- */
 
 function httpGet($url)
 {
-    $ch = curl_init();  
+   $ch = curl_init();
  
     curl_setopt($ch,CURLOPT_URL,$url);
     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
@@ -19,9 +15,52 @@ function httpGet($url)
 }
 
 function getW() {
-    $w = '{"coord":{"lon":-123.12,"lat":49.25},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}],"base":"stations","main":{"temp":279.14,"pressure":1007,"humidity":81,"temp_min":276.15,"temp_max":280.15},"visibility":32186,"wind":{"speed":1},"clouds":{"all":90},"dt":1511759700,"sys":{"type":1,"id":3359,"message":0.1684,"country":"CA","sunrise":1511797299,"sunset":1511828321},"id":6173331,"name":"Vancouver","cod":200}';
+    $w = '{"coord":{"lon":-123.12,"lat":49.25},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10n"}],"base":"stations","main":{"temp":7.24,"pressure":1018,"humidity":87,"temp_min":5,"temp_max":9},"visibility":24140,"wind":{"speed":6.2,"deg":90},"clouds":{"all":90},"dt":1511849700,"sys":{"type":1,"id":3359,"message":0.2456,"country":"CA","sunrise":1511883786,"sunset":1511914679},"id":6173331,"name":"Vancouver","cod":200}';
     return $w;
 }
+function getF() {
+	// $today_weather_url = 'http://api.openweathermap.org/data/2.5/forecast?q=vancouver,ca&units=metric&cnt=7&appid=b8d0c5f0b3d878c123756fc0a4284ea9';
+	$w = '{"cod":"200","message":0.1698,"cnt":7,"list":[{"dt":1512345600,"main":{"temp":5.39,"temp_min":4.07,"temp_max":5.39,"pressure":1017.9,"sea_level":1037.21,"grnd_level":1017.9,"humidity":100,"temp_kf":1.32},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"clouds":{"all":56},"wind":{"speed":1.26,"deg":269},"rain":{},"snow":{"3h":0.0095000000000001},"sys":{"pod":"n"},"dt_txt":"2017-12-04 00:00:00"},{"dt":1512356400,"main":{"temp":3.76,"temp_min":2.77,"temp_max":3.76,"pressure":1019.95,"sea_level":1039.41,"grnd_level":1019.95,"humidity":100,"temp_kf":0.99},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"clouds":{"all":12},"wind":{"speed":0.71,"deg":277.5},"rain":{},"snow":{"3h":0.023},"sys":{"pod":"n"},"dt_txt":"2017-12-04 03:00:00"},{"dt":1512367200,"main":{"temp":2.04,"temp_min":1.38,"temp_max":2.04,"pressure":1022.11,"sea_level":1041.72,"grnd_level":1022.11,"humidity":100,"temp_kf":0.66},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"clouds":{"all":32},"wind":{"speed":0.5,"deg":20.5069},"rain":{},"snow":{"3h":0.00675},"sys":{"pod":"n"},"dt_txt":"2017-12-04 06:00:00"},{"dt":1512378000,"main":{"temp":2.24,"temp_min":1.91,"temp_max":2.24,"pressure":1024.04,"sea_level":1043.66,"grnd_level":1024.04,"humidity":100,"temp_kf":0.33},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"clouds":{"all":68},"wind":{"speed":0.71,"deg":73.0029},"rain":{},"snow":{"3h":0.01125},"sys":{"pod":"n"},"dt_txt":"2017-12-04 09:00:00"},{"dt":1512388800,"main":{"temp":2.36,"temp_min":2.36,"temp_max":2.36,"pressure":1025.93,"sea_level":1045.5,"grnd_level":1025.93,"humidity":100,"temp_kf":0},"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13n"}],"clouds":{"all":56},"wind":{"speed":0.99,"deg":93.0011},"rain":{},"snow":{"3h":0.035},"sys":{"pod":"n"},"dt_txt":"2017-12-04 12:00:00"},{"dt":1512399600,"main":{"temp":2.38,"temp_min":2.38,"temp_max":2.38,"pressure":1027.29,"sea_level":1046.91,"grnd_level":1027.29,"humidity":100,"temp_kf":0},"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13n"}],"clouds":{"all":68},"wind":{"speed":1.55,"deg":99.5072},"rain":{},"snow":{"3h":0.045},"sys":{"pod":"n"},"dt_txt":"2017-12-04 15:00:00"},{"dt":1512410400,"main":{"temp":3.13,"temp_min":3.13,"temp_max":3.13,"pressure":1028.59,"sea_level":1048.21,"grnd_level":1028.59,"humidity":100,"temp_kf":0},"weather":[{"id":600,"main":"Snow","description":"light snow","icon":"13d"}],"clouds":{"all":64},"wind":{"speed":1.39,"deg":103.003},"rain":{},"snow":{"3h":0.1375},"sys":{"pod":"d"},"dt_txt":"2017-12-04 18:00:00"}],"city":{"id":6173331,"name":"Vancouver","coord":{"lat":49.2497,"lon":-123.1194},"country":"CA"}}';
+	return $w;
+}
+
+function isTimeToUpdate() {
+	$fname = "weathertime.txt";
+	if (file_exists($fname)) {
+		$time = file_get_contents($fname);
+		if ($time < time()) {
+			file_put_contents($fname, time()+3600);
+			return true;
+		}
+		return false;
+	} else {
+		file_put_contents($fname, time()+3600);
+		return true;
+	}
+}
+
+function getTodayWeather() {
+	$fname = "weathertoday.json";
+	if(isTimeToUpdate() || !file_exists($fname)) {
+		$json = httpGet("http://api.openweathermap.org/data/2.5/weather?q=vancouver,ca&appid=b8d0c5f0b3d878c123756fc0a4284ea9&units=metric");
+		file_put_contents($fname, $json);
+	} else {
+		$json = file_get_contents($fname);
+	}
+	return $json;
+}
+
+function getForecastWeather() {
+	$fname = "weatherforecast.json";
+	if(isTimeToUpdate() || !file_exists($fname)) {
+		$json = httpGet("http://api.openweathermap.org/data/2.5/forecast?q=vancouver,ca&units=metric&appid=b8d0c5f0b3d878c123756fc0a4284ea9");
+		file_put_contents($fname, $json);
+	} else {
+		$json = file_get_contents($fname);
+	}
+	return $json;
+}
+
 
 class td_weather {
 
@@ -87,40 +126,16 @@ class td_weather {
 
 		$weather_data['block_uid'] = 'abc';
 
+		self::get_today_data($atts, $weather_data);
+		$r = self::get_five_days_data($atts, $weather_data);
+		// var_dump($weather_data);
+
 		// render the HTML
 		$buffy = '<!-- weather -->';
         $buffy .= self::render_block_template($atts, $weather_data, $current_temp_label, $current_speed_label, $block_uid);
 
 		return $buffy;
 	}
-
-
-	/**
-	 * renders the template that is used in the top bar of the site
-	 * @param $atts - the atts that the block gets
-	 * @param $weather_data - the precomputed weather data
-	 * @param $current_temp_label - C/F
-	 *
-	 * @return string - HTML the rendered template
-	 */
-	private static function render_top_bar_template($atts, $weather_data, $current_temp_label) {
-        $current_unit = $weather_data['current_unit'];
-		ob_start();
-		?>
-		<div class="td-weather-top-widget" id="<?php echo $weather_data['block_uid'] ?>">
-			<i class="td-icons <?php echo $weather_data['today_icon'] ?>"></i>
-			<div class="td-weather-now" data-block-uid="<?php echo $weather_data['block_uid'] ?>">
-				<span class="td-big-degrees"><?php echo $weather_data['today_temp'][$current_unit] ?></span>
-				<span class="td-weather-unit"><?php echo $current_temp_label ?></span>
-			</div>
-			<div class="td-weather-header">
-				<div class="td-weather-city"><?php echo $atts['w_location'] ?></div>
-			</div>
-		</div>
-		<?php
-		return ob_get_clean();
-	}
-
 
 	/**
 	 * renders the template that is used on all weather blocks and widgets
@@ -132,14 +147,7 @@ class td_weather {
 	 * @return string - HTML the rendered template
 	 */
 	private static function render_block_template($atts, $weather_data, $current_temp_label, $current_speed_label, $block_uid) {
-        $current_unit = $weather_data['current_unit'];
-        $weather_data['forecast'] = array(
-            0 => array('day_name'=>"Mon", 'day_temp' => array(0=> "8")),
-            1 => array('day_name'=>"Tue", 'day_temp' => array(0=> "6")),
-            2 => array('day_name'=>"Wen", 'day_temp' => array(0=> "7")),
-            3 => array('day_name'=>"Thu", 'day_temp' => array(0=> "5")),
-            4 => array('day_name'=>"Fri", 'day_temp' => array(0=> "4")),
-    );
+		$current_unit = $weather_data['current_unit'];
 		ob_start();
 		?>
 
@@ -219,166 +227,12 @@ class td_weather {
 		return ob_get_clean();
 	}
 
+	private static function get_today_data($atts, &$weather_data) {
+	
+		$json_api_response = getTodayWeather();
 
-
-	/**
-	 * @param $atts
-	 * @param $weather_data - the precomputed weather data
-	 * @return bool|string
-	 *  - bool:true - we have the $weather_data (from cache or from a real request)
-	 *  - string - error message
-	 */
-	private static function get_weather_data($atts, &$weather_data) {
-		if (empty($atts['w_language'])) {
-			$atts['w_language'] = 'en';
-			$sytem_locale = get_locale();
-			$available_locales = array( 'en', 'es', 'sp', 'fr', 'it', 'de', 'pt', 'ro', 'pl', 'ru', 'uk', 'ua', 'fi', 'nl', 'bg', 'sv', 'se', 'ca', 'tr', 'hr', 'zh', 'zh_tw', 'zh_cn', 'hu' );
-
-			// CHECK FOR LOCALE
-			if( in_array( $sytem_locale , $available_locales ) ) {
-				$atts['w_language'] = $sytem_locale;
-			}
-			// CHECK FOR LOCALE BY FIRST TWO DIGITS
-			if( in_array(substr($sytem_locale, 0, 2), $available_locales ) ) {
-				$atts['w_language'] = substr($sytem_locale, 0, 2);
-			}
-		}
-
-
-		$cache_key = strtolower($atts['w_location'] . '_' . $atts['w_language'] . '_' . $weather_data['current_unit']);
-		// if (td_remote_cache::is_expired(__CLASS__, $cache_key) === true) {
-            if(true){
-			// cache is expired - do a request
-
-			// check the api call response
-
-			// The array of keys that have been checked
-			$avoid_keys = array();
-
-			// The flag marks we need a 'today' check
-			$atts['w_type'] = 'today';
-
-			$response = self::get_weather_data_method($atts, $cache_key, true, $weather_data, $avoid_keys);
-
-			if (isset($response)) {
-				return $response;
-			}
-
-			$remaining_keys = array_diff(self::$owm_api_keys, $avoid_keys);
-
-			// The flag marks we need a 'forecast' check
-			$atts['w_type'] = 'forecast';
-
-			if (empty($remaining_keys)) {
-
-				// It means that just one key was available, so now, we give a try, using again the entire set of keys
-				$response = self::get_weather_data_method($atts, $cache_key, true, $weather_data);
-
-				if (isset($response)) {
-					return $response;
-				}
-			} else {
-
-				// - First, try to get keys from the $remaining_keys array, and when we finish, get the already used $avoid_keys to reuse them
-				// - The cache is not checked, because we'll do it when we check again using the previously avoided keys
-
-				self::get_weather_data_method($atts, $cache_key, false, $weather_data, $avoid_keys);
-
-				if ($weather_data['api_key'] === null) {
-
-					// It means that the $remaining_keys array was exhausted, so, as we said, get the already used $avoid_keys to reuse them
-					$response_using_avoided_keys = self::get_weather_data_method($atts, $cache_key, true, $weather_data, $remaining_keys);
-					if (isset($response_using_avoided_keys)) {
-						return $response_using_avoided_keys;
-					}
-				}
-			}
-
-			td_remote_cache::set(__CLASS__, $cache_key, $weather_data, self::$caching_time); //we have a reply and we set it
-			return 'api';
-            
-		} else {
-			// cache is valid
-			$weather_data = td_remote_cache::get(__CLASS__, $cache_key);
-            var_dump("wd", $weather_data);
-			if ( $weather_data === false ) {
-				// It means an error has happened at the getting weather data, so an non expired cache value has been set for this $cache_key
-				return '';
-			} else {
-				return 'cache';
-			}
-		}
-	}
-
-
-	private static function get_weather_data_method($atts, $cache_key, $check_the_cache, &$weather_data, &$avoid_keys = array()) {
-
-		// The method used is given by the $atts['w_type'] attribute
-		switch ($atts['w_type']) {
-			case 'today': $method = 'owm_get_today_data'; break;
-			case 'forecast': $method = 'owm_get_five_days_data'; break;
-		}
-
-		$weather_data['api_key'] = self::get_a_owm_key($avoid_keys);
-		$api_data = self::$method($atts, $weather_data);
-
-		while ( $api_data !== true && $weather_data['api_key'] !== null) {
-			$avoid_keys[] = $weather_data['api_key'];
-			$weather_data['api_key'] = self::get_a_owm_key($avoid_keys);
-			$api_data = self::$method($atts, $weather_data);
-		}
-
-		// - Check will be done only when we didn't get api data and we can check the cache
-		// - We do not allow cache checking when the weather data is obtained using a subset of the available keys
-		// (the cache checking allowed only when all keys were used)
-		if ($api_data !== true && $check_the_cache) {
-
-			$weather_data = td_remote_cache::get(__CLASS__, $cache_key);
-			if ($weather_data === false) {
-
-				// - If we allow cache checking (all api weather keys have been used) and there's nothing in cache, we set non expiring cache time
-				// - Important! This will not allow any further api weather checks for this $cache_key (which represents a location)
-				td_remote_cache::set(__CLASS__, $cache_key, false, self::$caching_overtime);
-
-				return self::error('Weather API error: ' . $api_data);
-			}
-
-			td_remote_cache::extend(__CLASS__, $cache_key, self::$caching_time);
-			return 'api_fail_cache';
-		}
-	}
-
-
-
-	/**
-	 * adds to the &$weather_data the information for today's forecast from OWM
-	 * @param $atts - the shortcode atts
-	 * @param $weather_data - BYREF weather data - this function will add to it
-	 *
-	 * @return bool|string
-	 *   - true: if everything is ok
-	 *   - string: the error message, if there was an error
-	 */
-	private static function owm_get_today_data($atts, &$weather_data) {
-		$today_weather_url = 'http://api.openweathermap.org/data/2.5/weather?q=' . urlencode($atts['w_location']) . '&lang=' . $atts['w_language'] . '&units=metric&appid=' . $weather_data['api_key'];
-
-		//print("<pre>".print_r($today_weather_url,true)."</pre>");
-
-		$json_api_response = td_remote_http::get_page($today_weather_url, __CLASS__);
-
-		//print("<pre> json city weather API response: ".print_r($json_api_response,true)."</pre>");
-
-
-		// fail
-		if ($json_api_response === false) {
-            td_log::log(__FILE__, __FUNCTION__, 'Api call failed', $today_weather_url);
-			return 'Error getting remote data for today forecast. Please check your server configuration';
-		}
-
-		// try to decode the json
 		$api_response = @json_decode($json_api_response, true);
 		if ($api_response === null and json_last_error() !== JSON_ERROR_NONE) {
-            td_log::log(__FILE__, __FUNCTION__, 'Error decoding the json', $api_response);
 			return 'Error decoding the json from OpenWeatherMap';
 		}
 
@@ -393,11 +247,6 @@ class td_weather {
 		}
 
 		//print_r($api_response);
-
-
-
-		// set the language of the api
-		$weather_data['api_language'] = $atts['w_language'];
 
 		// current location
 		if (isset($api_response['name'])) {
@@ -513,7 +362,6 @@ class td_weather {
 		// today in format like: 20150210
 		$today_date = date( 'Ymd', current_time( 'timestamp', 0 ) );
 
-
 		if (!empty($api_response['list']) and is_array($api_response['list'])) {
 			$cnt = 0;
 
@@ -546,7 +394,104 @@ class td_weather {
 		return false; // return true if ~everything is ok
 	}
 
+	private static function get_five_days_data ($atts, &$weather_data) {
 
+		$json_api_response = getForecastWeather();
+
+		// fail
+		if ($json_api_response === false) {
+            td_log::log(__FILE__, __FUNCTION__, 'Api call failed', $today_weather_url);
+			return 'Error getting remote data for 5 days forecast. Please check your server configuration';
+		}
+
+		// try to decode the json
+		$api_response = @json_decode($json_api_response, true);
+		if ($api_response === null and json_last_error() !== JSON_ERROR_NONE) {
+            td_log::log(__FILE__, __FUNCTION__, 'Error decoding the json', $api_response);
+			return 'Error decoding the json from OpenWeatherMap';
+		}
+
+
+		// today in format like: 20150210
+		$today_date = date( 'Ymd', current_time( 'timestamp', 0 ) );
+		// echo "<pre>";
+		$week = array();
+		foreach ($api_response['list'] as $index => $day) {
+			$dd = explode(" ", $day['dt_txt']);
+			if (array_key_exists($dd[0], $week)) {
+				$data = $week[$dd[0]];
+				$max = $data['max'];
+				$min = $data['min'];
+				if ($max < $day['main']['temp']) {
+					$week[$dd[0]]['max'] = $day['main']['temp'];
+				}
+				if ($min > $day['main']['temp']) {
+					$week[$dd[0]]['min'] = $day['main']['temp'];
+				}
+			} else {
+				$week[$dd[0]] = array(
+					'max' => $day['main']['temp'], 
+					'min' => $day['main']['temp'],
+					'timestamp' => $day['dt'],
+					'day_name' => $day['dt'],
+					'owm_day_index' => $index
+				);
+			}
+		}
+		
+		foreach($week as $index => $day_forecast) {
+			$weather_data['forecast'][] = array (
+				'timestamp' => $day_forecast['day_name'],
+				'day_temp' => array(
+					round($day_forecast['max']),
+					round(self::celsius_to_fahrenheit($day_forecast['max']))
+				),
+				'day_name' => date_i18n('D', $day_forecast['day_name']),
+				'owm_day_index' => $index // used in js to update only the displayed days when we do api calls from JS
+			);
+		}
+
+		// var_dump($week);
+		// echo "</pre>";
+
+		// if (!empty($api_response['list']) and is_array($api_response['list'])) {
+		// 	$cnt = 0;
+
+		// 	foreach ($api_response['list'] as $index => $day_forecast) {
+		// 		if (
+		// 			!empty($day_forecast['dt'])
+		// 			and !empty($day_forecast['main']['temp'])
+		// 			and $today_date < date('Ymd', $day_forecast['dt'])  // compare today with the forecast date in the format 20150210, today must be smaller. We have to do this hack
+		// 		) {                                                     // because the api return UTC time and we may have different timezones on the server. Avoid showing the same day twice
+		// 			if ($cnt > 4) { // show only 5
+		// 				break;
+		// 			}
+		// 			$dd = explode(" ", $day_forecast['dt_txt']);
+		// 			$dd = $dd[0];
+
+		// 			$weather_data['forecast'][] = array (
+		// 				'timestamp' => $day_forecast['dt'],
+		// 				'day_temp' => array(
+		// 					round($week[$dd]['max']),
+		// 					round(self::celsius_to_fahrenheit($week[$dd]['max']))
+		// 				),
+		// 				// 'day_temp' => array (
+		// 				// 	round($day_forecast['main']['temp']), // metric
+		// 				// 	round(self::celsius_to_fahrenheit($day_forecast['main']['temp']))  //imperial
+		// 				// ),
+		// 				'day_name' => date_i18n('D', $day_forecast['dt']),
+		// 				'owm_day_index' => $index // used in js to update only the displayed days when we do api calls from JS
+		// 			);
+		// 			$cnt++;
+		// 		}
+
+		// 	}
+		// 	// echo "</pre>";
+		// 	// var_dump($weather_data['forecast']);
+		// 	return true;
+		// }
+		return true; // return true if ~everything is ok
+	}
 
 	/**
 	 * convert celsius to fahrenheit + rounding (no decimals if result > 100 or one decimal if result < 100)
@@ -588,8 +533,6 @@ class td_weather {
 		}
 		return '';
 	}
-
-
 
 	private static function get_a_owm_key( $avoid_keys = array() ) {
 
