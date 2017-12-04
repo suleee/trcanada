@@ -1,0 +1,120 @@
+.single {
+    .site-content{
+        margin-top: 20px;
+    }
+    .page-root {
+        list-style: none;
+        display: flex;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: $color_grey;
+        }
+    }
+    .content-area,
+    .arhive-posts-container {
+        @include media ($desktop-width) {
+            @include general-width;
+            flex-wrap: wrap;
+            #main {
+                width: 75%;
+            }
+            #secondary {
+                width: 25%;
+                padding-left: 15px;
+            }
+        }
+    }
+    .feature-image {
+        margin-left: 2%;
+        img {
+            object-fit: cover;
+            width: 90%;
+        }
+    }
+    .single-sns-bottom a {
+        background: none;
+        border: 1px solid black;
+        border-radius: 100px;
+        max-width: 100px !important;
+        span {
+            color: black;
+        }
+    }
+    .single-sns-top {
+        .text {
+            color: black;
+        }
+        a.mash-small {
+            padding: 20px;
+        }
+        .mashicon-facebook {
+            background: none;
+            border: 1px solid $color__border; // border-radius: 100px;
+            max-width: 200px !important;
+            border-radius: 100px;
+            .icon {
+                color: rgb(59, 89, 152);
+            }
+        }
+        .mashicon-twitter {
+            background: none;
+            border: 1px solid $color__border; // border-radius: 100px;
+            max-width: 200px !important;
+            border-radius: 100px;
+            .icon {
+                color: #2ecbfd;
+            }
+        }
+        .mashicon-subscribe {
+            background: none;
+            border: 1px solid $color__border; // border-radius: 100px;
+            max-width: 200px !important;
+            border-radius: 100px;
+            .icon {
+                // border: 1px solid black;
+            }
+        }
+    }
+    .rotatot-single-post-container {
+        display: flex;
+    }
+    .relatedposts {
+        display: flex;
+        padding: 15px;
+        border: 1px solid $color__border;
+        background: $color_post_background;
+        img {
+            width: 150px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .relatedthumb {
+            width: 25%;
+        }
+    }
+    .p-n-article-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-submit {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .comment-form-comment textarea {
+        height: 120px;
+    }
+}
+
+.post-85 {
+    margin-right: 20px;
+}

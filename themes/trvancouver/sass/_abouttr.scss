@@ -1,0 +1,21 @@
+.page-id-135 {
+    .content-area {
+        @include general-width;
+        #main {
+            width: 80%;
+            padding: 0 50px;
+        }
+        #secondary {
+            width: 20%;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+    }
+    .title,
+    .thumbnail-wrapper {
+        text-align: center;
+    }
+    .title h3 {
+        font-size: 30px;
+    }
+}

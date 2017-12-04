@@ -9,15 +9,46 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
+
+	
+<ul class="page-root">
+	<a href=""><li>home <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+	<a href=""><li>best <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
+	<a href=""><li><?php the_title( '<p class="entry-title">', '</p>' ); ?> </li></a>
+</ul>
+
+
+<?php
+$categories = get_terms( array(
+	'taxonomy' => 'best_type',
+	'orderby' => 'name',
+	'hide_empty' => true,
+));
+$separator = ' ';
+$output = '';
+if ( ! empty( $categories ) ) {
+    foreach( $categories as $category ) {
+        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+    }
+    echo trim( $output, $separator );
+}
+?>
+
+
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<div class="entry-meta">
+		
+	<?php red_starter_posted_by(); ?> <?php red_starter_posted_on(); ?>/ <?php red_starter_comment_count(); ?> 
+		</div><!-- .entry-meta -->
+		<?php echo do_shortcode('<div class="single-sns-top">[mashshare]</div>'); ?>
+	
+	<div class="feature-image"><?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
+</div>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
+		
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -30,7 +61,50 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	<div>
+	Tags:
+	<?php
+		// echo get_the_tag_list('',', ','');
+	?> 
+<?php
+$posttags = get_the_tags();
+if ($posttags) {
+  foreach($posttags as $tag) {
+	  echo "<a href='?slug=".$tag->slug."'>".$tag->name."</a>, ";
+	//   var_dump($tag);
+    // echo $tag->name . ' '; 
+  }
+}
+?>
+	</div>
+
+	<div class="rotatot-single-post-container">
+	<div class="rotator rotator-single-post">
+      <?php echo adrotate_group(4); ?>
+	</div>
+	
+	<div class="rotator rotator-single-post">
+      <?php echo adrotate_group(5); ?>
+	</div>
+	</div>
+	
+	<?php echo do_shortcode('<div class="single-sns-bottom">[mashshare]</div>'); ?>
+
+
+	<div class="p-n-article-container">
+	<div>
+		<h3>Previous posts</h3>
+		<?php previous_post_link('<strong>%link</strong>', '%title', ''); ?> 
+			</div>   
+	<div>
+	<h3>Next posts</h3>
+	<?php next_post_link('<strong>%link</strong>', '%title'); ?>
+			</div>
+			</div>
+
+
+
+		
+
+
 </article><!-- #post-## -->

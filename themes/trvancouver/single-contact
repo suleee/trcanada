@@ -1,0 +1,16 @@
+<?php
+/**
+* The template for displaying.
+*
+* @package RED_Starter_Theme
+*/
+
+get_header(); ?>
+
+<?php echo do_shortcode('[contact-form-7 id="6" title="Contact form 1"]'); ?>
+
+<?php get_sidebar(); ?>
+</div>
+        </div>
+
+<?php get_footer(); ?>

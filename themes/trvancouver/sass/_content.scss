@@ -2,80 +2,53 @@
 # Content
 --------------------------------------------------------------*/
 
+
 /* Posts and pages */
 
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+    margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+    margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+    clear: both;
+    margin: 0 0 $base__space-unit;
 }
+
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
+
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
+
 .bypostauthor {
-	display: block;
+    display: block;
 }
 
-
-///archive
-#primary, .arhive-posts-container{
-	display: flex;
-
-#main{
-	width: 70%;
-}
-#secondary{
-width: 30%;
-}
-}
-.page-header h1{
-	border-left: 4px solid $color_tr;
-	font-size: 20px;
-	padding-left: 10px;	
-}
-.posts{
-	width: 228px;
-	padding-right: 28px;
-	img{
-		height: 111px;
-	}
-}
-.content-area{
-	#secondary{
-		padding-left: 8px;
-		margin-top: 62px;
-		
-		}
-}

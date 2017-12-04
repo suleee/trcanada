@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying archive for the products post type (shop page).
+ * The template for displaying archive for the News post type.
  *
- * @package RED_Starter_Theme
+ * @package Trvancouver_Theme
  */
 
 get_header(); ?>
@@ -12,66 +12,53 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
 			<?php
-			
-			function archive_news_title( $title) {
-			if(is_post_type_archive('news')){
-				$title = '';
-				}
-				return $title;
-				}
-				add_filter('get_the_archive_title', 'archive_news_title');
-				the_archive_title( '<h1>', '</h1>' );
-
-
-				the_archive_description( '<div class="taxonomy-description">', '</div>' );
-			?>
-
-			<ul class="product-type-list">
-                    <?php    
-                        $terms = get_terms( array(
-                                            'taxonomy' => 'best_type',
-                                            'orderby' => 'name',
-                                        ));
-
-                        foreach ($terms as $term) :
-                            $url = get_term_link ($term->slug , 'best_type');              
-                    	?>    
-						<li class="product-list">                   
-                        <a href='<?php echo $url?>' class='button'>
-						
-						<h2><?php echo $term->name; ?></h2></a>
-						</li>
-                    <?php
-                        endforeach;
-                    ?>
-			</ul>
-
-			</header><!-- .page-header -->
-			<!--<?php /* Start the Loop */ ?>-->
-				
-				
-			<div class="arhive-posts-container news-posts">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="posts">
-						<div class="thumbnail-wrapper">
-							<a href = "<?php the_permalink(); ?> " rel="bookmark"><?php the_post_thumbnail( ); ?></a>
-						</div>
-
-						<div class="title">
-							<?php the_title(); ?>
-							
-							<!-- <?php echo CFS()->get( 'cost' ); ?> -->
-						</div>
-					</div>
-				<?php endwhile; ?>
-			</div>
-			<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+        // global $post;
+        $args = array(
+        'post_type' => 'news',
+        'order' => 'DSC',
+        'posts_per_page' => 3);
+        $product_posts = get_posts( $args ); // returns an array of posts
+        ?>
+        <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+        <div class="news-single-container">
+          <div class="p-content-div">
+        <div class="content-top">
+          <div class="content-title">
+        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
+        </div> 
+        <div class="archive-post-date">
+        <p>Posted By: <?php red_starter_posted_by(); ?></p> 
+        <p>On: <?php red_starter_posted_on(); ?></p> 
+        <p>In: <span class="cat-post-type">News</span></p>
+        <p><?php comments_number(); ?></p>
+        </div>
+        </div>
+          <div class="content archive-content-th">
+          <div class="archive-post-thumb">
+          <a class="read-more" href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( 'large' ); ?></div></a>
+          
+          
+          <div class="content-p-container">
+            <p class="content-p">
+          <?php
+            $content = get_the_content();
+            $content = strip_tags($content);
+            echo substr($content, 0, 280) . "...";
+          ?>
+          <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
+          </p>
+        </div>
+        </div>  
+        </div> 
+        <?php echo do_shortcode('[mashshare]'); ?>
+        </div>
+        <?php endforeach; wp_reset_postdata(); ?>
+		  </div>
+		  
 		<?php endif; ?>
 		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 

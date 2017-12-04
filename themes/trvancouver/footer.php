@@ -11,7 +11,7 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-			<div id="3" class="widget-area" role="complementary">
+			<div id="footer-widget" class="widget-area footer-widget-area" role="complementary">
 
 <?php if ( function_exists( 'dynamic_sidebar' )|| dynamic_sidebar('footer')):?>
 <?php endif; ?>
@@ -33,11 +33,11 @@
 					<a href="">View available tickets <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 					</div>
 					<ul class="footer-second-section">
-						<li>contact</li>
+					<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'contact us' ) ) ); ?>"><li>contact</li></a>
 						<li> | </li>
-						<li>광고 및 제휴 문의</li>
+						<a href="<?php echo esc_url( get_permalink( get_page_by_title( '광고 및 제휴 문의' ) ) ); ?>"><li>광고 및 제휴 문의</li></a>
 						<li> | </li>
-						<li> Kpop me</li>
+						<a href="http://kpopme.com/"><a href=""><li> Kpop me</li></a>
 						<li> | </li>
 						<li>©<span>TR</span> Canada</li>
 					</ul>

@@ -2,12 +2,16 @@
 /**
 * The template for displaying front-page.
 *
-* @package RED_Starter_Theme
+* @package Trvancouver_Theme
 */
 
 get_header(); ?>
 
-<section class="contnet-continaer front-page">
+
+<div class="text-bar-top"><?php echo do_shortcode('[wp_ticker]'); ?></div>
+
+<div class="front-page-wrapper">
+<section class="content-container front-page">
     <div class="rotator">
       <div class="skipper">
         <i class="fa fa-caret-left prev" aria-hidden="true"></i>
@@ -26,41 +30,66 @@ get_header(); ?>
         ?>
         <?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
         <div class="best-single-container">
-        <div class="content-top">
-          <div class="content-title">
-        <a class="" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
-        </div> 
-        <div><?php red_starter_posted_on(); ?> / <?php comments_number(); ?>
-        </div>
-        </div>
-          <div class="contetnt firstpage-content-th">
+
+          <div class="p-content-div">
           <div class="best-thumb">
           <?php the_post_thumbnail( 'large' ); ?></div>
-          <div class="content-p">
+
+          <div class="content firstpage-content-th">
+        <!-- <div class="content-top"> -->
+          <!-- <div class="content-title"> -->
+        <a class="post-best-h" href="<?php the_permalink(); ?>"><?php the_title( '<h3>', '</h3>' ); ?></a> 
+        <!-- </div>  -->
+        <div class="front-best-post-date">
+        <p>Posted By: <?php red_starter_posted_by(); ?></p> 
+        <p>On: <?php red_starter_posted_on(); ?></p> 
+        <p>In: <span class="cat-post-type">Best</span></p>
+        <p><?php comments_number(); ?></p>
+        </div>
+        <!-- </div> -->
+          
+          
+          
+          <div class="content-p-container">
+            <p class="content-p">
           <?php
             $content = get_the_content();
             $content = strip_tags($content);
-            echo substr($content, 0, 400) . "...";
+            echo substr($content, 0, 280) . "...";
           ?>
-          <br/>
-          <a class="read-more" href="<?php the_permalink(); ?>"> Read Entry </a>
-          </div>
+          <a class="read-more" href="<?php the_permalink(); ?>"> Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
+          </p>
+
+          
         </div>
+        <?php echo do_shortcode('[mashshare]'); ?>
+        </div>  
+        </div> 
+      
         </div>
         <?php endforeach; wp_reset_postdata(); ?>
           </div>
 
-<div class="viewmore-btn"><a href>Show More Posts <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+<!-- <div class="viewmore-btn"><a href>Show More Posts <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+
+ -->
+
+<div style="display: flex;justify-content: center;" class="fp-show-more" >
+  <a href="<?php echo get_home_url(); ?>/best">show more posts <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+</div>
 
 
-
-  <div class="front-post-contianer fpc-food">
-    <h2><span> 맛집 </span></h2>
+<div class="front-post-contianer fpc-trtv">
+<div class="fp-post-header">
+    <h2><div class="yellow-dot"><img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
+  </div><span> TRTV </span></h2> 
+  <a href="<?php echo get_home_url(); ?>/trtv">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+  </div>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;
         $args = array(
-        'post_type' => 'foodie',
+        'post_type' => 'trtv',
         'order' => 'DSC',
         'posts_per_page' => 4);
         $product_posts = get_posts( $args ); // returns an array of posts
@@ -70,7 +99,11 @@ get_header(); ?>
 
         <div class="front-post-single">
         
-        <div class="post-thumbnail-wrapper">
+        <div class="post-thumbnail-wrapper trtv-tb-w-bg">
+        <div class="play-btn">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/triangle.png"/>
+        </div>
+          <!-- <div class="black-box"></div> -->
         <?php the_post_thumbnail( 'large' ); ?>
         </div>
         <div class="content-title post-th-title">
@@ -82,8 +115,12 @@ get_header(); ?>
   </div>
 
 
+
+
   <div class="front-post-contianer fpc-news">
-    <h2>News</h2>
+  <div class="fp-post-header"><h2> NEWS </h2>
+    <a href="<?php echo get_home_url(); ?>/news">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        </div>
       <div class="front-posts front-newsposts">
         <?php
         // global $post;
@@ -108,12 +145,10 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
-
-
-
-
-  <div class="front-post-contianer fpc-trtv">
-    <h2><div class="yellow-dot"><i class="fa fa-caret-right" aria-hidden="true"></i></div><span> TRTV </span></h2>
+  <div class="front-post-contianer fpc-foodie">
+    <div class="fp-post-header"><h2><span> 맛집 </span></h2>
+    <a href="<?php echo get_home_url(); ?>/foodie">view all <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+        </div>
       <div class="front-posts front-foodposts">
         <?php
         // global $post;
@@ -138,10 +173,9 @@ get_header(); ?>
         <?php endforeach; wp_reset_postdata(); ?>
       </div>
   </div>
-
- 
 </section>
 <?php get_sidebar(); ?>
 </div>
+        </div>
 
 <?php get_footer(); ?>

@@ -1,12 +1,90 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
-	font-size: $sizeValue * 1rem;
+    font-size: ($sizeValue * 14) * 1px;
+    font-size: $sizeValue * 1rem;
 }
 
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin general-width {
+    
+    display: flex;
+    max-width: 980px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@mixin post-container {
+    border: 1px solid $color__border;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    display: flex;
+    margin-top: 11px;
+}
+
+@mixin post-container-date {
+    display: flex;
+    border-bottom: 1px solid $color__border;
+    margin-bottom: 20px;
+    min-height: 32px;
+    p {
+        font-size: 12px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        color: $color_date;
+        .cat-post-type {
+            color: $color_orange;
+        }
+    }
+}
+
+@mixin post-container-thumb {
+    height: 150px;
+    width: 280px;
+    object-fit: cover;
+}
+
+@mixin video-playbtn-shape {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+    border-radius: 40px;
+    position: absolute;
+    img {
+        width: 16px;
+        margin-left: 9px;
+        margin-top: 7px;
+    }
+}
+
+// Media Queries
+@mixin media($width) {
+    @media all and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin archive-post-date{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    @include media($desktop-width) {
+        margin-right: 10px;
+        margin-bottom: 20px;
+        margin: 2px;
+	}
+  
+}
+
+
+
+@mixin th-title{
+text-decoration: none;
+color: #222;
+font-size: 1rem;
 }

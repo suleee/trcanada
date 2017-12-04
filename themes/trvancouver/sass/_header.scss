@@ -1,82 +1,161 @@
-
-.small-menu{
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    max-width: 990px;
-    margin: 0 auto;
-    a{
-        text-decoration: none;
-        color: white;
-    &:hover{
-        color: $color_h_span; 
-    }
-    }
-    ul{
+// .logo-search-field, .small-menu, .menu{
+//     margin: 0 20px;
+// }
+.small-menu {
+    visibility: hidden;
+    @include media ($desktop-width) {
+        visibility: visible;
         display: flex;
-        list-style: none;
-        margin: 0;
-        li{
-            padding: 0 10px;
-            font-size: 12px;
-    }}
+        justify-content: flex-end;
+        padding: 5px 0;
+        max-width: 990px;
+        margin: 0 auto;
+        padding-top: 3px;
+        border-bottom: 1px solid #f1f3f6;
+        .icons {
+            position: absolute;
+            top: 35px;
+            right: 25%;
+        }
+        .icons a {
+            padding-left: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: $color_navy; // color: white;
+            &:hover {
+                color: $color_h_span;
+            }
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding-left: 10px;
+            li {
+                padding: 0 10px;
+                font-size: 12px;
+            }
+        }
+    }
 }
-.small-menu-container{
-    background: #24282d;
+
+.small-menu-container {
+    // background: #24282d;
     height: 30px;
+    border-top: 2px solid $color_tr;
 }
 
-.easylogo{
-    width: 200px;
-    margin: 0;
-  
+.easylogo {
+    width: 155px; // position: absolute;
+    // top: 24%;
+    // left: 30%;
+    margin: 0 auto;
+    margin-left: 20px;
+    @include media ($desktop-width) {
+        width: 200px; // position: absolute;
+        // left: 0%;
+    }
 }
 
-.logo-search-field{
+.logo-search-field {
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 20px 0;
+    padding: 10px 0;
     max-width: 990px;
-  
-   .fa-search{
-       color: $color_tr;
+    @include media ($desktop-width) {
+        padding: 50px 0;
     }
-    button{
+    .fa-search {
+        color: $color_tr;
+    }
+    button {
         position: absolute;
-        top: 36px;
+        top: 67px;
         right: 12px;
         background: none;
         box-shadow: none;
-        border: 0;    
-    &:hover{
-        box-shadow: none;
+        border: 0;
+        &:hover {
+            box-shadow: none;
+        }
+        &:focus {
+            border: none;
+        }
     }
-    &:focus{
-        border: none;
+    .header-search {
+        visibility: hidden;
+        @include media ($desktop-width) {
+            visibility: visible;
+        }
     }
+    #responsive-menu-button {
+        // position: inherit !important;
+        // top: 0;
+        // // right: 0;
+        top: 5%;
+        @include media ($desktop-width) {
+            visibility: hidden;
+        }
     }
-
-}
-
-.main-navigation{
-    border-top: 1px solid $color__border;
-    border-bottom: 1px solid $color__border;
-    padding: 30px 0;
-    a{
-        color: black;
-      
-    }
-    a:hover{
+    .fa-search {
         color: $color_tr;
     }
-    li{
-        padding: 0 20px;
+    .serach-fieldset button {
+        position: absolute;
+        top: 28px;
+        right: 2px;
+        background: none;
+        box-shadow: none;
+        border: 0;
+        @include media ($desktop-width) {
+            top: 70px;
+        }
+        &:hover {
+            box-shadow: none;
+        }
+        &:focus {
+            border: none;
+        }
     }
 }
-.menu-container{
- 
+.menu-b-bottom{
+    height: 62px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.main-navigation {
+    border-top: 1px solid #f1f3f6;
+  
+    a {
+        color: black;
+    }
+    a:hover {
+        color: $color_tr;
+    }
+    li {
+        padding: 0 15px;
+    }
+  
+    .menu-item {
+        padding: 20px 0px;
+        margin: 0 15px;
+        &.current-menu-item {
+            border-bottom: 2px solid blue;
+        }
+        &:hover {
+            border-bottom: 2px solid blue;
+        }
+    }
+}
+
+.menu-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo-search-field,
+.menu-menu-1-container {
     max-width: 990px;
-    margin: 0 auto;}
-
-
+    margin: 0 auto;
+}

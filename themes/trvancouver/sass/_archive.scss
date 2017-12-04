@@ -1,0 +1,91 @@
+.archive {
+    .site-content {
+        margin: 0 20px;
+    }
+    .content-area,
+    .arhive-posts-container {
+        @include media ($desktop-width) {
+            @include general-width;
+            margin-top: 20px;
+            #main {
+                width: 80%;
+            }
+            .widget-area {
+                width: 20%;
+                margin-top: 50px;
+            }
+        } // flex-wrap: wrap;
+    }
+    .thumbnail-wrapper img {
+        max-height: 96px;
+        object-fit: cover; // overflow: hidden;
+    }
+    .post-cat-type-list {
+        margin-top: 30px;
+    }
+    .page-header {
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        height: 25px;
+        margin-top: 10px;
+        a {
+            text-decoration: none;
+            color: #777;
+            p {
+                margin: 0;
+            }
+        }
+        h2 {
+            width: 40%;
+            font-size: 13px;
+        }
+        ul {
+            // width: 60%;
+            list-style: none;
+            display: flex;
+            margin: 0;
+            li {
+                padding-right: 10px;
+            }
+        }
+        h1 {
+            border-left: 4px solid $color_tr;
+            font-size: 16px;
+            padding-left: 10px;
+            margin: 0;
+        }
+    }
+    .posts {
+        width: 33%;
+        padding-right: 43px;
+        margin-bottom: 63px;
+        .post-img-tb img {
+            height: 111px;
+            object-fit: cover;
+        }
+         a{
+            @include th-title;
+        }
+        span{
+            color: #aaa;
+            font-size: 12px;
+        }
+    }
+    .title 
+        h3 {
+            margin: 8px 0;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 400;
+        
+    }
+    
+    .arhive-posts-container {
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+} ///taxonomy best posts
+.best-posts {
+    display: flex;
+}
