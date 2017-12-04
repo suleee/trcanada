@@ -103,9 +103,8 @@
     .best-thumb {
         text-align: center;
         @include media ($desktop-width) {
-        
-        width: 35%;
-    }
+            width: 35%;
+        }
         img {
             width: 300px;
             height: 150px;
@@ -116,7 +115,7 @@
             }
         }
     }
-    .p-content-div{
+    .p-content-div {
         padding: 0 50px;
         @include media ($desktop-width) {
             padding: 0px;
@@ -210,7 +209,7 @@
         }
     }
     .fp-post-header {
-        margin: 0 60px;
+        margin: 0 7%;
         @include media ($desktop-width) {
             margin: 0px;
         }
@@ -225,7 +224,10 @@
     .play-btn {
         @include video-playbtn-shape;
         top: 58px;
-        left: 125px;
+        left: 85%;
+        @include media ($desktop-width) {
+            left: 79%;
+        }
     }
     .shape-t {
         background: url("../..img/triangle.png") no-repeat center 4.5rem;

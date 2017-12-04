@@ -16,19 +16,29 @@
             }
         } // flex-wrap: wrap;
     }
-    .thumbnail-wrapper img {
-        max-height: 96px;
-        object-fit: cover; // overflow: hidden;
+    .thumbnail-wrapper {
+        text-align: center;
+        @include media ($desktop-width) {
+            text-align: left;
+        }
+        img {
+            max-height: 96px;
+            object-fit: cover; // overflow: hidden;
+   
+        }
     }
     .post-cat-type-list {
         margin-top: 30px;
     }
     .page-header {
+        height: 25px;
+        margin-top: 10px;
+        @include media ($desktop-width) {
         display: flex;
         width: 95%;
         justify-content: space-between;
-        height: 25px;
-        margin-top: 10px;
+        
+    }
         a {
             text-decoration: none;
             color: #777;
@@ -41,13 +51,15 @@
             font-size: 13px;
         }
         ul {
-            // width: 60%;
             list-style: none;
+            margin: 10px 0;            
+            @include media ($desktop-width) {
             display: flex;
-            margin: 0;
+          
+        }
             li {
                 padding-right: 10px;
-                a:hover{
+                a:hover {
                     color: #222;
                 }
             }
@@ -59,36 +71,42 @@
             margin: 0;
         }
     }
+    .post-cat-type-list{
+        display: flex;
+        padding: 0;
+        flex-wrap: wrap;
+    
+}
     .posts {
-        width: 33%;
-        padding-right: 43px;
         margin-bottom: 63px;
+        @include media ($desktop-width) {
+            width: 33%;
+            padding-right: 43px;
+        }
         .post-img-tb img {
             height: 111px;
             object-fit: cover;
         }
-         a{
+        a {
             @include th-title;
         }
-        span{
+        span {
             color: #aaa;
             font-size: 12px;
         }
     }
-    .title 
-        h3 {
-            margin: 8px 0;
-            font-size: 18px;
-            line-height: 20px;
-            font-weight: 400;
-        
+    .title h3 {
+        margin: 8px 0;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 400;
     }
-    
     .arhive-posts-container {
-        margin-top: 50px;
-        flex-wrap: wrap;
+        margin-top: 70px;
+        @include media ($desktop-width) {
+            flex-wrap: wrap;
+            display: flex;
+            margin-top: 50px;
+        }
     }
 } ///taxonomy best posts
-.best-posts {
-    display: flex;
-}
