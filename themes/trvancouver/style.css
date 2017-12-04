@@ -57,10 +57,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       margin: 0 auto;
       padding-top: 3px;
       border-bottom: 1px solid #f1f3f6; }
-      .small-menu .icons {
-        position: absolute;
-        top: 35px;
-        right: 25%; }
       .small-menu .icons a {
         padding-left: 20px; }
       .small-menu a {
