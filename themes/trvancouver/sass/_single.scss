@@ -15,6 +15,10 @@
         a {
             text-decoration: none;
             color: $color_grey;
+            margin-right: 10px;
+            &:hover{
+                color: #222;
+            }
         }
     }
     .content-area,
@@ -113,7 +117,20 @@
     .comment-form-comment textarea {
         height: 120px;
     }
+
+    .relatedthumb{
+        a{
+            @include th-title;
+        }
+    }
 }
+
+
+
+
+
+
+
 
 .post-85 {
     margin-right: 20px;

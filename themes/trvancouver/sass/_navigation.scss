@@ -132,8 +132,7 @@ a {
 .gp-back-to-top {
     background: $color_tr !important;
     border-radius: 0 !important;
-}
-
-#responsive-menu-button {
-
+    &:hover{
+        background: $color_navy !important;
+    }
 }

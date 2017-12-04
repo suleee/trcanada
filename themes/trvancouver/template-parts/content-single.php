@@ -9,30 +9,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		
 
-	
-<ul class="page-root">
-	<a href=""><li>home <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
-	<a href=""><li>best <i class="fa fa-angle-right" aria-hidden="true"></i></li></a>
-	<a href=""><li><?php the_title( '<p class="entry-title">', '</p>' ); ?> </li></a>
-</ul>
-
-
-<?php
-$categories = get_terms( array(
-	'taxonomy' => 'best_type',
-	'orderby' => 'name',
-	'hide_empty' => true,
-));
-$separator = ' ';
-$output = '';
-if ( ! empty( $categories ) ) {
-    foreach( $categories as $category ) {
-        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-    }
-    echo trim( $output, $separator );
-}
-?>
 
 
 	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

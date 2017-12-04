@@ -29,10 +29,13 @@ get_header(); ?>
                     </div>
 
                     <div class="title">
-                        <?php the_title('<h3>', '</h3>'); ?>
-                    </div>
-				</div></a>
-				<div><?php red_starter_posted_on(); ?> </div>
+						<?php the_title('<h3>', '</h3>'); ?>
+						
+					</div>
+					</a>
+					<div><?php red_starter_posted_on(); ?> </div>
+					</div>
+				
             <?php endwhile; ?>
 			</div>
 			<?php else : ?>

@@ -27,9 +27,22 @@
 .footer-sns-contianer {
     text-align: center;
     .fa {
-        padding: 0 20px;
+        border: 1px solid $color__border;
+        border-radius: 20px ;
+        margin: 0 20px;
+        padding: 10px 10px;
+        color: $color_tr;
+    &:hover{
+        color: #222;
+    }
+    }
+
+    .fa-facebook{
+        padding: 11px 13px;
     }
 }
+
+
 
 .footer-second-section,
 .footer-first-section {
@@ -68,6 +81,9 @@
     }
     a {
         text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     li {
         padding-right: 20px;
