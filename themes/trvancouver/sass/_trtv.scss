@@ -9,11 +9,26 @@
     .trtv-tb-w-bg {
         position: relative;
     }
-    .play-btn {
-        @include video-playbtn-shape;
-        top: 71px;
-        left: 179px;
+    .play-btn img {
+        width: 50px;
+        margin: 24px 0 0 30px;
     }
+    .play-btn {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+        border-radius: 102px;
+        position: absolute;
+        top: 38%;
+        left: 37%;
+    
+        @include media ($desktop-width) {
+            @include video-playbtn-shape;
+            top: 82px;
+            left: 179px;
+        }
+    }
+
     .shape-t {
         background: url("../..img/triangle.png") no-repeat center 4.5rem;
         background-size: contain, 11rem 26rem, cover;

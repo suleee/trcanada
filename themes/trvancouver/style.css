@@ -976,18 +976,31 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .post-type-archive-trtv .trtv-tb-w-bg {
   position: relative; }
 
+.post-type-archive-trtv .play-btn img {
+  width: 50px;
+  margin: 24px 0 0 30px; }
+
 .post-type-archive-trtv .play-btn {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  border-radius: 40px;
+  border-radius: 102px;
   position: absolute;
-  top: 71px;
-  left: 179px; }
-  .post-type-archive-trtv .play-btn img {
-    width: 16px;
-    margin-left: 9px;
-    margin-top: 7px; }
+  top: 38%;
+  left: 37%; }
+  @media all and (min-width: 760px) {
+    .post-type-archive-trtv .play-btn {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      border-radius: 40px;
+      position: absolute;
+      top: 82px;
+      left: 179px; }
+      .post-type-archive-trtv .play-btn img {
+        width: 16px;
+        margin-left: 9px;
+        margin-top: 7px; } }
 
 .post-type-archive-trtv .shape-t {
   background: url("../..img/triangle.png") no-repeat center 4.5rem;
