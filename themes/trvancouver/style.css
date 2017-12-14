@@ -952,6 +952,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding-left: 15px;
     margin-top: 30px; }
 
+.tax-foodie_type .type-posts {
+  display: -ms-flexbox;
+  display: flex; }
+
+.tax-foodie_type .page-header {
+  margin-bottom: 20px; }
+
 .page-id-159 .content-area {
   max-width: 980px;
   margin: 0 auto; }
